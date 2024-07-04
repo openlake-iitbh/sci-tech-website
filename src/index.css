@@ -26,3 +26,15 @@ code {
   background-repeat: no-repeat;
   height: 100vh;    
 }
+.section-2{
+  background-image:
+                linear-gradient(45deg,
+                    rgba(245, 70, 66, 0.75),
+                    rgba(8, 83, 156, 0.75)), 
+                      url(
+                          '/public/blog.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;   
+}
