@@ -37,7 +37,7 @@ function Home() {
                     <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button>
                 </div>
             </section>
-            <section className="section-2 text-white py-16 relative overflow-hidden">
+            <section id="clubs" className="section-2 text-white py-16 relative overflow-hidden">
                 <div className="container mx-auto text-center">
                     <h2 className="text-3xl font-bold mb-8 text-blue-400">Clubs</h2>
                     <div className="relative">
@@ -70,7 +70,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="section-3 text-white py-16 flex">
+            <section id="history" className="section-3 text-white py-16 flex">
                 <div className="container mx-auto px-4 md:w-1/2 flex flex-col justify-center">
                     <div className="px-4 mb-8">
                         <h2 className="text-4xl font-bold text-blue-400">History of the Club</h2>
@@ -102,7 +102,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="section-4 text-white py-16">
+            <section id="blogs" className="section-4 text-white py-16">
                 <div className="text-5xl px-8 font-[junge] text-[#0A66C2] mb-8">Check out Our Blogs</div>
                 <div className="flex px-8 justify-center space-x-4">
                     <BlogCard
@@ -130,7 +130,7 @@ function Home() {
                     </button>
                 </div>
             </section>
-            <section className="section-5 text-white py-16 flex">
+            <section id="achievements" className="section-5 text-white py-16 flex">
                 <div className="container bg-custom-radial mx-auto px-4 md:w-1/2 grid grid-cols-2 gap-4">
 
                     <div className="overflow-hidden rounded-lg">
