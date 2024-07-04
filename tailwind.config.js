@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      colors: {
+        'black-rgba': 'rgba(0, 0, 0, 0.54)',
+        'clr' : 'rgba(109, 109, 110, 0.7)',
+      },
       animation: {
         'spin-slow': 'spin 10s linear infinite',
       },
