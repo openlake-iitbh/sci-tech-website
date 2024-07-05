@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -26,7 +27,7 @@ code {
   background-repeat: no-repeat;
   height: 100vh;    
 }
-.section-2{
+.about-section-2{
   background-image:
                 linear-gradient(45deg,
                     rgba(245, 70, 66, 0.75),
@@ -37,4 +38,10 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;   
+}
+
+.text-outline {
+  
+  -webkit-text-stroke: 1px #0A66C2; /* Change color and width as needed */
+  color: transparent;
 }

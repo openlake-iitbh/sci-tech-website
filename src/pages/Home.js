@@ -1,7 +1,20 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.replace('#', ''));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [hash]);
 
     const BlogCard = ({ title, author, time, link }) => {
         return (
