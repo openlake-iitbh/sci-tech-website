@@ -1,4 +1,6 @@
-const BlogCard = ({ title, author, time, link }) => {
+import {Link} from "react-router-dom";
+
+const BlogCard = ({ title, author, time, link ,value }) => {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800">
             <img className="w-full" src="blog.png" alt="Blog" />
@@ -13,9 +15,9 @@ const BlogCard = ({ title, author, time, link }) => {
                 </div>
             </div>
             <div className="px-6 pt-4 pb-2">
-                <a href={link} className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">
+                <Link to={`individual/${value}`} className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">
                     Read More &rarr;
-                </a>
+                </Link>
             </div>
         </div>
     );
