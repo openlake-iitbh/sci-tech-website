@@ -29,10 +29,7 @@ const data = [
 ]
 
 const TimelineSection = () => {
-
-    const onNext = () => {
-
-    }
+    
     const events = [
         { date: '4th April 2024', active: true },
         { date: '6th April 2024', active: false },
@@ -50,7 +47,7 @@ const TimelineSection = () => {
                         <Swiper
                             style={{ marginLeft: '0' }}
                             modules={[Navigation]}
-                            spaceBetween={0}
+                            spaceBetween={10}
                             slidesPerView={1}
                             navigation={{
                                 nextEl: '.swiper-button-nex',

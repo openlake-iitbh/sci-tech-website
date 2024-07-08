@@ -2,6 +2,10 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import ConcentricCircles from "../components/Circles";
+import { useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim"; // if you are going to 
 
 function Home() {
 
@@ -15,6 +19,93 @@ function Home() {
             }
         }
     }, [hash]);
+    const [init, setInit] = useState(false);
+
+    // this should be run only once per application lifetime
+    useEffect(() => {
+        initParticlesEngine(async (engine) => {
+            ;
+            await loadSlim(engine);
+        }).then(() => {
+            setInit(true);
+        });
+    }, []);
+
+    const particlesLoaded = (container) => {
+        console.log(container);
+    };
+
+    const options = useMemo(
+        () => ({
+            background: {
+                color: {
+                    value: "transparent",
+                },
+            },                       
+            fpsLimit: 120,
+            interactivity: {
+                events: {
+                    onClick: {
+                        enable: true,
+                        mode: "push",
+                    },
+                    onHover: {
+                        enable: true,
+                        mode: "repulse",
+                    },
+                },
+                modes: {
+                    push: {
+                        quantity: 4,
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4,
+                    },
+                },
+            },
+            particles: {
+                color: {
+                    value: "#ffffff",
+                },
+                links: {
+                    color: "#ffffff",
+                    distance: 150,
+                    enable: true,
+                    opacity: 1,
+                    width: 1,
+                },
+                move: {
+                    direction: "none",
+                    enable: true,
+                    outModes: {
+                        default: "bounce",
+                    },
+                    random: false,
+                    speed: 6,
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                    },
+                    value: 80,
+                },
+                opacity: {
+                    value: 0.5,
+                },
+                shape: {
+                    type: "circle",
+                },
+                size: {
+                    value: { min: 1, max: 5 },
+                },
+            },
+            detectRetina: true,
+        }),
+        [],
+    );
+
 
     const BlogCard = ({ title, author, time, link }) => {
         return (
@@ -50,40 +141,21 @@ function Home() {
                     <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button>
                 </div>
             </section>
-            <section id="clubs" className="section-2 text-white py-16 relative overflow-hidden">
-                <div className="container mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-8 text-blue-400">Clubs</h2>
-                    <div className="relative">
-                        <img
-                            src='sun.png'
-                            alt="Sun"
-                            className="w-40 h-40 mx-auto animate-spin-slow"
-                        />
-                        <div className="absolute inset-0 flex justify-center items-center">
-                            <div className="relative">
-                                <div className="animate-spin-slow">
-                                    {Array.from({ length: 10 }).map((_, index) => (
-                                        <div
-                                            key={index}
-                                            className="absolute"
-                                            style={{
-                                                transform: `rotate(${index * 36}deg) translate(150px) rotate(-${index * 36}deg)`,
-                                            }}
-                                        >
-                                            <img
-                                                src='iit-bh-logo.png'
-                                                alt="Club Logo"
-                                                className="w-16 h-16"
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section id="clubs" className="section-2 text-white py-8 relative h-screen overflow-hidden">
+                {/* {init && (
+                    <Particles
+                        className="z-0"
+                        id="tsparticles"
+                        options={options}
+                        container={particlesLoaded}
+                    />
+                )} */}
+                <div className="container mx-auto text-left h-full">
+                    <h2 className="text-3xl font-bold text-blue-400">Clubs</h2>
+                    <ConcentricCircles />
                 </div>
             </section>
-            <section id="history" className="section-3 text-white py-16 flex">
+            <section id="history" className="section-3 text-white py-8 flex">
                 <div className="container mx-auto px-4 md:w-1/2 flex flex-col justify-center">
                     <div className="px-4 mb-8">
                         <h2 className="text-4xl font-bold text-blue-400">History of the Club</h2>

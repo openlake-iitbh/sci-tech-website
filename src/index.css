@@ -21,7 +21,7 @@ code {
   background-color: #030617;
 }
 .section-1{
-  background-image: url('/public/home.gif');
+  background-image: linear-gradient(0deg, rgba(53, 40, 63, 0.12) 0%, #0f0a1369 100%), url('/public/home.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,8 +40,29 @@ code {
   height: 100vh;   
 }
 
+
 .text-outline {
   
   -webkit-text-stroke: 1px #0A66C2; /* Change color and width as needed */
   color: transparent;
 }
+@keyframes orbit {
+    0% {
+      transform:
+        rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
+    }
+    100% {
+      transform:
+        rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg);
+    }
+}
+.animate-orbit{
+  animation: orbit calc(var(--duration)*1s) linear infinite calc(var(--delay)*1s);
+  animation-play-state: running;  
+}
+
+.animate-orbit:hover {
+  z-index: 1;  
+  animation-play-state: paused;
+}
+
