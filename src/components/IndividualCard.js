@@ -79,7 +79,7 @@ function IndividualCard(){
                     {/* Printing the Data */}
                     <div className="flex flex-col justify-center items-center mt-[2%]">
                         {/* Give the Image access to this also */}
-                        <img className="w-full" src="blog.png" alt="Blog" />
+                        <img className="w-full" src="/blog.png" alt="Blog" />
                         <div className="px-6 py-4 flex flex-col gap-3">
                             <div className="text-blue-500  font-bold text-3xl mb-2">{data.title}</div>
                             <p className="text-gray-700 dark:text-gray-300 text-base">{data.author}</p>

@@ -7,7 +7,7 @@ function SideBar({ name }) {
             {/* Logo */}
             <div className="pt-3">
                 <div className="flex justify-center items-center gap-2">
-                    <img src="iit-bh-logo.png" className="w-[4rem] h-[4rem]" />
+                    <img src="/iit-bh-logo.png" alt='logo' className="w-[4rem] h-[4rem]" />
                     <span className="text-lg font-bold">SCITECH COUNCIL</span>
                 </div>
             </div>

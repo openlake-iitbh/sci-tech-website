@@ -6,7 +6,12 @@ import ConcentricCircles from "../components/Circles";
 import { useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to 
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import BlogCard from "../components/BlogCard";
 
 
@@ -44,7 +49,7 @@ function Home() {
                 color: {
                     value: "transparent",
                 },
-            },                       
+            },
             fpsLimit: 120,
             interactivity: {
                 events: {
@@ -121,6 +126,27 @@ function Home() {
                     <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button>
                 </div>
             </section>
+            <div className="p-16 w-full h-96">
+                <Swiper
+                    // style={{ marginLeft: '0' }}
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="w-full h-full rounded-lg "                    
+                >
+                    <SwiperSlide>
+                        <img className="m-auto h-full w-full" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D" alt="slide1" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className="m-auto h-full w-full" src="https://images.unsplash.com/photo-1665686310429-ee43624978fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8YWV1NnJMLWo2ZXd8fGVufDB8fHx8fA%3D%3D" alt="slide2" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className="m-auto h-full w-full" src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xhc3Nyb29tfGVufDB8fDB8fHww" alt="slide3" />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
             <section id="clubs" className="section-2 text-white py-8 relative h-screen overflow-hidden">
                 {/* {init && (
                     <Particles
@@ -169,7 +195,7 @@ function Home() {
             </section>
             <section id="blogs" className="section-4 text-white py-16">
                 <div className="text-5xl px-8 font-[junge] text-[#0A66C2] mb-8">Check out Our Blogs</div>
-                <div className="flex px-8 justify-center space-x-4">
+                <div className="grid sm:grid-cols-2 gap-4 d:grid-cols-2 lg:grid-cols-3 px-8">
                     <BlogCard
                         title="Sci-tech club weekly magazine"
                         author="Aditya, Indian Institute of technology Bhilai"
@@ -190,7 +216,7 @@ function Home() {
                     />
                 </div>
                 <div className="text-center mt-8">
-                    <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+                    <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">
                         Learn More
                     </button>
                 </div>

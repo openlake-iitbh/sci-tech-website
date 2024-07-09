@@ -47,7 +47,7 @@ const TimelineSection = () => {
                         <Swiper
                             style={{ marginLeft: '0' }}
                             modules={[Navigation]}
-                            spaceBetween={10}
+                            spaceBetween={100}
                             slidesPerView={1}
                             navigation={{
                                 nextEl: '.swiper-button-nex',

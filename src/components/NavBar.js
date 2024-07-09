@@ -1,11 +1,19 @@
+import React, { useState } from 'react';
+
 function NavBar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
-        <nav className="p-8 flex justify-between">
+        <nav className="pl-8 pr-8 flex justify-between items-center">
             <div className="flex items-center space-x-2">
-            <a href="/" ><img className="h-20 w-20" src="Sci-Tech-Council.png" alt="logo" /></a>
-                <a href="/" ><h1 className="font-bold font-[poppins] text-white">SCITECH COUNCIL</h1></a>
+                <a href="/"><img className="h-20 w-20" src="Sci-Tech-Council.png" alt="logo" /></a>
+                <a href="/"><h1 className="font-bold font-[poppins] text-white">SCITECH COUNCIL</h1></a>
             </div>
-            <div className="flex justify-evenly">
+            <div className="hidden md:flex justify-evenly items-center">
                 <ul className="flex justify-evenly list-none space-x-4 text-white">
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/#blogs">Blogs</a></li>
@@ -14,9 +22,30 @@ function NavBar() {
                     <li><a href="/#clubs" className="bg-blue-500 rounded hover:bg-blue-700 text-white py-1 px-2">Clubs</a></li>
                 </ul>
             </div>
-
+            <div className="md:hidden flex items-center">
+                <button onClick={toggleMobileMenu} className="text-white focus:outline-none">
+                    <i className="fas fa-bars"></i>
+                </button>
+            </div>
+            {isMobileMenuOpen && (
+                <div className="fixed inset-0 flex justify-end z-40">
+                    <div className="fixed inset-0 bg-black opacity-50" onClick={toggleMobileMenu}></div>
+                    <div className="w-48 bg-gray-800 p-4 z-50">
+                        <button onClick={toggleMobileMenu} className="text-white focus:outline-none mb-4">
+                            <i className="fas fa-times"></i>
+                        </button>
+                        <ul className="flex flex-col list-none space-y-4 text-white">
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/#blogs">Blogs</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/events">Events</a></li>
+                            <li><a href="/#clubs" className="bg-blue-500 rounded hover:bg-blue-700 text-white py-1 px-2">Clubs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            )}
         </nav>
-    )
+    );
 }
 
 export default NavBar;
