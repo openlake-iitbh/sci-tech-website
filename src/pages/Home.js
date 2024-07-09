@@ -134,7 +134,7 @@ function Home() {
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
-                    className="w-full h-full rounded-lg "                    
+                    className="w-full h-full rounded-lg "
                 >
                     <SwiperSlide>
                         <img className="m-auto h-full w-full" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D" alt="slide1" />
@@ -161,8 +161,8 @@ function Home() {
                     <ConcentricCircles />
                 </div>
             </section>
-            <section id="history" className="section-3 text-white py-8 flex">
-                <div className="container mx-auto px-4 md:w-1/2 flex flex-col justify-center">
+            <section id="history" className="section-3 text-white py-4 grid md:grid-cols-2">
+                <div className="container mx-auto px-4  flex flex-col justify-center">
                     <div className="px-4 mb-8">
                         <h2 className="text-4xl font-bold text-blue-400">History of the Club</h2>
                     </div>
@@ -171,49 +171,57 @@ function Home() {
                             <p className="text-lg mb-6">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus.
                             </p>
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                Learn More
-                            </button>
                         </div>
                     </div>
                 </div>
-                <div className="container bg-custom-radial mx-auto px-4 md:w-1/2 grid grid-cols-2 gap-4">
+                <div className="container bg-custom-radial mx-auto px-4  grid grid-cols-2 gap-4">
+                    <div > {/* column-1 */}
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history2.png' alt="History 1" className="w-full my-2 h-[250px] object-cover" />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history4.png' alt="History 2" className="w-full my-2 h-[250px] object-cover" />
+                        </div></div>
+                    <div>{/* column-2 */}
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history1.png' alt="History 3" className="w-full my-2 h-[250px] object-cover" />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history3.png' alt="History 4" className="w-full my-2 h-[250px] object-cover" />
+                        </div></div>
 
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history2.png' alt="History 1" className="w-[278px] h-[280px] object-cover" />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history4.png' alt="History 2" className="w-[329px] h-[200px] object-cover" />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history1.png' alt="History 3" className="w-[500px] h-[280px] object-cover" />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history3.png' alt="History 4" className="w-[275px] h-[300px] object-cover" />
-                    </div>
                 </div>
             </section>
+            <div className="flex justify-center  md:items-start md:mx-28 ">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ">
+                    Learn More
+                </button>
+            </div>
+
             <section id="blogs" className="section-4 text-white py-16">
                 <div className="text-5xl px-8 font-[junge] text-[#0A66C2] mb-8">Check out Our Blogs</div>
-                <div className="grid sm:grid-cols-2 gap-4 d:grid-cols-2 lg:grid-cols-3 px-8">
-                    <BlogCard
-                        title="Sci-tech club weekly magazine"
-                        author="Aditya, Indian Institute of technology Bhilai"
-                        time="5 min read"
-                        link="#"
-                    />
-                    <BlogCard
-                        title="Sci-tech club weekly magazine"
-                        author="Aditya, Indian Institute of technology Bhilai"
-                        time="5 min read"
-                        link="#"
-                    />
-                    <BlogCard
-                        title="Sci-tech club weekly magazine"
-                        author="Aditya, Indian Institute of technology Bhilai"
-                        time="5 min read"
-                        link="#"
-                    />
+                <div className="grid justify-center md:grid-cols-3" >
+                    <div className="flex justify-center my-4 mx-4">
+                        <BlogCard
+                            title="Sci-tech club weekly magazine"
+                            author="Aditya, Indian Institute of technology Bhilai"
+                            time="5 min read"
+                            link="#"
+                        /></div>
+                    <div className="flex justify-center my-4 mx-4">
+                        <BlogCard
+                            title="Sci-tech club weekly magazine"
+                            author="Aditya, Indian Institute of technology Bhilai"
+                            time="5 min read"
+                            link="#"
+                        /></div>
+                    <div className="flex justify-center my-4 mx-4">
+                        <BlogCard
+                            title="Sci-tech club weekly magazine"
+                            author="Aditya, Indian Institute of technology Bhilai"
+                            time="5 min read"
+                            link="#"
+                        /></div>
                 </div>
                 <div className="text-center mt-8">
                     <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">
@@ -221,23 +229,26 @@ function Home() {
                     </button>
                 </div>
             </section>
-            <section id="achievements" className="section-5 text-white py-16 flex">
-                <div className="container bg-custom-radial mx-auto px-4 md:w-1/2 grid grid-cols-2 gap-4">
-
+            <section id="achievements" className="section-5 text-white py-16 grid md:grid-cols-2">
+                <div className="container bg-custom-radial mx-auto px-4  grid grid-cols-2 gap-4">
+                <div > {/* column-1 */}
                     <div className="overflow-hidden rounded-lg">
-                        <img src='history2.png' alt="History 1" className="w-[278px] h-[280px] object-cover" />
+                        <img src='history2.png' alt="History 1" className="w-full my-2 h-[250px] object-cover" />
                     </div>
                     <div className="overflow-hidden rounded-lg">
-                        <img src='history4.png' alt="History 2" className="w-[329px] h-[200px] object-cover" />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history1.png' alt="History 3" className="w-[500px] h-[280px] object-cover" />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history3.png' alt="History 4" className="w-[275px] h-[300px] object-cover" />
+                        <img src='history4.png' alt="History 2" className="w-full my-2 h-[250px] object-cover" />
                     </div>
                 </div>
-                <div className="container mx-auto px-4 md:w-1/2 flex flex-col justify-center">
+                <div>{/* column-2 */}
+                    <div className="overflow-hidden rounded-lg">
+                        <img src='history1.png' alt="History 3" className="w-full my-2 h-[250px] object-cover" />
+                    </div>
+                    <div className="overflow-hidden rounded-lg">
+                        <img src='history3.png' alt="History 4" className="w-full my-2 h-[250px] object-cover" />
+                    </div>
+                </div>
+            </div>
+                <div className="container mx-auto px-4  flex flex-col justify-center">
                     <div className="px-4 mb-8">
                         <h2 className="text-4xl font-bold font-[junge] text-[#0A66C2]">Our Achievments</h2>
                     </div>
