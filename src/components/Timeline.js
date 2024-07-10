@@ -85,10 +85,11 @@ const TimelineSection = () => {
                     <button className="p-2 bg-white rounded-full">
                         <FaArrowLeft className="text-black" />
                     </button>
-                    <div className="flex items-center justify-between w-full max-w-4xl px-4">
+                    <div className="flex items-center justify-between w-full max-w px-4">
                         <div className="relative flex-1">
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-full h-0.5 bg-white"></div>
+                            <div className="w-full h-0.5 bg-white hidden md:block"></div>
+
                             </div>
                             <div className="relative z-10 flex justify-between">
                                 {events.map((event, index) => (
@@ -155,7 +156,7 @@ const TimelineSection = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="bg-[#101323] p-6 rounded-lg ">
+                            <div className="bg-[#101323] p-6 rounded-lg">
                                 <img src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
                                 <h4 className="text-xl font-semibold">Performance at IIT Hyderabad by IIT Bhilai</h4>
                                 <p className="text-sm leading-relaxed mt-2">

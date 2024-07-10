@@ -1,9 +1,10 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import TimelineSection from "../components/Timeline";
+
 export const OurStory = () => {
     return (
-        <div className="text-white flex flex-col lg:flex-row m-8 lg:m-20 overflow-hidden rounded-lg">
+        <div className="text-white flex flex-col lg:flex-row m-8 lg:m-20 overflow-hidden rounded-lg font-[poppins]">
             {/* Image */}
             <img
                 src="Arbaz shaikh.jpg"
@@ -22,9 +23,9 @@ export const OurStory = () => {
                 </div>
             </div>
         </div>
-
     )
 };
+
 
 const teamMembers = [
     {
@@ -76,9 +77,6 @@ const teamMembers = [
 ];
 
 function About() {
-
-    // Our Story Function
-
     return (
         <div className="home-bg">
             <div className="about-section-2">
@@ -97,7 +95,7 @@ function About() {
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col gap-y-8 lg:gap-y-32">
                             <div className="flex flex-col lg:flex-row gap-8 items-center">
-                                <div className=" bg-[#101323] p-6 rounded-lg text-center flex-1">
+                                <div className="bg-[#101323] p-6 rounded-lg text-center flex-1">
                                     <h3 className="text-4xl font-bold mb-4 tracking-wider font-[junge] text-[#0A66C2]">Our Mission</h3>
                                     <hr className="w-36 border-[#0A66C2] mx-auto my-4" />
                                     <p className="text-sm leading-relaxed">
@@ -137,7 +135,7 @@ function About() {
                                     </p>
                                 </div>
                                 <div className="flex flex-1 justify-center">
-                                    <img src="values.png" alt="Mission" className="rounded-lg h-60 max-w-full object-contain" />
+                                    <img src="values.png" alt="Values" className="rounded-lg h-60 max-w-full object-contain" />
                                 </div>
                             </div>
                         </div>
@@ -148,10 +146,10 @@ function About() {
             <section className="section-4">
                 <div className="py-16 text-white">
                     <div className="container mx-auto">
-                        <h2 className="text-left text-2xl md:text-4xl lg:text-6xl tracking-wider leading-[99px] font-[junge]  text-outline mb-12">MEET OUR CREATIVE MINDS</h2>
+                        <h2 className="text-2xl md:text-4xl lg:text-6xl tracking-wider leading-[99px] font-[junge] text-outline mb-12 text-center">MEET OUR CREATIVE MINDS</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                             {teamMembers.map((member, index) => (
-                                <div key={index} className=" border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center">
+                                <div key={index} className="border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center">
                                     <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mb-4" />
                                     <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                                     <p className="text-sm mb-2">{member.position}</p>
@@ -171,9 +169,6 @@ function About() {
                     </div>
                 </div>
             </section>
-
-
-
 
             <Footer />
         </div>
