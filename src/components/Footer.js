@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="text-white py-8">
       <div className="container mx-auto text-center">
@@ -32,7 +34,7 @@ const Footer = () => {
           <a href="/clubs" className="hover:underline">Clubs</a>
         </nav>
         <div>
-          <button className="bg-white font-[roboto] text-gray-900 px-4 py-2 rounded-full hover:bg-gray-200">
+          <button onClick={() => navigate('/contact-us')} className="bg-white font-[roboto] text-gray-900 px-4 py-2 rounded-full hover:bg-gray-200">
             Contact Us
           </button>
         </div>
