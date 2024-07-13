@@ -7,6 +7,7 @@ import BlockChain from './pages/Clubs/BlockChain';
 import Blog from './pages/Blog';
 import IndividualCard from './components/IndividualCard';
 import ContactUs from './pages/ContactUs';
+import Developer from './pages/Developer';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Route path='/contact-us'element={<ContactUs />}></Route>
       <Route path='/blockchain' element={<BlockChain />}></Route>
       <Route path='/blogs' element={<Blog />}></Route>
+      <Route path='/developer' element={<Developer />}></Route>
+
       <Route path='/blogs/individual/:value' element={<IndividualCard />}></Route>
 
 
