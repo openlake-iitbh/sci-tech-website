@@ -14,7 +14,7 @@ export default function ConcentricCircles() {
         delay={50}
         radius={110}
       >
-        <a className="hover:scale-150" href="/"><img src="GDSC.png" alt="GDSC Club" /></a>        
+        <a className="hover:scale-150" href="/club/gdsc"><img src="club_logo/GDSC.png" alt="GDSC Club" /></a>        
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[50px] border-none bg-transparent"
@@ -22,7 +22,7 @@ export default function ConcentricCircles() {
         delay={75}
         radius={110}
       >       
-        <a className="hover:scale-150" href="/"><img src="OPENLAKE.png" alt="OPENLAKE Club" /></a>       
+        <a className="hover:scale-150" href="/club/openlake"><img src="club_logo/OPENLAKE.png" alt="OPENLAKE Club" /></a>       
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[100px] border-none bg-transparent"
@@ -30,7 +30,7 @@ export default function ConcentricCircles() {
         delay={30}
         radius={110}
       >        
-        <a className="hover:scale-150" href="/"><img className="" src="SES Logo.png" alt="SES Logo" /></a>
+        <a className="hover:scale-150" href="/club/ses"><img className="" src="club_logo/SES Logo.png" alt="SES Logo" /></a>
       </OrbitingCircles>
 
       {/* Middle Orbit */}
@@ -41,7 +41,7 @@ export default function ConcentricCircles() {
         delay={90}
         reverse
       >        
-        <a className="hover:scale-150" href="/blockchain"><img src="BIB.png" alt="BIB Logo" /></a>        
+        <a className="hover:scale-150" href="/club/blockchain"><img src="club_logo/BIB.png" alt="BIB Logo" /></a>        
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[60px] border-none bg-transparent"
@@ -49,7 +49,7 @@ export default function ConcentricCircles() {
         radius={180}
         reverse
       >
-        <a className="hover:scale-150" href="/"><img src="Motorsports.png" alt="Motorsports Club" /></a>       
+        <a className="hover:scale-150" href="/club/motorsports"><img src="club_logo/Motorsports.png" alt="Motorsports Club" /></a>       
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[60px] border-none bg-transparent"
@@ -58,7 +58,7 @@ export default function ConcentricCircles() {
         delay={20}
         reverse
       >        
-        <a className="hover:scale-150" href="/"><img src="ING.png" alt="ING Logo" /></a>
+        <a className="hover:scale-150" href="/club/ingenuity"><img src="club_logo/ING.png" alt="ING Logo" /></a>
       </OrbitingCircles>
 
       {/* Outer Orbit */}
@@ -69,7 +69,7 @@ export default function ConcentricCircles() {
         radius={240}
         reverse
       >        
-        <a className="hover:scale-150" href="/"><img src="epsilon_logo_new.png" alt="Epsilon Logo" /></a>        
+        <a className="hover:scale-150" href="/club/epsilon"><img src="club_logo/epsilon_logo_new.png" alt="Epsilon Logo" /></a>        
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[70px] border-none bg-transparent"
@@ -78,7 +78,7 @@ export default function ConcentricCircles() {
         radius={240}
         reverse
       >
-        <a className="hover:scale-150" href="/"><img src="DSAI.png" alt="DSAI Logo" /></a>        
+        <a className="hover:scale-150" href="/club/dsai"><img src="club_logo/DSAI.png" alt="DSAI Logo" /></a>        
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[70px] border-none bg-transparent"
@@ -87,7 +87,7 @@ export default function ConcentricCircles() {
         radius={240}
         reverse
       >        
-        <a className="hover:scale-150" href="/"><img src="Electromos.png" alt="Electromos Logo" /></a>
+        <a className="hover:scale-150" href="/club/electromos"><img src="club_logo/Electromos.png" alt="Electromos Logo" /></a>
       </OrbitingCircles>
     </div>
 
