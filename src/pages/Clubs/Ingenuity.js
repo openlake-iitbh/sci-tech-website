@@ -116,8 +116,8 @@ const Ingenuity = () => {
             clubName="Ingenuity Club"
             clubLogo="ING.png"
             instagram="https://www.instagram.com/ingenuity_iit_bh/"
-            linkedin="https://www.linkedin.com/company/74349589/admin/feed/posts/"
-            twitter="https://twitter.com/"
+            linkedin="https://www.linkedin.com/company/74349589/admin/feed/posts/"            
+            youtube="https://www.youtube.com/channel/UCxJn-SGexPHBs7Pmx378osw"
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}

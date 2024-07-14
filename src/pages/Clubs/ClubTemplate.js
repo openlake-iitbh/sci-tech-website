@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import BlogCard from '../../components/BlogCard';
 
-const ClubTemplate = ({clubName, clubLogo, instagram, linkedin, twitter,
+const ClubTemplate = ({clubName, clubLogo, instagram, linkedin, twitter, youtube, github,
     images, blogs, clubMembers, clubAgenda, clubDescription}) => {
    const swiperRef1 = useRef(null);
    const swiperRef2 = useRef(null);
@@ -101,9 +101,11 @@ const ClubTemplate = ({clubName, clubLogo, instagram, linkedin, twitter,
                <div className=" p-4 flex justify-end items-center">
                    {/* <h2 className="sm:text-2xl font-bold"></h2> */}
                    <div className="flex space-x-4">
-                       <a href={instagram} target='_blank' rel='noreferrer' className="text-white hover:text-red-500"><i className="fab fa-instagram"></i></a>
-                       <a href={linkedin} target='_blank' rel='noreferrer' className="text-white hover:text-blue-500"><i className="fab fa-linkedin"></i></a>
-                       <a href={twitter} target='_blank' rel='noreferrer' className="text-white hover:text-blue-500"><i className="fab fa-twitter"></i></a>
+                       {instagram && <a href={instagram} target='_blank' rel='noreferrer' className="text-white hover:text-red-500"><i className="fab fa-instagram"></i></a>}
+                       {linkedin && <a href={linkedin} target='_blank' rel='noreferrer' className="text-white hover:text-blue-500"><i className="fab fa-linkedin"></i></a>}
+                       {twitter &&<a href={twitter} target='_blank' rel='noreferrer' className="text-white hover:text-blue-500"><i className="fab fa-twitter"></i></a>}
+                       {youtube &&<a href={youtube} target='_blank' rel='noreferrer' className="text-white hover:text-red-500"><i className="fab fa-youtube"></i></a>}
+                       {github &&<a href={github} target='_blank' rel='noreferrer' className="text-white hover:text-blue-500"><i className="fab fa-github"></i></a>}
                    </div>
                </div>
 
@@ -151,8 +153,8 @@ const ClubTemplate = ({clubName, clubLogo, instagram, linkedin, twitter,
                                    <div className="w-full h-full rounded-md p-4 overflow-auto">
                                        <div className="flex flex-col justify-center items-center mt-[2%]">
                                            {/* Give the Image access to this also */}
-                                           <img className="w-1/2 rounded-xl" src="/blog.png" alt="Blog" />
-                                           <div className="px-6 py-4 flex flex-col gap-3">
+                                           <div className='h-48 w-full px-8'><img className="w-full h-full object-cover object-center rounded-xl" src="/blog.png" alt="Blog" /></div>
+                                           <div className="px-6 py-4 flex flex-1 flex-col gap-3">
                                                <div className="text-blue-500 text-lg font-bold sm:text-2xl lg:text-3xl mb-2">{currentBlog.title}</div>
                                                <p className="text-gray-700 dark:text-gray-300 text-base">{currentBlog.author}</p>
 
@@ -214,8 +216,6 @@ const ClubTemplate = ({clubName, clubLogo, instagram, linkedin, twitter,
                                    ))}
                                </div>
                            </div>
-
-
                        </div>
                    </SwiperSlide>
                </Swiper>

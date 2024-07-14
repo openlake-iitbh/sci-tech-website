@@ -121,12 +121,12 @@ function Home() {
                 <NavBar />
                 <div className="mx-auto text-center py-32 relative bg-opacity-70">
 
-                    <h1 className="text-6xl font-bold text-white">Welcome to Scitech Council</h1>
-                    <p className="text-2xl text-gray-300">We are a group of tech enthusiasts who love to explore and learn new things.</p>
+                    <h1 className="welcome font-bold text-white mb-4">Welcome to Scitech Council</h1>
+                    <p className="text-l md:text-2xl text-gray-300">We are a group of tech enthusiasts who love to explore and learn new things.</p>
                     <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button>
                 </div>
             </section>
-            <div className="p-16 w-full h-96">
+            <div className="p-8 sm:p-16 w-full h-96">
                 <Swiper
                     // style={{ marginLeft: '0' }}
                     modules={[Navigation, Pagination]}
@@ -157,18 +157,18 @@ function Home() {
                     />
                 )} */}
                 <div className="container mx-auto text-left h-full">
-                    <h2 className="text-3xl font-bold text-blue-400">Clubs</h2>
+                    <h2 className="text-3xl font-bold pl-6 sm:pl-0 text-blue-400">Clubs</h2>
                     <ConcentricCircles />
                 </div>
             </section>
             <section id="history" className="section-3 text-white py-4 grid md:grid-cols-2">
                 <div className="container mx-auto px-4  flex flex-col justify-center">
                     <div className="px-4 mb-8">
-                        <h2 className="text-4xl font-bold text-blue-400">History of the Club</h2>
+                        <h2 className="home-heading font-bold text-blue-400">History of the Club</h2>
                     </div>
                     <div className="flex flex-wrap items-center ">
                         <div className="w-full px-4 mb-8 ">
-                            <p className="text-lg mb-6">
+                            <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus.
                             </p>
                         </div>
@@ -199,29 +199,32 @@ function Home() {
             </div>
 
             <section id="blogs" className="section-4 text-white py-16">
-                <div className="text-5xl px-8 font-[junge] text-[#0A66C2] mb-8">Check out Our Blogs</div>
-                <div className="grid justify-center md:grid-cols-3" >
-                    <div className="flex justify-center my-4 mx-4">
+                <div className="home-heading px-8 font-[junge] text-[#0A66C2] mb-8">Check out Our Blogs</div>
+                <div className="grid mx-8 justify-center gap-4 sm:grid-cols-2 md:grid-cols-3" >
+                    {/* <div className="bg-red-600 size-1/2 justify-center my-4 mx-4"> */}
                         <BlogCard
                             title="Sci-tech club weekly magazine"
                             author="Aditya, Indian Institute of technology Bhilai"
                             time="5 min read"
                             link="#"
-                        /></div>
-                    <div className="flex justify-center my-4 mx-4">
+                        />
+                        {/* </div> */}
+                    {/* <div className="flex justify-center my-4 mx-4"> */}
                         <BlogCard
                             title="Sci-tech club weekly magazine"
                             author="Aditya, Indian Institute of technology Bhilai"
                             time="5 min read"
                             link="#"
-                        /></div>
-                    <div className="flex justify-center my-4 mx-4">
+                        />
+                        {/* </div> */}
+                    {/* <div className="flex justify-center my-4 mx-4"> */}
                         <BlogCard
                             title="Sci-tech club weekly magazine"
                             author="Aditya, Indian Institute of technology Bhilai"
                             time="5 min read"
                             link="#"
-                        /></div>
+                        />
+                        {/* </div> */}
                 </div>
                 <div className="text-center mt-8">
                     <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">
@@ -231,30 +234,30 @@ function Home() {
             </section>
             <section id="achievements" className="section-5 text-white py-16 grid md:grid-cols-2">
                 <div className="container bg-custom-radial mx-auto px-4  grid grid-cols-2 gap-4">
-                <div > {/* column-1 */}
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history2.png' alt="History 1" className="w-full my-2 h-[250px] object-cover" />
+                    <div > {/* column-1 */}
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history2.png' alt="History 1" className="w-full my-2 h-[250px] object-cover" />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history4.png' alt="History 2" className="w-full my-2 h-[250px] object-cover" />
+                        </div>
                     </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history4.png' alt="History 2" className="w-full my-2 h-[250px] object-cover" />
+                    <div>{/* column-2 */}
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history1.png' alt="History 3" className="w-full my-2 h-[250px] object-cover" />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                            <img src='history3.png' alt="History 4" className="w-full my-2 h-[250px] object-cover" />
+                        </div>
                     </div>
                 </div>
-                <div>{/* column-2 */}
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history1.png' alt="History 3" className="w-full my-2 h-[250px] object-cover" />
-                    </div>
-                    <div className="overflow-hidden rounded-lg">
-                        <img src='history3.png' alt="History 4" className="w-full my-2 h-[250px] object-cover" />
-                    </div>
-                </div>
-            </div>
                 <div className="container mx-auto px-4  flex flex-col justify-center">
                     <div className="px-4 mb-8">
-                        <h2 className="text-4xl font-bold font-[junge] text-[#0A66C2]">Our Achievments</h2>
+                        <h2 className="home-heading font-bold font-[junge] text-[#0A66C2]">Our Achievments</h2>
                     </div>
                     <div className="flex flex-wrap items-center ">
                         <div className="w-full px-4 mb-8 ">
-                            <p className="text-lg mb-6">
+                            <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus.
                             </p>
                             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">

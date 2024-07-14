@@ -101,6 +101,7 @@ const BlockChain = () => {
             instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
             linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
             twitter="https://twitter.com/BlockchainClubI1"
+            youtube="https://youtube.com/@blockchainiitbh?feature=shared"
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}

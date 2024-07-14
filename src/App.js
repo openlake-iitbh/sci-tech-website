@@ -16,6 +16,7 @@ import Epsilon from './pages/Clubs/Epsilon';
 import Openlake from './pages/Clubs/Openlake';
 import Motorsports from './pages/Clubs/Motorsports';
 import GDSC from './pages/Clubs/Gdsc';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path='/contact-us'element={<ContactUs />}></Route>
       <Route path='/events' element={<Events />}></Route>
       <Route path='/blogs' element={<Blog />}></Route>
+      <Route path='/gallery' element={<Gallery />}></Route>
       <Route path='/blogs/individual/:value' element={<IndividualCard />}></Route>
       <Route path='/club/dsai' element={<DSAI />}></Route>
       <Route path='/club/blockchain' element={<BlockChain />}></Route>

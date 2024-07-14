@@ -80,9 +80,11 @@ const DSAI = () => {
         <ClubTemplate
             clubName="DSAI Club"
             clubLogo="/DSAI.png"
-            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
-            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
-            twitter="https://twitter.com/BlockchainClubI1"
+            instagram="https://www.instagram.com/dsai_iitbhilai/"
+            linkedin="https://www.linkedin.com/company/data-science-and-artificial-intelligence-club-iit-bhilai/"
+            twitter="https://twitter.com/DSAI_IITBHILAI"
+            github="https://github.com/dsai-iitbhilai"
+            youtube="https://www.youtube.com/@datascienceaiclubiitbhilai5876"
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}

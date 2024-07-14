@@ -86,9 +86,9 @@ const Electromos = () => {
         <ClubTemplate
             clubName="Electromos Club"
             clubLogo="Electromos.png"
-            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
-            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
-            twitter="https://twitter.com/BlockchainClubI1"
+            instagram="https://www.instagram.com/electromos.iitbh/"
+            linkedin="https://www.linkedin.com/company/electromos-sci-tech-club-iit-bhilai/"
+            twitter="https://twitter.com/"
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}
