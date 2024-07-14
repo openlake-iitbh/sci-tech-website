@@ -37,10 +37,10 @@ function NavBar() {
                             <i className="fas fa-times"></i>
                         </button>
                         <ul className="flex flex-col list-none space-y-4 text-white">
-                            <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/#blogs">Blogs</Link></li>
-                            <li><Link to="/gallery">Gallery</Link></li>
-                            <li><Link to="/events">Events</Link></li>
+                            <li><Link to="/about"><i class="fa fa-fw fa-info-circle mr-2" aria-hidden="true"></i>About Us</Link></li>
+                            <li><Link to="/#blogs"><i class="fa fa-fw fa-rss mr-2"></i>Blogs</Link></li>
+                            <li><Link to="/gallery"><i class="fa fa-fw fa-file-image-o mr-2" aria-hidden="true"></i>Gallery</Link></li>
+                            <li><Link to="/events"><i class="fa fa-fw fa-calendar mr-2"></i>Events</Link></li>
                             <li><Link to="/#clubs" className="bg-blue-500 rounded hover:bg-blue-700 text-white py-1 px-2">Clubs</Link></li>
                         </ul>
                     </div>
