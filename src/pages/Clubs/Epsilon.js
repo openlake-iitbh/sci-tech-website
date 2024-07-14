@@ -14,20 +14,32 @@ const blogs = [
         time: "5 min read",
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
     },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
     // Add more blog objects here as needed
 ];
 const clubMembers = [
     {
-        icon: "/epsilon/member_image/Bhavik_12240410.jpg",
-        name: "Pradeep",
-        position: "Coordinator",
-        email: "pradeepj@iitbhilai.ac.in"
+        "icon": "/epsilon/member_image/Bhavik_12240410.jpg",
+       " name": "Pradeep",
+        "position": "Coordinator",
+        "email": "pradeepj@iitbhilai.ac.in"
     },
     {
-        icon: "/epsilon/member_image/Chetan.jpg",
-        name: "Chetan",
-        position: "Coordinator",
-        email: "chetan@iitbhilai.ac.in"
+        "icon": "/epsilon/member_image/Chetan.jpg",
+        "name": "Chetan",
+        "position": "Coordinator",
+        "email": "chetan@iitbhilai.ac.in"
     },
     {
         "name": "Anand Vardhan",
