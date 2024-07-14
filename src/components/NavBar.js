@@ -12,7 +12,7 @@ function NavBar() {
     return (
         <nav className="pl-8 pr-8 flex justify-between items-center">
             <div className="flex items-center space-x-2">
-                <Link to="/"><img className="h-20 w-20" src="Sci-Tech-Council.png" alt="logo" /></Link>
+                <Link to="/"><img className="h-20 w-20" src="/Sci-Tech-Council.png" alt="logo" /></Link>
                 <Link to="/"><h1 className="font-bold font-[poppins] text-white">SCITECH COUNCIL</h1></Link>
             </div>
             <div className="hidden md:flex justify-evenly items-center">

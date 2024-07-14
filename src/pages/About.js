@@ -29,45 +29,45 @@ export const OurStory = () => {
 
 const teamMembers = [
     {
-        name: 'Sai Surya Kinguu',
-        position: 'Design Lead',
-        email: 'sai.surya@institute.in',
+        name: 'Ojus Goel',
+        position: 'General Secretary',
+        email: 'ojusg@iitbhilai.ac.in',
         phone: '+9187654321',
         linkedin: 'https://www.linkedin.com',
         instagram: 'https://www.instagram.com',
         image: 'https://via.placeholder.com/100', // replace with actual image URL
     },
     {
-        name: 'Sai Surya Kinguu',
-        position: 'Design Lead',
-        email: 'sai.surya@institute.in',
+        name: 'Bhavik Shangari',
+        position: 'DSAI Coordinator',
+        email: 'bhaviks@iitbhilai.ac.in',
+        phone: '+91-9636455905',
+        linkedin: 'https://www.linkedin.com',
+        instagram: 'https://www.instagram.com',
+        image: 'https://via.placeholder.com/100', // replace with actual image URL
+    },
+    {
+        name: 'Gaddey Hemanth Chowdary',
+        position: 'DSAI Coordinator',
+        email: 'gaddeyhemanth@iitbhilai.ac.in',
+        phone: '+91-9494248739',
+        linkedin: 'https://www.linkedin.com',
+        instagram: 'https://www.instagram.com',
+        image: 'https://via.placeholder.com/100', // replace with actual image URL
+    },
+    {
+        name: 'Nishchay Rajput',
+        position: 'Openlake Coordinator',
+        email: 'nishchayr@iitbhilai.ac.in',
         phone: '+9187654321',
         linkedin: 'https://www.linkedin.com',
         instagram: 'https://www.instagram.com',
         image: 'https://via.placeholder.com/100', // replace with actual image URL
     },
     {
-        name: 'Sai Surya Kinguu',
-        position: 'Design Lead',
-        email: 'sai.surya@institute.in',
-        phone: '+9187654321',
-        linkedin: 'https://www.linkedin.com',
-        instagram: 'https://www.instagram.com',
-        image: 'https://via.placeholder.com/100', // replace with actual image URL
-    },
-    {
-        name: 'Sai Surya Kinguu',
-        position: 'Design Lead',
-        email: 'sai.surya@institute.in',
-        phone: '+9187654321',
-        linkedin: 'https://www.linkedin.com',
-        instagram: 'https://www.instagram.com',
-        image: 'https://via.placeholder.com/100', // replace with actual image URL
-    },
-    {
-        name: 'Sai Surya Kinguu',
-        position: 'Design Lead',
-        email: 'sai.surya@institute.in',
+        name: 'Sumit Pathak',
+        position: 'Openlake Coordinator',
+        email: 'sumitp@iitbhilai.ac.in',
         phone: '+9187654321',
         linkedin: 'https://www.linkedin.com',
         instagram: 'https://www.instagram.com',
@@ -151,7 +151,7 @@ function About() {
                             {teamMembers.map((member, index) => (
                                 <div key={index} className="border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center">
                                     <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full mb-4" />
-                                    <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                                    <h3 className="text-xl text-center font-bold mb-2">{member.name}</h3>
                                     <p className="text-sm mb-2">{member.position}</p>
                                     <p className="text-sm mb-2">{member.email}</p>
                                     <p className="text-sm mb-4">{member.phone}</p>
