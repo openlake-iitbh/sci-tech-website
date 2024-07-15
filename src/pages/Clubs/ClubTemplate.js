@@ -53,8 +53,9 @@ const ClubTemplate = ({clubName, clubLogo, instagram, linkedin, twitter, youtube
            {/* Left Sidebar */}
            <div className="w-1/4 flex flex-col p-2 h-full">
                <div className="flex items-center justify-center gap-2">
-                   <a href='/'><img src={`/club_logo/${clubLogo}`} alt="Logo" className="h-8 w-8 sm:h-14 sm:w-14" /></a>
-                   <a className='hidden sm:flex' href='/'><h1 className="text-sm sm:text-xl font-[poppins]">{clubName}</h1></a>
+                <a href='/'><img src={'/Sci-Tech-Council.png'} alt="Sci Tech Logo" className="h-8 w-8 sm:h-14 sm:w-14 border-r-2" /></a>
+                <img src={`/club_logo/${clubLogo}`} alt="Logo" className="h-8 w-8 sm:h-14 sm:w-14" />
+                <h1 className="text-sm sm:text-xl font-[poppins]">{clubName}</h1>
                </div>
                <div className="flex flex-1 flex-col items-center justify-center relative">
                    <Swiper
