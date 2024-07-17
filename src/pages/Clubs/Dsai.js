@@ -67,7 +67,7 @@ const clubMembers = [
     },
     {
         icon: "/dsai/member_image/Naga Jaswanth.jpeg",
-        name: "Ganta Naga Jaswanth",
+        name: "Naga Jaswanth",
         position: "Core Member",
         email: "gantanag@iitbhilai.ac.in"
     },

@@ -33,7 +33,7 @@ function Developer() {
         },
         {
             src: "Jaswanth.jpeg",
-            name: "Ganta Naga Jaswanth",
+            name: "Naga Jaswanth",
             role: "Developer"
         }, 
         {
