@@ -95,13 +95,13 @@ const ClubTemplate = ({
             }}
             controller={{ control: swiperRef2.current }}
           >
-            <SwiperSlide>
+            {events && events.length>0 && <SwiperSlide>
               <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
                 <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
                   Events
                 </h2>
               </div>
-            </SwiperSlide>
+            </SwiperSlide>}
             <SwiperSlide>
               <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
                 <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
@@ -211,7 +211,7 @@ const ClubTemplate = ({
           }}
           controller={{ control: swiperRef1.current }}
         >
-          <SwiperSlide>
+          {events && events.length>0 && <SwiperSlide>
             <div className="overflow-y-scroll h-full text-white px-4">
               <h1 className="text-3xl text-center text-blue-700 font-[poppins] mb-4">
                 {events[events.length - 1].title}
@@ -252,7 +252,7 @@ const ClubTemplate = ({
                   )}
               </div>
             </div>
-          </SwiperSlide>
+          </SwiperSlide>}
           <SwiperSlide>
             <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-scroll h-full">
               {images.map((image, index) => (
