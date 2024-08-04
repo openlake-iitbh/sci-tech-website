@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -105,7 +105,8 @@ const clubMembers = [
 
 const SES = () => {
     const images = getGalleryImages('ses');
-
+    const Events  = EventDetails.filter(event => event.club === "SES");
+    console.log(Events);
     return (
         <ClubTemplate
             clubName="SES Club"
@@ -116,6 +117,7 @@ const SES = () => {
             facebook="https://www.facebook.com/ses.iitbh/"
             images={images}
             blogs={blogs}
+            events={Events}
             clubMembers={clubMembers}
             clubDescription="At IIT Bhilai, the Space Exploration Society (SES) thrives as a lively community where curiosity and the cosmos converge. Space fanatics within the institute unite to explore the universe’s wonders and advance aeronautical innovation. Under the expansive night sky, SES members revel in celestial observations and the excitement of aeromodelling.
 

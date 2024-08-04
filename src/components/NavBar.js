@@ -17,11 +17,11 @@ function NavBar() {
             </div>
             <div className="hidden md:flex justify-evenly items-center">
                 <ul className="flex justify-evenly list-none space-x-4 text-white">
-                    <li><Link to="/about">About Us</Link></li>
-                    <li><Link to="/#blogs">Blogs</Link></li>
-                    <li><Link to="/gallery">Gallery</Link></li>
-                    <li><Link to="/events">Events</Link></li>
-                    <li><Link to="/#clubs" className="bg-blue-500 rounded hover:bg-blue-700 text-white py-1 px-2">Clubs</Link></li>
+                    <li className="text-center hover:text-[#d2fe23] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/about">About Us</Link></li>
+                    <li className="text-center hover:text-[#23fed9] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/#blogs">Blogs</Link></li>
+                    <li className="text-center hover:text-[#0fee0b] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/gallery">Gallery</Link></li>
+                    <li className="text-center hover:text-[#d6aeef] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/events">Events</Link></li>
+                    <li className="text-center p-2"><Link to="/#clubs" className="bg-blue-500 rounded hover:bg-blue-700 text-white py-1 px-2">Clubs</Link></li>
                 </ul>
             </div>
             <div className="md:hidden flex items-center">

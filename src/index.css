@@ -21,7 +21,9 @@ code {
   background-color: #030617;
 }
 .section-1{
-  background-image: linear-gradient(0deg, rgba(53, 40, 63, 0.12) 0%, #0f0a1369 100%), url('/public/iit-bh.jpeg');
+  background-image: linear-gradient(45deg,
+      rgba(0, 0, 0, 0.30),
+      rgba(0, 0, 0, 0.70)), url('/public/iit-bh.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,6 +113,28 @@ img.hover-shadow {
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* Create the hover effect using pseudo-elements */
+.nav-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(75% 75% at 50% 50%, #A100FFFF 0%, #71C4FFFF 100%);
+  transition: left 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.nav-hover:hover::before {
+  left: 0;
+}
+
+/* styles.css */
+.drop {  
+    filter: drop-shadow(0px 0px 2px #f10081);
 }
 
 
