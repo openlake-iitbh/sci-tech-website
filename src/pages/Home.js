@@ -169,7 +169,7 @@ function Home() {
                     <div className="flex flex-wrap items-center ">
                         <div className="w-full px-4 mb-8 ">
                             <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus.
+                            From our humble beginnings, we have grown into a dynamic council that organizes a diverse range of events, workshops, and projects. These activities not only provide hands-on learning experiences but also foster collaboration and creativity among students. Our journey has been marked by the enthusiastic participation and brilliant contributions of our members, each bringing unique perspectives and talents to the table.
                             </p>
                         </div>
                     </div>
@@ -192,11 +192,11 @@ function Home() {
 
                 </div>
             </section>
-            <div className="flex justify-center  md:items-start md:mx-28 ">
+            {/* <div className="flex justify-center  md:items-start md:mx-28 ">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ">
                     Learn More
                 </button>
-            </div>
+            </div> */}
 
             <section id="blogs" className="section-4 text-white py-16">
                 <div className="home-heading px-8 font-[junge] text-[#0A66C2] mb-8">Check out Our Blogs</div>
@@ -258,7 +258,7 @@ function Home() {
                     <div className="flex flex-wrap items-center ">
                         <div className="w-full px-4 mb-8 ">
                             <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id velit. Sit amet nulla facilisi morbi tempus iaculis. Arcu ac tortor dignissim convallis aenean et tortor at risus.
+                            Despite our relatively recent inception, the Scitech Council of IIT Bhilai has made significant strides in fostering a culture of innovation and collaboration. Our projects have led to creative solutions and prototypes, showcasing the potential and ingenuity of our members. These achievements, though just the beginning, highlight our commitment to providing valuable learning experiences and inspiring technological advancement.
                             </p>
                             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                 View All

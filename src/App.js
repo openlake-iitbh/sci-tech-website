@@ -18,6 +18,7 @@ import Openlake from './pages/Clubs/Openlake';
 import Motorsports from './pages/Clubs/Motorsports';
 import GDSC from './pages/Clubs/Gdsc';
 import Gallery from './pages/Gallery';
+import PageNotFound from './pages/PageNotFound';
 
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
       <Route path='/club/openlake' element={<Openlake />}></Route>
       <Route path='/club/motorsports' element={<Motorsports />}></Route>
       <Route path='/club/gdsc' element={<GDSC />}></Route>
+
+      <Route path="*" element={<PageNotFound/>}></Route>
 
 
 
