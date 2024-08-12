@@ -18,40 +18,70 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        icon: "/dsai/member_image/Bhavik_12240410.jpg",
-        name: "Bhavik Shangari",
+        icon: "/openlake/member_image/Nishchay Rajput.jpg",
+        name: "Nishchay Rajput",
         position: "Coordinator",
-        email: "bhaviks@iitbhilai.ac.i"
+        email: "nishchayr@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Hemanth_12140660.jpeg",
-        name: "Gaddey Hemanth Chowdary",
+        icon: "/openlake/member_image/sumit_pathak.jpg",
+        name: "Sumit Pathak",
         position: "Coordinator",
-        email: "gaddeyhemanth@iitbhilai.ac.in"
+        email: "sumitkum@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Nishant.jpg",
+        icon: "/openlake/member_image/Amay_Dixit_12340220.png",
+        name: "Amay Dixit",
+        position: "Core Member",
+        email: "amayd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Arbaz shaikh_11zon.jpg",
+        name: "Arbaz Shaikh",
+        position: "Core Member",
+        email: "shaikharbaz@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Divyanshu_Prakash_11zon.jpg",
+        name: "Divyanshu Prakash",
+        position: "Core Member",
+        email: "divyanshup@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Hemanth.jpeg",
+        name: "Puneti Hemanth Kumar Reddy",
+        position: "Core Member",
+        email: "punetihemanth@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Kriti_arora_11zon.jpg",
+        name: "Kriti Arora",
+        position: "Core Member",
+        email: "kritia@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Nidhi Singh_11zon.jpg",
+        name: "Nidhi Singh",
+        position: "Core Member",
+        email: "nidhis@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Nishant.jpg",
         name: "Nishant Verma",
         position: "Core Member",
         email: "nishantv@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Ashutosh_12340390.jpg",
-        name: "Ashutosh Kumar Jha",
+        icon: "/openlake/member_image/sachin_prakash.jpg",
+        name: "Sachin prakash",
         position: "Core Member",
-        email: "ashutoshj@iitbhilai.ac.in"
+        email: "sachinp@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Uday_bhardwaj.jpg",
-        name: "Uday Bharadwaj",
+        icon: "/openlake/member_image/Shashank Pant.jpg",
+        name: "Shashank Pant",
         position: "Core Member",
-        email: "udayb@iitbhilai.ac.in"
-    },
-    {
-        icon: "/dsai/member_image/Naga Jaswanth.jpeg",
-        name: "Ganta Naga Jaswanth",
-        position: "Core Member",
-        email: "gantanag@iitbhilai.ac.in"
+        email: "shashankp@iitbhilai.ac.in"
     },
 ]
 
@@ -62,13 +92,19 @@ const Openlake = () => {
         <ClubTemplate
             clubName="Openlake Club"
             clubLogo="OPENLAKE.png"
-            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
-            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
-            twitter="https://twitter.com/BlockchainClubI1"
+            instagram="https://instagram.com/openlake_iitbhilai?igshid=MmU2YjMzNjRlOQ=="
+            linkedin="https://www.linkedin.com/company/openlake/"
+            twitter="https://twitter.com/OpenLakeClub?t=FpIJluBD6clOSITxfJXojw&s=09"
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}
-            clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
+            clubDescription="OpenLake, the premier open-source club at IIT Bhilai.
+
+At OpenLake, we are committed to fostering a collaborative and innovative community where students can explore, contribute to, and learn from open-source projects. Our mission is to promote the spirit of open-source development, encouraging creativity, collaboration, and continuous learning.
+
+Whether you are a seasoned developer or just beginning your journey, OpenLake provides a platform for all to enhance their skills and share knowledge. Join us to delve into the world of open-source, participate in hackathons, attend informative workshops, and collaborate on impactful projects.
+
+Together, let's build, share, and grow."
         />
     );
 }

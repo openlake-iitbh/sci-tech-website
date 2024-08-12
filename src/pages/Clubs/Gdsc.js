@@ -60,11 +60,11 @@ const GDSC = () => {
 
     return (
         <ClubTemplate
-            clubName="GDSC Club"
+            clubName="GDSC"
             clubLogo="GDSC.png"
-            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
-            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
-            twitter="https://twitter.com/BlockchainClubI1"
+            instagram="https://www.instagram.com/dsc_iitbhilai/"
+            linkedin="https://www.linkedin.com/company/developer-student-club-iit-bhilai/"
+            twitter=""
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}

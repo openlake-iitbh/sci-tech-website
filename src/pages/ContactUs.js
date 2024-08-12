@@ -28,9 +28,9 @@ const ContactUs = () => {
                         <strong className='opacity-50'>Contacts</strong>
                         <p className="">
                             <br />
-                            <a href="mailto:scitechcouncil@iitbhilai.ac.in" className="text-blue-400">scitechcouncil@iitbhilai.ac.in</a>
+                            <a href="mailto:Gensec_Scitech_Gymkhana@iitbhilai.ac.in" className="text-blue-400">Gensec_Scitech_Gymkhana@iitbhilai.ac.in</a>
                             <br />
-                            9670004551
+                            8708943859
                         </p>
                     </div>
                 </div>

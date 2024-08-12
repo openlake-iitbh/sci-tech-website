@@ -92,9 +92,9 @@ const Epsilon = () => {
         <ClubTemplate
             clubName="Epsilon Club"
             clubLogo="epsilon_logo_new.png"
-            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
-            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
-            twitter="https://twitter.com/BlockchainClubI1"
+            instagram="https://www.instagram.com/roboticsclub_iitbhilai/"
+            linkedin="https://www.linkedin.com/company/the-epsilon-club-iit-bhilai-robotics-club/"
+            youtube="https://www.youtube.com/@theepsilonclubiitbhilai2447/featured"
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}
