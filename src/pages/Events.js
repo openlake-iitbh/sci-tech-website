@@ -2,71 +2,7 @@ import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import EventCard from "../components/EventCard";
-
-const EventsDetails = [
-  {
-    title: "NATIONAL SPACE DAY 2024",
-    hosting: "By Space Exploration Society",
-    club: "Space Exploration Society",
-    description: `Exploring New Horizons: Celebrating India's Space Legacy 
-    To commemorate the success of Chandrayaan-3 mission on its first anniversary, Space Exploration Society and Department of Physics at IIT Bhilai are delighted to invite you all to celebrate the National Space Day with us. Get ready to spend the day with exciting sessions of fun and knowledge outreach throughout the day to celebrate India’s greatest achievements. Looking forward for your participation to make this event a resounding success.`,
-    date: "08",
-    month: "Aug",
-    year: "2024",
-    time: "12:00-2:00 PM IST",
-    location: "IIT Bhilai",
-    timeLeft: "2 days left",
-    image: "/events/Space_Day.jpg",
-  },
-  {
-    title: "PHOTOSHOP REVAMP BY THE GOAT",
-    hosting: "Hosted by Talla",
-    club: "DesignX",
-    description: "This is a description of the event",
-    date: "08",
-    month: "Aug",
-    time: "12:00-2:00 PM IST",
-    location: "Bhilai",
-    timeLeft: "2 days left",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    title: "PHOTOSHOP REVAMP BY THE GOAT",
-    hosting: "Hosted by Talla",
-    club: "DesignX",
-    description: "This is a description of the event",
-    date: "08",
-    month: "Aug",
-    time: "12:00-2:00 PM IST",
-    location: "Bhilai",
-    timeLeft: "2 days left",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    title: "PHOTOSHOP REVAMP BY THE GOAT",
-    hosting: "Hosted by Talla",
-    club: "DesignX",
-    description: "This is a description of the event",
-    date: "08",
-    month: "Aug",
-    time: "12:00-2:00 PM IST",
-    location: "Bhilai",
-    timeLeft: "2 days left",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    title: "PHOTOSHOP REVAMP BY THE GOAT",
-    hosting: "Hosted by Talla",
-    club: "DesignX",
-    description: "This is a description of the event",
-    date: "08",
-    month: "Aug",
-    time: "12:00-2:00 PM IST",
-    location: "Bhilai",
-    timeLeft: "2 days left",
-    image: "https://via.placeholder.com/150",
-  },
-];
+import EventsDetails from "../utils/EventDetails";
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState("upcoming");
@@ -75,6 +11,27 @@ const Events = () => {
     setActiveTab(tab);
   };
 
+  const currentDate = new Date();
+
+  const upcomingEvents = EventsDetails.filter((event) => {
+    const eventDate = new Date(
+      Number(event.year),
+      new Date(Date.parse(event.month + " 1, 2024")).getMonth(),
+      Number(event.date)
+    );
+    return eventDate >= new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
+  });
+
+  const pastEvents = EventsDetails.filter((event) => {
+    const eventDate = new Date(
+      Number(event.year),
+      new Date(Date.parse(event.month + " 1, 2024")).getMonth(),
+      Number(event.date)
+    );
+    return eventDate < new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
+  });
+  
+  
   return (
     <div className="home-bg text-white">
       <section className="events mb-8">
@@ -108,14 +65,21 @@ const Events = () => {
             </button>
           </div>
           <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {activeTab === "upcoming" &&
-              EventsDetails.map((member, index) => (
-                <EventCard key={index} event={member} />
-              ))}
-            {activeTab === "past" && (
-              <p className="text-white">No past events available.</p>
-            )}
-          </div>
+  {activeTab === "upcoming" &&
+    upcomingEvents.map((event, index) => (
+      <EventCard key={index} event={event} />
+    ))}
+  
+  {activeTab === "past" && (
+    pastEvents.length > 0 ? (
+      pastEvents.map((event, index) => (
+        <EventCard key={index} event={event} />
+      ))
+    ) : (
+      <p className="text-white">No past events available.</p>
+    )
+  )}
+</div>
         </div>
       </section>
       <Footer />
