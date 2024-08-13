@@ -20,7 +20,7 @@ const EventsDetails = [
       club: "BIB",
       description: "An immersive program to explore blockchain fundamentals, development with Solidity, and industry trends. Includes hands-on workshops and expert insights.",
       date: "08",
-      month: "May - June",
+      month: "May",
       year: "2024",
       time: "12:00-2:00 PM IST",
       location: "Bhilai",
@@ -34,7 +34,7 @@ const EventsDetails = [
       club: "Electromos",
       description: "The Electromos club decided to conduct summer online workshop for the Student of our institute . This year the first Summer Of Electronics workshops were conducted. This year 3 major workshops were conducted, this included workshops on MATLAB & Simulink, PCB designing and LTspice circuit simulation. Certificate of completion were also awarded to sincere students who attended all sessions and solved the problem statements. This initiative will continue every year from now.",
       date: "08",
-      month: "May - July",
+      month: "May",
       year: "2024",
       time: "12:00-2:00 PM IST",
       location: "Bhilai",
@@ -44,16 +44,16 @@ const EventsDetails = [
     },
     {
       title: "Gradient Overflow BootCamp",
-      hosting: "By Data Science and AI Club",
+      hosting: "By DSAI",
       club: "DSAI",
-      description: "This event hosted by DSAI club is a 2 month long bootcamp for beginners in the field of Data Science and AI. The bootcamp will cover the basics of Python, Machine Learning, Deep Learning starting from mathematical foundations to practical implementations. Interactive sessions, hands-on projects and mentorship will be provided to the participants.",
-      date: "01",
-      month: "May - July",
+      description: <>This event hosted by DSAI club is a 2 month long bootcamp for beginners in the field of Data Science and AI. The bootcamp will cover the basics of Python, Machine Learning, Deep Learning starting from mathematical foundations to practical implementations. Comprising of 12 sessions, the bootcamp will dive into the world of data science and AI. Access the recordings of the sessions <a href = "https://youtube.com/playlist?list=PLRsLWy71mrwjd7sn7js0OC15mnGs8XWJB&feature=shared"><u>here</u></a>.</>,
+      date: "13",
+      month: "May",
       year: "2024",
-      time: "12:00-2:00 PM IST",
+      time: "3:00-4:00 PM IST",
       location: "Bhilai",
-      timeLeft: "2 days left",
-      image: "https://via.placeholder.com/150",
+      timeLeft: "Completed",
+      image: "/events/Gradient_Overflow.jpg",
       isSingleEvent: false,
     },
     {
@@ -72,4 +72,4 @@ const EventsDetails = [
     },
   ];
 
-  module.exports = EventsDetails;
+  export default EventsDetails;
