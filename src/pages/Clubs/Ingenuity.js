@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -111,6 +111,7 @@ const clubMembers = [
 
 const Ingenuity = () => {
     const images = getGalleryImages('ingenuity');
+    const events = EventDetails.filter(event => event.club === 'Ingenuity');
     return (
         <ClubTemplate
             clubName="Ingenuity Club"
@@ -120,6 +121,7 @@ const Ingenuity = () => {
             youtube="https://www.youtube.com/channel/UCxJn-SGexPHBs7Pmx378osw"
             images={images}
             blogs={blogs}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="Ingenuity, the competitive programming club of IIT Bhilai, is where innovation intertwines with algorithmic brilliance. Born from a vision to cultivate a haven of problem-solving and intellectual curiosity, Ingenuity is more than a coder's refuge - it's a thriving community of passionate enthusiasts. Here, we sharpen our problem-solving prowess and algorithmic acumen through exhilarating coding contests and dynamic collaborative learning."
         />

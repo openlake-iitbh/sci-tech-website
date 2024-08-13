@@ -70,16 +70,12 @@ code {
 }
 
 .events{
-  background-image:
-  linear-gradient(45deg,
-      rgba(0, 0, 0, 0.30),
-      rgba(0, 0, 0, 0.70)), 
+  background-image: 
         url(
-            '/public/events-bg.jpg');
+            '/public/ses/gallery/Copy of STAR_GAZING_11zon.jpg');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-height: 100vh;  
 }
 
 .welcome{

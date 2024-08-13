@@ -8,6 +8,29 @@ const EventCard = ({ event }) => {
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
+  const eventDate = new Date(
+    Number(event.year),
+    new Date(Date.parse(event.month + " 1, 2024")).getMonth(),
+    Number(event.date)
+  );
+  const currentDate = new Date();
+  const timeLeft =
+    eventDate >=
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate()
+    )
+      ? `${Math.ceil(
+          (eventDate.getTime() -
+            new Date(
+              currentDate.getFullYear(),
+              currentDate.getMonth(),
+              currentDate.getDate()
+            ).getTime()) /
+            (1000 * 60 * 60 * 24)
+        )} days left`
+      : "Completed";
 
   return (
     <div className="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col justify-between">
@@ -17,7 +40,7 @@ const EventCard = ({ event }) => {
         </h3>
         <div className="flex justify-between items-center mb-4 gap-2">
           <p className="overflow-ellipsis">{event.hosting}</p>
-          <p className="">{event.timeLeft}</p>
+          <p className="">{timeLeft}</p>
         </div>
         {/* <p className="mb-4">{event.club}</p> */}
         <div className="flex items-center mb-4 font-[poppins]">

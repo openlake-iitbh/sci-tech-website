@@ -42,7 +42,7 @@ const teamMembers = [
     phone: "+9187654321",
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
-    image: "https://via.placeholder.com/100", // replace with actual image URL
+    image: "/ojus.png", // replace with actual image URL
   },
   {
     name: "Bhavik Shangari",
@@ -51,7 +51,7 @@ const teamMembers = [
     phone: "+91-9636455905",
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
-    image: "https://via.placeholder.com/100", // replace with actual image URL
+    image: "/dsai/member_image/Bhavik_12240410.jpg", // replace with actual image URL
   },
   {
     name: "Gaddey Hemanth Chowdary",
@@ -60,28 +60,145 @@ const teamMembers = [
     phone: "+91-9494248739",
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
-    image: "https://via.placeholder.com/100", // replace with actual image URL
+    image: "/dsai/member_image/Hemanth_12140660.jpeg", // replace with actual image URL
   },
   {
     name: "Nishchay Rajput",
     position: "Openlake Coordinator",
     email: "nishchayr@iitbhilai.ac.in",
-    phone: "+9187654321",
+    phone: "+91-9770552422",
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
-    image: "https://via.placeholder.com/100", // replace with actual image URL
+    image: "/openlake/member_image/Nishchay Rajput.jpg", // replace with actual image URL
   },
   {
     name: "Sumit Pathak",
     position: "Openlake Coordinator",
     email: "sumitp@iitbhilai.ac.in",
-    phone: "+9187654321",
+    phone: "+91-8306312679",
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
-    image: "https://via.placeholder.com/100", // replace with actual image URL
+    image: "/openlake/member_image/sumit_pathak.jpg", // replace with actual image URL
   },
-  // Add more members as needed
+  {
+    name: "Arya Rajesh Lanjewar",
+    position: "Blockchain Coordinator",
+    email: "lanjewararya@iitbhilai.ac.in",
+    phone: "+91-9527705693",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/bib/member_image/Arya.jpg",
+  },
+  {
+    name: "Nikhil Kumar Shrey",
+    position: "Blockchain Coordinator",
+    email: "nikhilkumar@iitbhilai.ac.in",
+    phone: "+91-9111900797",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/bib/member_image/Nikhil.jpg",
+  },
+  {
+    name: "Omendra Kumar Upadhyay",
+    position: "Electromos Coordinator",
+    email: "omendrak@iitbhilai.ac.in",
+    phone: "+91-8247589701",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/electromos/member_image/omendra_12241200.jpg",
+  },
+  {
+    name: "Pradeep",
+    position: "Epsilon Coordinator",
+    email: "pradeepj@iitbhilai.ac.in",
+    phone: "+91-7010823512",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/epsilon/member_image/pradeep.png",
+  },
+  {
+    name: "Chetan",
+    position: "Epsilon Coordinator",
+    email: "chetan@iitbhilai.ac.in",
+    phone: "+91-9355844091",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/epsilon/member_image/Chetan.jpg",
+  },
+  {
+    name: "Koosh Gupta",
+    position: "Ingenuity Coordinator",
+    email: "kooshg@iitbhilai.ac.in",
+    phone: "+91-8250213794",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ingenuity/member_image/Koosh-Gupta_12240850.jpg",
+  },
+  {
+    name: "Manopriya Mondal",
+    position: "Ingenuity Coordinator",
+    email: "manopriyam@iitbhilai.ac.in",
+    phone: "+91-7595807122",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ingenuity/member_image/Manopriya-Mondal_12240970.jpg",
+  },
+  {
+    name: "Sai Kamal Nannuri",
+    position: "SES Secretary",
+    email: "nannurik@iitbhilai.ac.in",
+    phone: "+91-8019181868",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ses/member_image/ASTRO_SEC_SaiKamal12341470_11zon.jpg",
+  },
+  {
+    name: "Sidhesh Kumar Patra",
+    position: "SES Secretary",
+    email: "sidheshp@iitbhilai.ac.in",
+    phone: "+91-6371257931",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ses/member_image/AERO_SEC_Sidhesh Kumar Patra_12342060.jpeg",
+  },
 ];
+
+const MemberCard = ({ member, index }) => {
+  return (
+    <div
+      key={index}
+      className="border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center"
+    >
+      <img
+        src={member.image}
+        alt={member.name}
+        className="w-24 h-24 rounded-full mb-4"
+      />
+      <h3 className="text-xl text-center font-bold mb-2 line-clamp-1">{member.name}</h3>
+      <p className="text-sm mb-2">{member.position}</p>
+      <p className="text-sm mb-2">{member.email}</p>
+      <p className="text-sm mb-4">{member.phone}</p>
+      <div className="flex space-x-2">
+        <a
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center font-[poppins] bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-full"
+        >
+          <i className="fab fa-linkedin-in mr-1"></i>LinkedIn
+        </a>
+        <a
+          href={member.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center font-[poppins] bg-pink-500 hover:bg-pink-600 text-white py-2 px-3 rounded-full"
+        >
+          <i className="fab fa-instagram mr-1"></i>Instagram
+        </a>
+      </div>
+    </div>
+  );
+};
 
 function About() {
   return (
@@ -180,42 +297,12 @@ function About() {
             <h2 className="text-2xl md:text-4xl lg:text-6xl tracking-wider leading-[99px] font-[junge] text-outline mb-12 text-center">
               MEET OUR CREATIVE MINDS
             </h2>
+            <div className="pb-8">
+              <MemberCard key={0} member={teamMembers[0]} index={0} />
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className="border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center"
-                >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mb-4"
-                  />
-                  <h3 className="text-xl text-center font-bold mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm mb-2">{member.position}</p>
-                  <p className="text-sm mb-2">{member.email}</p>
-                  <p className="text-sm mb-4">{member.phone}</p>
-                  <div className="flex space-x-2">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center font-[poppins] bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-full"
-                    >
-                      <i className="fab fa-linkedin-in mr-1"></i>LinkedIn
-                    </a>
-                    <a
-                      href={member.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center font-[poppins] bg-pink-500 hover:bg-pink-600 text-white py-2 px-3 rounded-full"
-                    >
-                      <i className="fab fa-instagram mr-1"></i>Instagram
-                    </a>
-                  </div>
-                </div>
+              {teamMembers.slice(1).map((member, index) => (
+                <MemberCard key={index} member={member} index={index}/>
               ))}
             </div>
           </div>

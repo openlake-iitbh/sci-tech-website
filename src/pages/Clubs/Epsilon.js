@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -30,7 +30,7 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        "icon": "/epsilon/member_image/Bhavik_12240410.jpg",
+        "icon": "/epsilon/member_image/pradeep.png",
        " name": "Pradeep",
         "position": "Coordinator",
         "email": "pradeepj@iitbhilai.ac.in"
@@ -87,7 +87,7 @@ const clubMembers = [
 
 const Epsilon = () => {
     const images = getGalleryImages('epsilon');
-
+    const events = EventDetails.filter(event=> event.club === 'Epsilon');
     return (
         <ClubTemplate
             clubName="Epsilon Club"
@@ -97,6 +97,7 @@ const Epsilon = () => {
             youtube="https://www.youtube.com/@theepsilonclubiitbhilai2447/featured"
             images={images}
             blogs={blogs}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
         />

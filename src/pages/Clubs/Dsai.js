@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -75,7 +75,7 @@ const clubMembers = [
 
 const DSAI = () => {
     const images = getGalleryImages('dsai');
-
+    const events = EventDetails.filter((event) => event.club === "DSAI");
     return (
         <ClubTemplate
             clubName="DSAI Club"
@@ -87,6 +87,7 @@ const DSAI = () => {
             youtube="https://www.youtube.com/@datascienceaiclubiitbhilai5876"
             images={images}
             blogs={blogs}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
         />

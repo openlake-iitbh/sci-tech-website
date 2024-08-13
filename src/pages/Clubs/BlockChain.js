@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -94,6 +94,7 @@ const clubMembers = [
 
 const BlockChain = () => {
     const images = getGalleryImages('blockchain');
+    const events = EventDetails.filter(event => event.club === 'BIB');
     return (
         <ClubTemplate
             clubName="BlockChain Club"
@@ -104,6 +105,7 @@ const BlockChain = () => {
             youtube="https://youtube.com/@blockchainiitbh?feature=shared"
             images={images}
             blogs={blogs}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="Blockchain at IIT Bhilai (BIB) is the institute's vibrant blockchain society, committed to fostering innovation and knowledge in decentralized technologies. Our club offers a rich blend of workshops, expert lectures, and hackathons, providing a hands-on approach to learning and applying blockchain concepts. With a focus on collaboration and real-world application, BIB is the hub for students passionate about exploring blockchain's vast potential and driving technological advancement. Join us to be a part of the blockchain revolution and contribute to cutting-edge projects and research."
         />

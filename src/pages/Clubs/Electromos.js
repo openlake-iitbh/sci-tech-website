@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -81,7 +81,7 @@ const clubMembers = [
 
 const Electromos = () => {
     const images = getGalleryImages('electromos');
-
+    const events = EventDetails.filter(event => event.club === 'Electromos');
     return (
         <ClubTemplate
             clubName="Electromos Club"
@@ -91,6 +91,7 @@ const Electromos = () => {
             twitter="https://twitter.com/"
             images={images}
             blogs={blogs}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="Electromos, the one and only electronics club of IIT Bhilai has always been the epicentre for electronics research and projects in the Sci-Tech community of this institute.
 Every year a bunch of electronics enthusiast gather to foster this club and propagate the knowledge of electronics and it's domain in the institute.

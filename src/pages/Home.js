@@ -3,11 +3,8 @@ import Footer from "../components/Footer";
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ConcentricCircles from "../components/Circles";
-import { useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // if you are going to 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -26,93 +23,7 @@ function Home() {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-    }, [hash]);
-    const [init, setInit] = useState(false);
-
-    // this should be run only once per application lifetime
-    useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            ;
-            await loadSlim(engine);
-        }).then(() => {
-            setInit(true);
-        });
-    }, []);
-
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
-
-    const options = useMemo(
-        () => ({
-            background: {
-                color: {
-                    value: "transparent",
-                },
-            },
-            fpsLimit: 120,
-            interactivity: {
-                events: {
-                    onClick: {
-                        enable: true,
-                        mode: "push",
-                    },
-                    onHover: {
-                        enable: true,
-                        mode: "repulse",
-                    },
-                },
-                modes: {
-                    push: {
-                        quantity: 4,
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                    },
-                },
-            },
-            particles: {
-                color: {
-                    value: "#ffffff",
-                },
-                links: {
-                    color: "#ffffff",
-                    distance: 150,
-                    enable: true,
-                    opacity: 1,
-                    width: 1,
-                },
-                move: {
-                    direction: "none",
-                    enable: true,
-                    outModes: {
-                        default: "bounce",
-                    },
-                    random: false,
-                    speed: 6,
-                    straight: false,
-                },
-                number: {
-                    density: {
-                        enable: true,
-                    },
-                    value: 80,
-                },
-                opacity: {
-                    value: 0.5,
-                },
-                shape: {
-                    type: "circle",
-                },
-                size: {
-                    value: { min: 1, max: 5 },
-                },
-            },
-            detectRetina: true,
-        }),
-        [],
-    );
+    }, [hash]);       
 
 
     return (
@@ -123,7 +34,7 @@ function Home() {
 
                     <h1 className="welcome font-bold text-white mb-4">Welcome to Scitech Council</h1>
                     <p className="text-l md:text-2xl text-gray-300">We are a group of tech enthusiasts who love to explore and learn new things.</p>
-                    <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button>
+                    {/* <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button> */}
                 </div>
             </section>
             <div className="p-8 sm:p-16 w-full h-96">
@@ -147,15 +58,7 @@ function Home() {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <section id="clubs" className="section-2 text-white py-8 relative h-screen overflow-hidden">
-                {/* {init && (
-                    <Particles
-                        className="z-0"
-                        id="tsparticles"
-                        options={options}
-                        container={particlesLoaded}
-                    />
-                )} */}
+            <section id="clubs" className="section-2 text-white py-8 relative h-screen overflow-hidden">                
                 <div className="container mx-auto text-left h-full">
                     <h2 className="text-3xl font-bold pl-6 sm:pl-0 text-blue-400">Clubs</h2>
                     <ConcentricCircles />
@@ -260,9 +163,9 @@ function Home() {
                             <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
                             Despite our relatively recent inception, the Scitech Council of IIT Bhilai has made significant strides in fostering a culture of innovation and collaboration. Our projects have led to creative solutions and prototypes, showcasing the potential and ingenuity of our members. These achievements, though just the beginning, highlight our commitment to providing valuable learning experiences and inspiring technological advancement.
                             </p>
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                            {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                 View All
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>

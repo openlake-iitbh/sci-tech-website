@@ -78,7 +78,7 @@ export default function ConcentricCircles() {
         radius={window.screen.width > 640 ? 240 : 180}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/epsilon"><img src="club_logo/epsilon_logo_new.png" alt="Epsilon Logo" />
+        <a className="hover:scale-150 group relative" href="/club/epsilon"><img src="club_logo/epsilon_nobg.png" alt="Epsilon Logo" />
           <p className="hidden text-white absolute -bottom-4 left-0 group-hover:block">Epsilon</p></a>
       </OrbitingCircles>
       <OrbitingCircles

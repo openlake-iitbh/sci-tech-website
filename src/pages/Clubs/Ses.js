@@ -105,8 +105,7 @@ const clubMembers = [
 
 const SES = () => {
     const images = getGalleryImages('ses');
-    const Events  = EventDetails.filter(event => event.club === "SES");
-    console.log(Events);
+    const Events  = EventDetails.filter(event => event.club === "SES");    
     return (
         <ClubTemplate
             clubName="SES Club"

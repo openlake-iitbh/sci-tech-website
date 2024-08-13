@@ -1,6 +1,6 @@
 import ClubTemplate from "./ClubTemplate";
 import { getGalleryImages } from '../../utils/getGalleryImages';
-
+import EventDetails from "../../utils/EventDetails";
 const blogs = [
     {
         title: "Sci-tech club weekly magazine",
@@ -87,7 +87,7 @@ const clubMembers = [
 
 const Openlake = () => {
     const images = getGalleryImages('openlake');
-
+    const events = EventDetails.filter(event => event.club === "Openlake");
     return (
         <ClubTemplate
             clubName="Openlake Club"
@@ -97,6 +97,7 @@ const Openlake = () => {
             twitter="https://twitter.com/OpenLakeClub?t=FpIJluBD6clOSITxfJXojw&s=09"
             images={images}
             blogs={blogs}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="OpenLake, the premier open-source club at IIT Bhilai.
 

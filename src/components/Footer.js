@@ -32,7 +32,7 @@ const Footer = () => {
           <a href="/gallery" className="hover:underline">Gallery</a>
           <a href="/events" className="hover:underline">Events</a>
           <a href="/developer" className="hover:underline">Developers</a>
-          <a href="/clubs" className="hover:underline">Clubs</a>
+          <a href="/#clubs" className="hover:underline">Clubs</a>
         </nav>
         <div>
           <button onClick={() => navigate('/contact-us')} className="bg-white font-[roboto] text-gray-900 px-4 py-2 rounded-full hover:bg-gray-200">
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="mt-4">
           <hr className="border-gray-700" />
-          <p className="mt-4">Copyright © 2024 <span className='text-[#0A66C2]'><a href='/'>Sci-tech Council</a></span> All Rights Reserved</p>
+          <p className="mt-4">Copyright © 2024 <span className='text-[#0A66C2]'><a href='/'>Sci-tech Council | IIT Bhilai</a></span> All Rights Reserved</p>
         </div>
       </div>
     </footer>

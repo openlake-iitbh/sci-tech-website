@@ -10,17 +10,17 @@ function NavBar() {
     };
 
     return (
-        <nav className="pl-8 pr-8 flex justify-between items-center">
+        <nav className="pl-8 pr-8 flex justify-between items-center ">
             <div className="flex items-center space-x-2">
-                <Link to="/"><img className="h-20 w-20" src="/Sci-Tech-Council.png" alt="logo" /></Link>
+                <Link to="/"><img className="h-20 w-20 mix-blend-multiply " src="/Copy of Copy of scitech_logo_black.png" alt="logo" /></Link>
                 <Link to="/"><h1 className="font-bold font-[poppins] text-white">SCITECH COUNCIL</h1></Link>
             </div>
             <div className="hidden md:flex justify-evenly items-center">
                 <ul className="flex justify-evenly list-none space-x-4 text-white">
-                    <li className="text-center hover:text-[#d2fe23] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/about">About Us</Link></li>
-                    <li className="text-center hover:text-[#23fed9] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/#blogs">Blogs</Link></li>
-                    <li className="text-center hover:text-[#0fee0b] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/gallery">Gallery</Link></li>
-                    <li className="text-center hover:text-[#d6aeef] relative overflow-hidden nav-hover p-2 hover:rounded-md "><Link className="z-10 relative" to="/events">Events</Link></li>
+                    <li className="text-center p-2 "><Link className="z-10 relative" to="/about">About Us</Link></li>
+                    <li className="text-center p-2 "><Link className="z-10 relative" to="/#blogs">Blogs</Link></li>
+                    <li className="text-center p-2 "><Link className="z-10 relative" to="/gallery">Gallery</Link></li>
+                    <li className="text-center p-2 "><Link className="z-10 relative" to="/events">Events</Link></li>
                     <li className="text-center p-2"><Link to="/#clubs" className="bg-blue-500 rounded hover:bg-blue-700 text-white py-1 px-2">Clubs</Link></li>
                 </ul>
             </div>
