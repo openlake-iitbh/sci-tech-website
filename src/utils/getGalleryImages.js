@@ -1,4 +1,4 @@
-import { importAll } from './importAll';
+import { importAll } from './importAll.js';
 
 const paths = {
     dsai: require.context('../../public/dsai/gallery', false, /\.(png|jpe?g|svg|gif)$/),
