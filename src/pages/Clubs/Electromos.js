@@ -84,7 +84,7 @@ const Electromos = () => {
     const events = EventDetails.filter(event => event.club === 'Electromos');
     return (
         <ClubTemplate
-            clubName="Electromos Club"
+            clubName="Electromos"
             clubLogo="Electromos.png"
             instagram="https://www.instagram.com/electromos.iitbh/"
             linkedin="https://www.linkedin.com/company/electromos-sci-tech-club-iit-bhilai/"

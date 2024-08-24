@@ -8,8 +8,8 @@ export const OurStory = () => {
       {/* Image */}
       <div className="flex-1">
         <img
-          src="EYANTRA.jpg"
-          className="h-48 sm:h-full w-full object-conver sm:object-fill"
+          src="timeline.png"
+          className="h-48 sm:h-full w-full object-cover sm:object-fill"
           alt="Our Story"
         />
       </div>
@@ -174,11 +174,11 @@ const MemberCard = ({ member, index }) => {
         alt={member.name}
         className="w-24 h-24 rounded-full mb-4"
       />
-      <h3 className="text-xl text-center font-bold mb-2 line-clamp-1">{member.name}</h3>
+      <h3 className="text-xl text-center font-bold mb-2 text-[#0A66C2] line-clamp-1">{member.name}</h3>
       <p className="text-sm mb-2">{member.position}</p>
       <p className="text-sm mb-2">{member.email}</p>
       <p className="text-sm mb-4">{member.phone}</p>
-      <div className="flex space-x-2">
+      {/* <div className="flex space-x-2">
         <a
           href={member.linkedin}
           target="_blank"
@@ -195,7 +195,7 @@ const MemberCard = ({ member, index }) => {
         >
           <i className="fab fa-instagram mr-1"></i>Instagram
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -214,7 +214,7 @@ function About() {
       <OurStory />
 
       {/* Corousel */}
-      <TimelineSection />
+      {/* <TimelineSection /> */}
 
       <section className="section-3">
         <div className="py-16 text-white">
@@ -239,7 +239,7 @@ function About() {
                   <img
                     src="mission.png"
                     alt="Mission"
-                    className="rounded-lg h-60 max-w-full object-contain"
+                    className="mission rounded-lg h-60 max-w-full object-contain"
                   />
                 </div>
               </div>
@@ -259,7 +259,7 @@ function About() {
                   <img
                     src="vision.png"
                     alt="Vision"
-                    className="rounded-lg h-60 max-w-full object-contain"
+                    className="vision rounded-lg h-60 max-w-full object-contain"
                   />
                 </div>
               </div>
@@ -282,7 +282,7 @@ function About() {
                   <img
                     src="values.png"
                     alt="Values"
-                    className="rounded-lg h-60 max-w-full object-contain"
+                    className="values rounded-lg h-60 max-w-full object-contain"
                   />
                 </div>
               </div>
@@ -294,13 +294,13 @@ function About() {
       <section className="section-4">
         <div className="py-16 text-white">
           <div className="container mx-auto">
-            <h2 className="text-2xl md:text-4xl lg:text-6xl tracking-wider leading-[99px] font-[junge] text-outline mb-12 text-center">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl tracking-wider leading-[99px] font-[junge] text-[#0A66C2] mb-12 text-center">
               MEET OUR CREATIVE MINDS
             </h2>
-            <div className="pb-8">
+            <div className="pb-8 mx-2">
               <MemberCard key={0} member={teamMembers[0]} index={0} />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="mx-2 grid grid-cols-1 mb:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {teamMembers.slice(1).map((member, index) => (
                 <MemberCard key={index} member={member} index={index}/>
               ))}

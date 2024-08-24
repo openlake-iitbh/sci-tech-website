@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
         <nav className="flex flex-wrap justify-center space-x-4 md:space-x-24 mb-4">
           <a href="/about" className="hover:underline">About</a>
-          <a href="/blogs" className="hover:underline">Blogs</a>
+          {/* <a href="/blogs" className="hover:underline">Blogs</a> */}
           <a href="/gallery" className="hover:underline">Gallery</a>
           <a href="/events" className="hover:underline">Events</a>
           <a href="/developer" className="hover:underline">Developers</a>

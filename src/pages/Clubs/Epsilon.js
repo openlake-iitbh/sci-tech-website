@@ -90,7 +90,7 @@ const Epsilon = () => {
     const events = EventDetails.filter(event=> event.club === 'Epsilon');
     return (
         <ClubTemplate
-            clubName="Epsilon Club"
+            clubName="Epsilon"
             clubLogo="epsilon_logo_new.png"
             instagram="https://www.instagram.com/roboticsclub_iitbhilai/"
             linkedin="https://www.linkedin.com/company/the-epsilon-club-iit-bhilai-robotics-club/"

@@ -58,8 +58,8 @@ const EventCard = ({ event }) => {
           </div>
         </div>
       </div>
-      <div className="font-[poppins] flex gap-4 items-center">
-        <button
+      <div className="font-[poppins] flex gap-4 items-center justify-end">
+        {/* <button
           onClick={() => {
             setIsRegistered(true);
             toggleDrawer();
@@ -67,7 +67,7 @@ const EventCard = ({ event }) => {
           className="bg-[#0A66C2] text-white p-2 rounded-full"
         >
           Register now
-        </button>
+        </button> */}
         <button
           onClick={() => {
             setIsRegistered(false);

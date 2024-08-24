@@ -14,9 +14,16 @@ export default function ConcentricCircles() {
         delay={50}
         radius={window.screen.width > 640 ? 110 : 70}
       >
-        <a className="group hover:scale-150 relative" href="/club/gdsc">
+        <a
+          className="group hover:scale-150 relative"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src="club_logo/GDSC.png" alt="GDSC Club" />
-          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">GDSC</p>
+          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">
+            GDSC
+          </p>
         </a>
       </OrbitingCircles>
       <OrbitingCircles
@@ -25,8 +32,16 @@ export default function ConcentricCircles() {
         delay={75}
         radius={window.screen.width > 640 ? 110 : 70}
       >
-        <a className="hover:scale-150 group relative" href="/club/openlake"><img src="club_logo/OPENLAKE.png" alt="OPENLAKE Club" />
-          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">Openlake</p>
+        <a
+          className="hover:scale-150 group relative"
+          href="/club/openlake"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/OPENLAKE.png" alt="OPENLAKE Club" />
+          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">
+            Openlake
+          </p>
         </a>
       </OrbitingCircles>
       <OrbitingCircles
@@ -35,8 +50,17 @@ export default function ConcentricCircles() {
         delay={30}
         radius={window.screen.width > 640 ? 110 : 70}
       >
-        <a className="bg- hover:scale-150 group relative" href="/club/ses"><img className="" src="club_logo/SES Logo.png" alt="SES Logo" />
-          <p className="hidden text-white absolute bottom-2 left-1/4 group-hover:block">SES</p></a>
+        <a
+          className="bg- hover:scale-150 group relative"
+          href="/club/ses"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img className="" src="club_logo/SES Logo.png" alt="SES Logo" />
+          <p className="hidden text-white absolute bottom-2 left-1/4 group-hover:block">
+            SES
+          </p>
+        </a>
       </OrbitingCircles>
 
       {/* Middle Orbit */}
@@ -47,8 +71,17 @@ export default function ConcentricCircles() {
         delay={90}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/blockchain"><img src="club_logo/BIB.png" alt="BIB Logo" />
-          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">BlockChain</p></a>
+        <a
+          className="hover:scale-150 group relative"
+          href="/club/blockchain"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/BIB.png" alt="BIB Logo" />
+          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">
+            BlockChain
+          </p>
+        </a>
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[50px] sm:h-[50px] sm:w-[60px] border-none bg-transparent"
@@ -56,8 +89,17 @@ export default function ConcentricCircles() {
         radius={window.screen.width > 640 ? 180 : 130}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/motorsports"><img src="club_logo/Motorsports.png" alt="Motorsports Club" />
-          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">MotorSports</p></a>
+        <a
+          className="hover:scale-150 group relative"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/Motorsports.png" alt="Motorsports Club" />
+          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">
+            MotorSports
+          </p>
+        </a>
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[50px] sm:h-[50px] sm:w-[60px] border-none bg-transparent"
@@ -66,8 +108,17 @@ export default function ConcentricCircles() {
         delay={20}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/ingenuity"><img src="club_logo/ING.png" alt="ING Logo" />
-          <p className="hidden text-white absolute -bottom-4 left-0 group-hover:block">Inenuity</p></a>
+        <a
+          className="hover:scale-150 group relative"
+          href="/club/ingenuity"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/ING.png" alt="ING Logo" />
+          <p className="hidden text-white absolute -bottom-4 left-0 group-hover:block">
+            Inenuity
+          </p>
+        </a>
       </OrbitingCircles>
 
       {/* Outer Orbit */}
@@ -78,8 +129,17 @@ export default function ConcentricCircles() {
         radius={window.screen.width > 640 ? 240 : 180}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/epsilon"><img src="club_logo/epsilon_nobg.png" alt="Epsilon Logo" />
-          <p className="hidden text-white absolute -bottom-4 left-0 group-hover:block">Epsilon</p></a>
+        <a
+          className="hover:scale-150 group relative"
+          href="/club/epsilon"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/epsilon_nobg.png" alt="Epsilon Logo" />
+          <p className="hidden text-white absolute -bottom-4 left-0 group-hover:block">
+            Epsilon
+          </p>
+        </a>
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[50px] sm:h-[50px] sm:w-[70px] border-none bg-transparent"
@@ -88,8 +148,17 @@ export default function ConcentricCircles() {
         radius={window.screen.width > 640 ? 240 : 180}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/dsai"><img src="club_logo/DSAI.png" alt="DSAI Logo" />
-          <p className="hidden text-white absolute -bottom-6 left-4 group-hover:block">DSAI</p></a>
+        <a
+          className="hover:scale-150 group relative"
+          href="/club/dsai"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/DSAI.png" alt="DSAI Logo" />
+          <p className="hidden text-white absolute -bottom-6 left-4 group-hover:block">
+            DSAI
+          </p>
+        </a>
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[30px] w-[50px] sm:h-[50px] sm:w-[70px] border-none bg-transparent"
@@ -98,11 +167,18 @@ export default function ConcentricCircles() {
         radius={window.screen.width > 640 ? 240 : 180}
         reverse
       >
-        <a className="hover:scale-150 group relative" href="/club/electromos"><img src="club_logo/Electromos.png" alt="Electromos Logo" />
-          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">Electromos</p></a>
+        <a
+          className="hover:scale-150 group relative"
+          href="/club/electromos"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="club_logo/Electromos.png" alt="Electromos Logo" />
+          <p className="hidden text-white absolute -bottom-6 left-0 group-hover:block">
+            Electromos
+          </p>
+        </a>
       </OrbitingCircles>
     </div>
-
   );
 }
-

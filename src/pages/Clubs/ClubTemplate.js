@@ -109,13 +109,13 @@ const ClubTemplate = ({
                 </h2>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
                 <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
                   Blogs
                 </h2>
               </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
             <SwiperSlide>
               <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
                 <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
@@ -267,7 +267,7 @@ const ClubTemplate = ({
               {/* Add more images as needed */}
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <div className="relative h-full">
               <div
                 className={`p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-scroll h-full ${
@@ -296,8 +296,7 @@ const ClubTemplate = ({
                     <i class="fas fa-arrow-left text-white" />
                   </button>
                   <div className="w-full h-full rounded-md p-4 overflow-auto">
-                    <div className="flex flex-col justify-center items-center mt-[2%]">
-                      {/* Give the Image access to this also */}
+                    <div className="flex flex-col justify-center items-center mt-[2%]">                      
                       <div className="h-48 w-full px-8">
                         <img
                           className="w-full h-full object-cover object-center rounded-xl"
@@ -344,28 +343,25 @@ const ClubTemplate = ({
                 </div>
               )}
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide>
             <div className="p-6 overflow-y-scroll h-full">
-              <div className="flex gap-8 mb-8">
+              <div className="flex gap-8 mb-8 items-center">
                 <img
                   src={`/club_logo/${clubLogo}`}
                   className="h-16 w-16"
-                  alt="BIB"
+                  alt="Logo"
                 ></img>
-                <div className="">
+                {/* <div className=""> */}
                   <h2 className="text-4xl font-[600] font-[poppins] text-[#0A66C2]">
                     {clubName}
-                  </h2>
-                  {/* <p className="text-sm font-[poppins]">
-                    10 Core Members | 50 Members{" "}
-                  </p> */}
-                </div>
+                  </h2>                  
+                {/* </div> */}
               </div>
               <div className="flex flex-col gap-4 mb-8">
-                <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">
+                {/* <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">
                   What are we about
-                </h2>
+                </h2> */}
                 <p className="text-sm font-[poppins]">{clubDescription}</p>
               </div>
               {/* <div className="flex flex-col gap-4 mb-8">
@@ -380,7 +376,7 @@ const ClubTemplate = ({
                                <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Innovation:</strong> Contribute to cutting-edge projects and be at the forefront of ClubTemplate innovation. </p>
                            </div> */}
               <div className="flex flex-col gap-4 mb-8">
-                <h2 className="text-2xl md:text-4xl tracking-wider leading-[99px] font-[junge] text-outline mb-12 text-center">
+                <h2 className="text-2xl md:text-4xl tracking-wider leading-[99px] font-[junge] text-[#0A66C2] mb-12 text-center">
                   THE MINDS BEHIND THE CLUB
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -388,7 +384,7 @@ const ClubTemplate = ({
                     <div key={index} className="flex flex-col items-center">
                       <img
                         src={member.icon}
-                        className="h-24 w-24 rounded-full"
+                        className="h-24 w-24 rounded-full line-clamp-1"
                         alt={member.name}
                       />
                       <h3 className="text-lg text-center font-[poppins] font-[500]">

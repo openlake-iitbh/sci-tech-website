@@ -108,7 +108,7 @@ const SES = () => {
     const Events  = EventDetails.filter(event => event.club === "SES");    
     return (
         <ClubTemplate
-            clubName="SES Club"
+            clubName="SES"
             clubLogo="SES Logo.png"
             instagram="https://instagram.com/ses_iitbh?igshid=ZDc4ODBmNjlmNQ=="
             linkedin="https://www.linkedin.com/company/space-exploration-society-iitbh/"

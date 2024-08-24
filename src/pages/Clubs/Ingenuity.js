@@ -114,7 +114,7 @@ const Ingenuity = () => {
     const events = EventDetails.filter(event => event.club === 'Ingenuity');
     return (
         <ClubTemplate
-            clubName="Ingenuity Club"
+            clubName="Ingenuity"
             clubLogo="ING.png"
             instagram="https://www.instagram.com/ingenuity_iit_bh/"
             linkedin="https://www.linkedin.com/company/74349589/admin/feed/posts/"            

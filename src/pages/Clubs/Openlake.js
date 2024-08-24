@@ -90,7 +90,7 @@ const Openlake = () => {
     const events = EventDetails.filter(event => event.club === "Openlake");
     return (
         <ClubTemplate
-            clubName="Openlake Club"
+            clubName="Openlake"
             clubLogo="OPENLAKE.png"
             instagram="https://instagram.com/openlake_iitbhilai?igshid=MmU2YjMzNjRlOQ=="
             linkedin="https://www.linkedin.com/company/openlake/"

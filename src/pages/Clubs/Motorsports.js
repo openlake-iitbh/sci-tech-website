@@ -60,7 +60,7 @@ const Motorsports = () => {
 
     return (
         <ClubTemplate
-            clubName="Motorsports Club"
+            clubName="Motorsports"
             clubLogo="Motorsports.png"
             instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
             linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"

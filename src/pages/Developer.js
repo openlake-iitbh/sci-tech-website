@@ -46,7 +46,7 @@ function Developer() {
     return (
         <div className="home-bg text-white min-h-screen pb-10">
             <div className="relative">
-                <img src="/blog.png" className="w-full h-[60vh] object-cover opacity-20" alt="bg" />
+                <img src="/development.jpg" className="w-full h-[60vh] object-cover opacity-30" alt="bg" />
                 <div className="absolute inset-0 flex flex-col">
                     <NavBar />
                     <div className="flex-grow flex justify-center items-center">

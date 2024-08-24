@@ -78,7 +78,7 @@ const DSAI = () => {
     const events = EventDetails.filter((event) => event.club === "DSAI");
     return (
         <ClubTemplate
-            clubName="DSAI Club"
+            clubName="DSAI"
             clubLogo="/DSAI.png"
             instagram="https://www.instagram.com/dsai_iitbhilai/"
             linkedin="https://www.linkedin.com/company/data-science-and-artificial-intelligence-club-iit-bhilai/"
