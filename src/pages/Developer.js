@@ -27,12 +27,12 @@ function Developer() {
             role: "Developer"
         },
         {
-            src: "Divyanshu.jpg",
+            src: "/developer/Divyanshu.jpg",
             name: "Divyanshu Prakash",
             role: "Developer"
         },
         {
-            src: "Jaswanth.jpeg",
+            src: "/developer/Jaswanth.jpeg",
             name: "Naga Jaswanth",
             role: "Developer"
         }, 

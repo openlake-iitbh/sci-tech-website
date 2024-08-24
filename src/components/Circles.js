@@ -116,7 +116,7 @@ export default function ConcentricCircles() {
         >
           <img src="club_logo/ING.png" alt="ING Logo" />
           <p className="hidden text-white absolute -bottom-4 left-0 group-hover:block">
-            Inenuity
+            Ingenuity
           </p>
         </a>
       </OrbitingCircles>
