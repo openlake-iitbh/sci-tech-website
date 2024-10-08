@@ -39,7 +39,7 @@ const teamMembers = [
     name: "Ojus Goel",
     position: "General Secretary",
     email: "ojusg@iitbhilai.ac.in",
-    phone: "+9187654321",
+    phone: "+91-8708943859",
     linkedin: "https://www.linkedin.com",
     instagram: "https://www.instagram.com",
     image: "/ojus.png", // replace with actual image URL
@@ -174,7 +174,9 @@ const MemberCard = ({ member, index }) => {
         alt={member.name}
         className="w-24 h-24 rounded-full mb-4"
       />
-      <h3 className="text-xl text-center font-bold mb-2 text-[#0A66C2] line-clamp-1">{member.name}</h3>
+      <h3 className="text-xl text-center font-bold mb-2 text-[#0A66C2] line-clamp-1">
+        {member.name}
+      </h3>
       <p className="text-sm mb-2">{member.position}</p>
       <p className="text-sm mb-2">{member.email}</p>
       <p className="text-sm mb-4">{member.phone}</p>
@@ -203,11 +205,11 @@ const MemberCard = ({ member, index }) => {
 function About() {
   return (
     <div className="home-bg">
-      <div className="about-section-2">
+      <div className="about-section-2 max-h-[640px]">
         <NavBar />
-        <h1 className="w-fit text-[3rem] text-sky-500 font-bold m-auto mt-[10rem]">
+        <h1 className="w-fit text-[3rem] text-[#0A66C2]  font-bold m-auto mt-[12rem] backdrop-blur-[2px]">
           About Us
-        </h1>
+        </h1>        
       </div>
 
       {/* Adding everything based on the function */}
@@ -302,7 +304,7 @@ function About() {
             </div>
             <div className="mx-2 grid grid-cols-1 mb:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {teamMembers.slice(1).map((member, index) => (
-                <MemberCard key={index} member={member} index={index}/>
+                <MemberCard key={index} member={member} index={index} />
               ))}
             </div>
           </div>

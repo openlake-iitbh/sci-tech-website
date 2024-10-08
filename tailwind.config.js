@@ -15,7 +15,8 @@ module.exports = {
         'send-linear': 'linear-gradient(90deg, rgba(40, 169, 226, 0.75) 0%, rgba(0, 124, 179, 0.75) 109.66%)',
       },
       screens: {
-        'mb': '540px',
+        'mb': '364px',
+        'club-bp': '454px'
       },
     },
   },
