@@ -114,9 +114,9 @@ const BottomDrawer = ({ isOpen, onClose, children }) => {
     >
       <div
         ref={drawerRef}
-        onMouseDown={handleMouseDown}
-        onTouchStart={handleTouchStart}
-        onTransitionEnd={handleTransitionEnd}
+        // onMouseDown={handleMouseDown}
+        // onTouchStart={handleTouchStart}
+        // onTransitionEnd={handleTransitionEnd}
         // onDoubleClick={(e) => e.preventDefault()}
         style={{
           transform: `translateY(${isOpen ? currentY : 100}%)`,

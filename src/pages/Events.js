@@ -47,7 +47,7 @@ const Events = () => {
 
   return (
     <div className="home-bg text-white">
-      <section className="events mb-8 h-screen">
+      <section className="events mb-8 h-screen max-h-[640px]">
         <div className="backdrop-brightness-[.4] h-full">
           <NavBar />
           <div className="flex flex-col justify-center items-center h-[80%]">

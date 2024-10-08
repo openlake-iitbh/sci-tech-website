@@ -14,16 +14,16 @@ const Footer = () => {
             <i className="fab fa-twitter"></i>
           </a> */}
           <a href="https://www.linkedin.com/in/iit-bhilai-sci-tech-council-b962a7250/" className="mx-2 hover:text-[#3647c6]">
-            <i className="fab fa-linkedin-in"></i>
+            <i className="fab fa-linkedin-in fa-lg"></i>
           </a>
           {/* <a href="https://www.telegram.com" className="mx-2">
             <i className="fab fa-telegram-plane"></i>
           </a> */}
           <a href="https://www.instagram.com/scitech_iitbh/" className="mx-2 hover:text-[#f10081]">
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram fa-lg"></i>
           </a>
-          <a href="https://github.com/scitech-iitbh" className="mx-2">
-            <i className="fab fa-github"></i>
+          <a href="https://github.com/scitech-iitbh" className="mx-2 hover:text-slate-600">
+            <i className="fab fa-github fa-lg"></i>
           </a>
         </div>
         <nav className="flex flex-wrap justify-center space-x-4 md:space-x-24 mb-4">
@@ -31,6 +31,7 @@ const Footer = () => {
           {/* <a href="/blogs" className="hover:underline">Blogs</a> */}
           <a href="/gallery" className="hover:underline">Gallery</a>
           <a href="/events" className="hover:underline">Events</a>
+          <a href="/achievements" className="hover:underline">Achievements</a>
           <a href="/developer" className="hover:underline">Developers</a>
           <a href="/#clubs" className="hover:underline">Clubs</a>
         </nav>

@@ -17,7 +17,7 @@ export const Card = ({ src, name, role }) => {
 function Developer() {
     const [member, setMember] = useState([
         {
-            src: "/developer/Arbaz Shaikh.jpg",
+            src: "/developer/Arbaz shaikh.jpg",
             name: "Arbaz Shaikh",
             role: "Developer"
         },
@@ -37,7 +37,7 @@ function Developer() {
             role: "Developer"
         }, 
         {
-            src: "sai.jpg",
+            src: "/developer/sai.jpg",
             name: "Sai Surya",
             role: "UI/UX Designer"
         }       

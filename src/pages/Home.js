@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ConcentricCircles from "../components/Circles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -10,9 +10,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import BlogCard from "../components/BlogCard";
+import CircularImages from "../components/Clubs";
 
 function Home() {
   const { hash } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (hash) {
@@ -23,9 +25,10 @@ function Home() {
     }
   }, [hash]);
 
+
   return (
     <div className="home-bg">
-      <section className="section-1 ">
+      <section className="section-1 max-h-[640px]">
         <NavBar />
         <div className="mx-auto text-center py-32 relative bg-opacity-70">
           <h1 className="welcome font-bold text-white mb-4">
@@ -55,44 +58,31 @@ function Home() {
               src="/Devfest_Bhilai x ShutterStories (407 of 71).jpg"
               alt="slide1"
             />
-          </SwiperSlide>
-          {/* <SwiperSlide>
-            <img
-              className="m-auto h-full w-full"
-              src="https://images.unsplash.com/photo-1665686310429-ee43624978fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8YWV1NnJMLWo2ZXd8fGVufDB8fHx8fA%3D%3D"
-              alt="slide2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className="m-auto h-full w-full"
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xhc3Nyb29tfGVufDB8fDB8fHww"
-              alt="slide3"
-            />
-          </SwiperSlide> */}
+          </SwiperSlide>          
         </Swiper>
       </div>
 
       <section
         id="clubs"
-        className="section-2 text-white py-8 relative h-screen overflow-hidden"
+        className="section-2 text-white py-8 relative h-screen overflow-visible mb:mb-8"
       >
-        <div className="container mx-auto text-left h-full">
-          <h2 className="text-3xl mr-12 font-bold pl-6 sm:pl-0 text-blue-400">
+        <div className="h-full">
+          <h2 className="px-8 home-heading font-bold font-[junge] text-[#0A66C2]">
             Clubs
           </h2>
-          <ConcentricCircles />
+          {/* <ConcentricCircles /> */}
+          <CircularImages />          
         </div>
       </section>
 
 
-      <section id="achievements" className="section-5 text-white py-16">
-        <div className="flex flex-col mb:flex-row justify-center mb:items-center ">
+      <section id="achievements" className="section-5 text-white sm:py-8">
+        <div className="flex flex-col mb:flex-row justify-center mb:items-center backdrop-blur-[3px] ">
           <div className="mb:w-1/2 px-4 order-2 mb:order-1 flex justify-center">
             <img
               src="Eyantra.png"
               alt="Achievements"
-              className="h-56 w-auto sm:h-auto max-h-96 mb:w-full object-fill object-center rounded-md shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300"
+              className="h-56 w-auto mb-2 sm:h-auto max-h-96 mb:w-full object-fill object-center rounded-md shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="w-full mb:w-1/2 order-1 mb:order-2 px-4 flex flex-col justify-center">
@@ -103,7 +93,7 @@ function Home() {
             </div>
             <div className="flex flex-wrap items-center ">
               <div className="w-full px-4 mb-8 ">
-                <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
+                <p className="text-[0.9rem] sm:text-xs md:text-sm lg:text-lg mb-6">
                   Despite our relatively recent inception, the Scitech Council
                   of IIT Bhilai has made significant strides in fostering a
                   culture of innovation and collaboration. Our projects have led
@@ -112,9 +102,9 @@ function Home() {
                   the beginning, highlight our commitment to providing valuable
                   learning experiences and inspiring technological advancement.
                 </p>
-                {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button onClick={()=>navigate('/achievements')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                                 View All
-                            </button> */}
+                            </button>
               </div>
             </div>
           </div>
@@ -131,7 +121,7 @@ function Home() {
             </div>
             <div className="flex flex-wrap items-center ">
               <div className="w-full px-4 mb-8 ">
-                <p className="text-[0.7rem] sm:text-xs md:text-sm lg:text-lg mb-6">
+                <p className="text-[0.9rem] sm:text-xs md:text-sm lg:text-lg mb-6">
                   From our humble beginnings, we have grown into a dynamic
                   council that organizes a diverse range of events, workshops,
                   and projects. These activities not only provide hands-on

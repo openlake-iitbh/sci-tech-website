@@ -19,6 +19,7 @@ import Motorsports from './pages/Clubs/Motorsports';
 import GDSC from './pages/Clubs/Gdsc';
 import Gallery from './pages/Gallery';
 import PageNotFound from './pages/PageNotFound';
+import AchievementsPage from './pages/Achievements';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path='/about' element={<About />}></Route>
       <Route path='/contact-us'element={<ContactUs />}></Route>
       <Route path='/events' element={<Events />}></Route>
+      <Route path='/achievements' element={<AchievementsPage />}></Route>
       <Route path='/blogs' element={<Blog />}></Route>
       <Route path='/developer' element={<Developer />}></Route>
       <Route path='/gallery' element={<Gallery />}></Route>
