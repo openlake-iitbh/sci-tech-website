@@ -55,6 +55,7 @@ const EventCard = ({ event }) => {
           <div className="">
             <p>{event.time}</p>
             <p>{event.location}</p>
+            <p>{event.year}</p>
           </div>
         </div>
       </div>

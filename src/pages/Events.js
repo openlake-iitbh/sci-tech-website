@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import EventCard from "../components/EventCard";
@@ -6,6 +6,10 @@ import EventsDetails from "../utils/EventDetails";
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState("upcoming");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -28,6 +32,19 @@ const Events = () => {
       )
     );
   });
+  upcomingEvents.sort((a, b) => {
+    const dateA = new Date(
+      Number(a.year),
+      new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+      Number(a.date)
+    );
+    const dateB = new Date(
+      Number(b.year),
+      new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+      Number(b.date)
+    );
+    return dateB - dateA;
+  });
 
   const pastEvents = EventsDetails.filter((event) => {
     const eventDate = new Date(
@@ -43,6 +60,19 @@ const Events = () => {
         currentDate.getDate()
       )
     );
+  });
+  pastEvents.sort((a, b) => {
+    const dateA = new Date(
+      Number(a.year),
+      new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+      Number(a.date)
+    );
+    const dateB = new Date(
+      Number(b.year),
+      new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+      Number(b.date)
+    );
+    return dateB - dateA;
   });
 
   return (

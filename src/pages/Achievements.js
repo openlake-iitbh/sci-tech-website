@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
@@ -60,38 +60,41 @@ const achievements = [
 ];
 
 const AchievementsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="" id="achievements">
-      <div className="backdrop-blur-[3px]">
+    <div className="home-bg">
+      <div className="max-h-[640px] achievements">
+        <div className="backdrop-blur-[3px] h-full">
         <NavBar />
-        <div className="min-h-screen ">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold text-cyan-500 mb-10">
-            Achievements in Sci-Tech Council
-          </h1>
-          <div className="flex flex-col mx-2 mb:mx-8 sm:mx-8 md:mx-16 space-y-8">
-            {achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 shadow-lg rounded-lg p-6 hover:scale-105 transform transition-transform duration-300 text-white"
-              >
-                <h2 className="text-2xl font-semibold text-[#0A66C2] mb-2">
-                  {achievement.title}
-                </h2>
-                {achievement.details && (
-                  <p className="mb-2">{achievement.details}</p>
-                )}
-                <p className="font-medium">
-                  <span className="font-bold text-blue-600">
-                    Participants:{" "}
-                  </span>
-                  {achievement.participants}
-                </p>
-              </div>
-            ))}
-          </div>
+        <h1 className="text-2xl sm:text-4xl md:text-5xl h-2/3 ml-4 club-bp:ml-16 flex justify-start items-center font-bold text-cyan-500">
+          Achievements in Sci-Tech Council
+        </h1>
         </div>
-        <Footer />
       </div>
+      <div className="min-h-screen mt-4">
+        <div className="flex flex-col mx-2 mb:mx-8 sm:mx-8 md:mx-16 space-y-8">
+          {achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 shadow-lg rounded-lg p-6 hover:scale-105 transform transition-transform duration-300 text-white"
+            >
+              <h2 className="text-2xl font-semibold text-[#0A66C2] mb-2">
+                {achievement.title}
+              </h2>
+              {achievement.details && (
+                <p className="mb-2">{achievement.details}</p>
+              )}
+              <p className="font-medium">
+                <span className="font-bold text-blue-600">Participants: </span>
+                {achievement.participants}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };

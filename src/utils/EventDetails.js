@@ -127,7 +127,7 @@ const EventsDetails = [
       </>
     ),
     date: "11",
-    month: "May-June",
+    month: "May",
     year: "2024",
     time: "3:00-4:00 PM ",
     location: "Online",

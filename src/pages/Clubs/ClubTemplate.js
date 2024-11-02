@@ -257,10 +257,10 @@ const ClubTemplate = ({
             prevEl: ".swiper-button-pre",
           }}
           direction="vertical"
-          onSwiper={(swiper) => {
-            swiperRef2.current = swiper;
-          }}
-          controller={{ control: swiperRef1.current }}
+          // onSwiper={(swiper) => {
+          //   swiperRef2.current = swiper;
+          // }}
+          // controller={{ control: swiperRef1.current }}
         >
           <SwiperSlide>
             <div className="p-6 overflow-y-scroll h-full">
@@ -280,7 +280,7 @@ const ClubTemplate = ({
                 {/* <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">
                   What are we about
                 </h2> */}
-                <p className="text-sm font-[poppins]">{clubDescription}</p>
+                <p className="text-[1rem] club-bp:text-xl font-[poppins]">{clubDescription}</p>
               </div>
               {/* <div className="flex flex-col gap-4 mb-8">
                                <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">What do we do</h2>
@@ -324,42 +324,42 @@ const ClubTemplate = ({
             <SwiperSlide>
               <div className="overflow-y-scroll h-full text-white px-4">
                 <h1 className="text-3xl text-center text-blue-700 font-[poppins] mb-4">
-                  {events[events.length - 1].title}
+                  {events[0].title}
                 </h1>
                 <img
-                  src={events[events.length - 1].image}
+                  src={events[0].image}
                   className=" h-72 w-full object-contain rounded-lg"
                   alt="Event"
                 ></img>
                 <p className="my-4 whitespace-pre-line">
-                  {events[events.length - 1].description}
+                  {events[0].description}
                 </p>
                 <p className="text-blue-700 font-semibold font-serif">
                   Venue:{" "}
                   <span className="text-white font-normal italic">
-                    {events[events.length - 1].location}
+                    {events[0].location}
                   </span>
                 </p>
                 <p className="text-blue-700 font-semibold font-serif">
                   Date:{" "}
                   <span className="text-white font-normal italic">
-                    {events[events.length - 1].date +
+                    {events[0].date +
                       " " +
-                      events[events.length - 1].month +
+                      events[0].month +
                       ", " +
-                      events[events.length - 1].year}
+                      events[0].year}
                   </span>
                 </p>
-                {events && events.length - 2 >= 0 && (
+                {events && events.length>1 && (
                   <h2 className="text-2xl font-bold text-blue-70 font-serif py-4">
                     Explore More
                   </h2>
                 )}
                 <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-4">
-                  {events &&
+                  {events && 
                     events.map(
                       (event, index) =>
-                        index <= events.length - 2 && (
+                        index > 0 && (
                           <EventCard key={index} event={event} />
                         )
                     )}

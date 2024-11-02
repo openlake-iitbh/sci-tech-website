@@ -50,19 +50,19 @@ const clubMembers = [
     {
         "name": "Ragini Vinay Mehta",
         "email": "raginivi@iitbhiali.ac.in",
-        "icon": "/electromos/member_image/ragini.jpg",
+        "icon": "/electromos/member_image/Ragini.jpg",
         "position": "Core Member"
     },
     {
         "name": "Rohan Kumar Mishra",
         "email": "rohankum@iitbhilai.ac.in",
-        "icon": "/electromos/member_image/rohan.jpg",
+        "icon": "/electromos/member_image/Rohan.jpg",
         "position": "Core Member"
     },
     {
         "name": "Rohit Rajkumar Dhamale",
         "email": "rohitraj@iitbhilai.ac.in",
-        "icon": "/electromos/member_image/rohit.jpg",
+        "icon": "/electromos/member_image/Rohit.jpg",
         "position": "Core Member"
     },
     {
@@ -82,6 +82,19 @@ const clubMembers = [
 const Electromos = () => {
     const images = getGalleryImages('electromos');
     const events = EventDetails.filter(event => event.club === 'Electromos');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
     return (
         <ClubTemplate
             clubName="Electromos"

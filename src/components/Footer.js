@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -27,13 +27,13 @@ const Footer = () => {
           </a>
         </div>
         <nav className="flex flex-wrap justify-center space-x-4 md:space-x-24 mb-4">
-          <a href="/about" className="hover:underline">About</a>
           {/* <a href="/blogs" className="hover:underline">Blogs</a> */}
-          <a href="/gallery" className="hover:underline">Gallery</a>
-          <a href="/events" className="hover:underline">Events</a>
-          <a href="/achievements" className="hover:underline">Achievements</a>
-          <a href="/developer" className="hover:underline">Developers</a>
-          <a href="/#clubs" className="hover:underline">Clubs</a>
+          <Link to="/about" className="hover:underline">About</Link>
+          <Link to="/gallery" className="hover:underline">Gallery</Link>
+          <Link to="/events" className="hover:underline">Events</Link>
+          <Link to="/achievements" className="hover:underline">Achievements</Link>
+          <Link to="/developer" className="hover:underline">Developers</Link>
+          <Link to="/#clubs" className="hover:underline">Clubs</Link>
         </nav>
         <div>
           <button onClick={() => navigate('/contact-us')} className="bg-white font-[roboto] text-gray-900 px-4 py-2 rounded-full hover:bg-gray-200">

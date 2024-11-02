@@ -31,7 +31,7 @@ const blogs = [
 const clubMembers = [
     {
         "icon": "/epsilon/member_image/pradeep.png",
-       " name": "Pradeep",
+        "name": "Pradeep",
         "position": "Coordinator",
         "email": "pradeepj@iitbhilai.ac.in"
     },
@@ -72,12 +72,6 @@ const clubMembers = [
         "position": "Core Member"
     },
     {
-        "name": "Mohit Thakre",
-        "email": "mohitt@iitbhilai.ac.in",
-        "icon": "/epsilon/member_image/mohit.jpg",
-        "position": "Core Member"
-    },
-    {
         "name": "Raj Mohammad",
         "email": "rajmohammad@iitbhilai.ac.in",
         "icon": "/epsilon/member_image/raj.jpg",
@@ -88,6 +82,19 @@ const clubMembers = [
 const Epsilon = () => {
     const images = getGalleryImages('epsilon');
     const events = EventDetails.filter(event=> event.club === 'Epsilon');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
     return (
         <ClubTemplate
             clubName="Epsilon"

@@ -105,7 +105,20 @@ const clubMembers = [
 
 const SES = () => {
     const images = getGalleryImages('ses');
-    const Events  = EventDetails.filter(event => event.club === "SES");    
+    const events  = EventDetails.filter(event => event.club === "SES");    
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
     return (
         <ClubTemplate
             clubName="SES"
@@ -116,7 +129,7 @@ const SES = () => {
             facebook="https://www.facebook.com/ses.iitbh/"
             images={images}
             blogs={blogs}
-            events={Events}
+            events={events}
             clubMembers={clubMembers}
             clubDescription="At IIT Bhilai, the Space Exploration Society (SES) thrives as a lively community where curiosity and the cosmos converge. Space fanatics within the institute unite to explore the universe’s wonders and advance aeronautical innovation. Under the expansive night sky, SES members revel in celestial observations and the excitement of aeromodelling.
 

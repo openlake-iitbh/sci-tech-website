@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const CircularImages = () => {
   const images = [
@@ -68,11 +69,11 @@ const CircularImages = () => {
           const y = centerY + radius * Math.sin(angle);
 
           return (
-            <a
+            <Link
               key={index}
-              href={img.href}
-              target="_blank"
-              rel="noreferrer"
+              to={img.href}
+              // target="_blank"
+              // rel="noreferrer"
               className="absolute transition-transform duration-300 ease-in-out overflow-visible"
               style={{
                 top: `${y}%`,
@@ -94,7 +95,7 @@ const CircularImages = () => {
                   {img.name}
                 </p>
               )}
-            </a>
+            </Link>
           );
         })}
       </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
@@ -42,6 +42,9 @@ function Developer() {
             role: "UI/UX Designer"
         }       
     ]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className="home-bg text-white min-h-screen pb-10">

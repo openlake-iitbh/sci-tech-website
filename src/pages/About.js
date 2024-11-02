@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import TimelineSection from "../components/Timeline";
@@ -203,6 +204,9 @@ const MemberCard = ({ member, index }) => {
 };
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="home-bg">
       <div className="about-section-2 max-h-[640px]">
