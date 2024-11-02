@@ -55,6 +55,7 @@ const EventCard = ({ event }) => {
           <div className="">
             <p>{event.time}</p>
             <p>{event.location}</p>
+            <p>{event.year}</p>
           </div>
         </div>
       </div>
@@ -124,12 +125,12 @@ const EventCard = ({ event }) => {
             <h2 className="text-lg text-center text-[#0A66C2] font-[poppins] font-bold">
               About the Event
             </h2>
-            <div className="flex">
-              <div className="flex-1">
+            <div className="flex flex-col md:flex-row space-x-2 space-y-2">
+              <div className="flex-1 order-2 md:order-1">
                 <h3 className="font-[poppins] font-semibold">Description</h3>
                 <p className="text-[#CECECE] whitespace-pre-line">{event.description}</p>
               </div>
-              {event.image && <img className="h-48 w-auto" src={event.image} alt="Event_Image" />}
+              {event.image && <img className="h-48 w-auto max-w-1/2 object-contain order-1 md:order-2" src={event.image} alt="Event_Image" />}
             </div>
           </div>
         )}

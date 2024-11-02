@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Controller } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import BlogCard from "../../components/BlogCard";
 import EventCard from "../../components/EventCard";
+import { use } from "framer-motion/client";
 
 const ClubTemplate = ({
   clubName,
@@ -28,7 +29,7 @@ const ClubTemplate = ({
   const [isEnlargedView, setIsEnlargedView] = useState(false);
   const [isBlogVisible, setIsBlogVisible] = useState(false);
   const [currentBlog, setCurrentBlog] = useState(null);
-
+  const [activeSlide, setActiveSlide] = useState(0);
   const openImage = (index) => {
     setSelectedImage(index);
     setIsEnlargedView(true);
@@ -60,11 +61,24 @@ const ClubTemplate = ({
     setCurrentBlog(blog);
     setIsBlogVisible(true);
   };
+  const handleSlideChange = (index) => {
+    if (swiperRef1.current && swiperRef2.current) {
+      setActiveSlide(index);
+      swiperRef1.current.slideTo(index);
+      swiperRef2.current.slideTo(index);
+    }
+  };
+  
+  const onSlideChange = (swiper) => {
+    setActiveSlide(swiper.activeIndex);
+  };
+
 
   return (
     <div className="flex h-screen bg-[#101323] text-white">
+      <div className=""></div>
       {/* Left Sidebar */}
-      <div className="w-1/4 flex flex-col p-2 h-full">
+      <div className="hidden w-1/4 sm:flex flex-col p-2 h-full">
         <div className="flex items-center justify-center gap-2">
           <a href="/">
             <img
@@ -94,14 +108,24 @@ const ClubTemplate = ({
               swiperRef1.current = swiper;
             }}
             controller={{ control: swiperRef2.current }}
+            onSlideChange={onSlideChange}
           >
-            {events && events.length>0 && <SwiperSlide>
+            <SwiperSlide>
               <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
                 <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
-                  Events
+                  About
                 </h2>
               </div>
-            </SwiperSlide>}
+            </SwiperSlide>
+            {events && events.length > 0 && (
+              <SwiperSlide>
+                <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
+                  <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
+                    Events
+                  </h2>
+                </div>
+              </SwiperSlide>
+            )}
             <SwiperSlide>
               <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
                 <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
@@ -116,13 +140,6 @@ const ClubTemplate = ({
                 </h2>
               </div>
             </SwiperSlide> */}
-            <SwiperSlide>
-              <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
-                <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
-                  About
-                </h2>
-              </div>
-            </SwiperSlide>
           </Swiper>
           <hr className="absolute border -rotate-90 border-[#EEE8F3] w-full" />
           <div className="absolute right-1/4 flex flex-col items-center space-y-2 mt-4">
@@ -139,9 +156,43 @@ const ClubTemplate = ({
       {/* Main Content */}
       <div className="flex-1 flex flex-col w-full bg-[#030617] h-screen">
         {/* Header */}
-        <div className=" p-4 flex justify-end items-center">
+        <div className=" p-4 flex justify-between sm:justify-end items-center over">
           {/* <h2 className="sm:text-2xl font-bold"></h2> */}
-          <div className="flex space-x-4">
+          <div className="sm:hidden flex space-x-4 items-center">
+            <a href="/" className="text-white hover:text-blue-500 pr-4">
+              <h1 className="text-xl sm:text-xl font-[poppins]">{clubName}</h1>
+            </a>
+            <a
+              onClick={() => handleSlideChange(0)}
+              href="#"
+              className={`text-xl ${
+                activeSlide === 0 ? "text-[#0A66C2] underline" : "text-white"
+              }`}
+            >
+              About
+            </a>
+            {events && (
+              <a
+                onClick={() => handleSlideChange(1)}
+                href="#"
+                className={`text-xl ${
+                  activeSlide === 1 ? "text-[#0A66C2] underline" : "text-white"
+                }`}
+              >
+                Events
+              </a>
+            )}
+            <a
+              onClick={() => handleSlideChange(2)}
+              href="#"
+              className={`text-xl ${
+                activeSlide === 2 ? "text-[#0A66C2] underline" : "text-white"
+              }`}
+            >
+              Gallery
+            </a>
+          </div>
+          <div className="hidden club-bp:flex space-x-4">
             {instagram && (
               <a
                 href={instagram}
@@ -206,53 +257,116 @@ const ClubTemplate = ({
             prevEl: ".swiper-button-pre",
           }}
           direction="vertical"
-          onSwiper={(swiper) => {
-            swiperRef2.current = swiper;
-          }}
-          controller={{ control: swiperRef1.current }}
+          // onSwiper={(swiper) => {
+          //   swiperRef2.current = swiper;
+          // }}
+          // controller={{ control: swiperRef1.current }}
         >
-          {events && events.length>0 && <SwiperSlide>
-            <div className="overflow-y-scroll h-full text-white px-4">
-              <h1 className="text-3xl text-center text-blue-700 font-[poppins] mb-4">
-                {events[events.length - 1].title}
-              </h1>
-              <img
-                src={events[events.length - 1].image}
-                className=" h-72 w-full object-contain rounded-lg"
-                alt="Event"
-              ></img>
-              <p className="my-4 whitespace-pre-line">
-                {events[events.length - 1].description}
-              </p>
-              <p className="text-blue-700 font-semibold font-serif">
-                Venue:{" "}
-                <span className="text-white font-normal italic">
-                  {events[events.length - 1].location}
-                </span>
-              </p>
-              <p className="text-blue-700 font-semibold font-serif">
-                Date:{" "}
-                <span className="text-white font-normal italic">
-                  {events[events.length - 1].date +
-                    " " +
-                    events[events.length - 1].month +
-                    ", " +
-                    events[events.length - 1].year}
-                </span>
-              </p>
-              {/* <h2 className="text-2xl font-bold text-blue-70 font-serif mt-4">Explore More</h2> */}
-              <div className="flex my-4">
-                {events &&
-                  events.map(
-                    (event, index) =>
-                      index > events.length - 2 &&
-                      index > events.length && (
-                        <EventCard key={index} event={event} />
-                      )
-                  )}
+          <SwiperSlide>
+            <div className="p-6 overflow-y-scroll h-full">
+              <div className="flex gap-8 mb-8 items-center">
+                <img
+                  src={`/club_logo/${clubLogo}`}
+                  className="h-16 w-16"
+                  alt="Logo"
+                ></img>
+                {/* <div className=""> */}
+                <h2 className="text-4xl font-[600] font-[poppins] text-[#0A66C2]">
+                  {clubName}
+                </h2>
+                {/* </div> */}
+              </div>
+              <div className="flex flex-col gap-4 mb-8">
+                {/* <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">
+                  What are we about
+                </h2> */}
+                <p className="text-[1rem] club-bp:text-xl font-[poppins]">{clubDescription}</p>
+              </div>
+              {/* <div className="flex flex-col gap-4 mb-8">
+                               <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">What do we do</h2>
+                               <p className="text-sm font-[poppins]">{clubAgenda}</p>
+                           </div>
+                           <div className="flex flex-col gap-4 mb-8">
+                               <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">Why should you join us?</h2>
+                               <p className="text-sm font-[poppins]">By joining the ClubTemplate Club, you'll gain access to a wealth of resources, including:</p>
+                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Knowledge:</strong> Stay updated with the latest trends and developments in ClubTemplate technology. </p>
+                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Community:</strong> Be part of a supportive and enthusiastic group that shares your passion for ClubTemplate. </p>
+                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Innovation:</strong> Contribute to cutting-edge projects and be at the forefront of ClubTemplate innovation. </p>
+                           </div> */}
+              <div className="flex flex-col gap-4 mb-8">
+                <h2 className="text-xl mb:text-2xl md:text-4xl leading-[99px] font-[junge] text-[#0A66C2] mb-4 text-center">
+                  THE MINDS BEHIND THE CLUB
+                </h2>
+                <div className="grid grid-cols-2 mb:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  {clubMembers.map((member, index) => (
+                    <div key={index} className="flex flex-col items-center">
+                      <img
+                        src={member.icon}
+                        className="h-24 w-24 rounded-full line-clamp-1"
+                        alt={member.name}
+                      />
+                      <h3 className="text-lg text-center font-[poppins] font-[500]">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm font-[poppins] font-[300]">
+                        {member.position}
+                      </p>
+                      <p className="text-xs text-blue-600 font-[poppins] font-[300]">
+                        {member.email}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </SwiperSlide>}
+          </SwiperSlide>
+          {events && events.length > 0 && (
+            <SwiperSlide>
+              <div className="overflow-y-scroll h-full text-white px-4">
+                <h1 className="text-3xl text-center text-blue-700 font-[poppins] mb-4">
+                  {events[0].title}
+                </h1>
+                <img
+                  src={events[0].image}
+                  className=" h-72 w-full object-contain rounded-lg"
+                  alt="Event"
+                ></img>
+                <p className="my-4 whitespace-pre-line">
+                  {events[0].description}
+                </p>
+                <p className="text-blue-700 font-semibold font-serif">
+                  Venue:{" "}
+                  <span className="text-white font-normal italic">
+                    {events[0].location}
+                  </span>
+                </p>
+                <p className="text-blue-700 font-semibold font-serif">
+                  Date:{" "}
+                  <span className="text-white font-normal italic">
+                    {events[0].date +
+                      " " +
+                      events[0].month +
+                      ", " +
+                      events[0].year}
+                  </span>
+                </p>
+                {events && events.length>1 && (
+                  <h2 className="text-2xl font-bold text-blue-70 font-serif py-4">
+                    Explore More
+                  </h2>
+                )}
+                <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-4">
+                  {events && 
+                    events.map(
+                      (event, index) =>
+                        index > 0 && (
+                          <EventCard key={index} event={event} />
+                        )
+                    )}
+                </div>
+              </div>
+            </SwiperSlide>
+          )}
           <SwiperSlide>
             <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-scroll h-full">
               {images.map((image, index) => (
@@ -344,64 +458,6 @@ const ClubTemplate = ({
               )}
             </div>
           </SwiperSlide> */}
-          <SwiperSlide>
-            <div className="p-6 overflow-y-scroll h-full">
-              <div className="flex gap-8 mb-8 items-center">
-                <img
-                  src={`/club_logo/${clubLogo}`}
-                  className="h-16 w-16"
-                  alt="Logo"
-                ></img>
-                {/* <div className=""> */}
-                  <h2 className="text-4xl font-[600] font-[poppins] text-[#0A66C2]">
-                    {clubName}
-                  </h2>                  
-                {/* </div> */}
-              </div>
-              <div className="flex flex-col gap-4 mb-8">
-                {/* <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">
-                  What are we about
-                </h2> */}
-                <p className="text-sm font-[poppins]">{clubDescription}</p>
-              </div>
-              {/* <div className="flex flex-col gap-4 mb-8">
-                               <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">What do we do</h2>
-                               <p className="text-sm font-[poppins]">{clubAgenda}</p>
-                           </div>
-                           <div className="flex flex-col gap-4 mb-8">
-                               <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">Why should you join us?</h2>
-                               <p className="text-sm font-[poppins]">By joining the ClubTemplate Club, you'll gain access to a wealth of resources, including:</p>
-                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Knowledge:</strong> Stay updated with the latest trends and developments in ClubTemplate technology. </p>
-                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Community:</strong> Be part of a supportive and enthusiastic group that shares your passion for ClubTemplate. </p>
-                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Innovation:</strong> Contribute to cutting-edge projects and be at the forefront of ClubTemplate innovation. </p>
-                           </div> */}
-              <div className="flex flex-col gap-4 mb-8">
-                <h2 className="text-2xl md:text-4xl tracking-wider leading-[99px] font-[junge] text-[#0A66C2] mb-12 text-center">
-                  THE MINDS BEHIND THE CLUB
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                  {clubMembers.map((member, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                      <img
-                        src={member.icon}
-                        className="h-24 w-24 rounded-full line-clamp-1"
-                        alt={member.name}
-                      />
-                      <h3 className="text-lg text-center font-[poppins] font-[500]">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm font-[poppins] font-[300]">
-                        {member.position}
-                      </p>
-                      <p className="text-xs text-blue-600 font-[poppins] font-[300]">
-                        {member.email}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
         </Swiper>
         {isEnlargedView && (
           <div className="fixed z-50 w-full inset-0 bg-black bg-opacity-75 flex justify-center items-center">
@@ -430,6 +486,66 @@ const ClubTemplate = ({
             </button>
           </div>
         )}
+
+        {/* Footer */}
+        <footer className="club-bp:hidden flex flex-col justify-center items-center h-16 bg-[#101323] py-4 text-white">
+          <div className="flex space-x-4">
+            {instagram && (
+              <a
+                href={instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-500"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+            )}
+            {linkedin && (
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+            )}
+            {twitter && (
+              <a
+                href={twitter}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+            )}
+            {youtube && (
+              <a
+                href={youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-500"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+            )}
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+            )}
+          </div>
+          {/* <hr className="w-[90%]" /> */}
+          <p className="text-sm font-[poppins]">
+            &copy; 2024 <span className="text-[#0A66C2]">{clubName}</span> All Rights Reserved
+          </p>
+        </footer>
       </div>
     </div>
   );

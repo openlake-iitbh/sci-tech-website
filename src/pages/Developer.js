@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
@@ -17,7 +17,7 @@ export const Card = ({ src, name, role }) => {
 function Developer() {
     const [member, setMember] = useState([
         {
-            src: "/developer/Arbaz Shaikh.jpg",
+            src: "/developer/Arbaz shaikh.jpg",
             name: "Arbaz Shaikh",
             role: "Developer"
         },
@@ -37,11 +37,14 @@ function Developer() {
             role: "Developer"
         }, 
         {
-            src: "sai.jpg",
+            src: "/developer/sai.jpg",
             name: "Sai Surya",
             role: "UI/UX Designer"
         }       
     ]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className="home-bg text-white min-h-screen pb-10">

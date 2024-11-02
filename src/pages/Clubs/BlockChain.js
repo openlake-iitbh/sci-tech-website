@@ -95,6 +95,19 @@ const clubMembers = [
 const BlockChain = () => {
     const images = getGalleryImages('blockchain');
     const events = EventDetails.filter(event => event.club === 'BIB');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
     return (
         <ClubTemplate
             clubName="BlockChain Club"

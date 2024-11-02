@@ -112,6 +112,19 @@ const clubMembers = [
 const Ingenuity = () => {
     const images = getGalleryImages('ingenuity');
     const events = EventDetails.filter(event => event.club === 'Ingenuity');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
     return (
         <ClubTemplate
             clubName="Ingenuity"
