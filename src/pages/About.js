@@ -37,7 +37,7 @@ export const OurStory = () => {
 
 const teamMembers = [
   {
-    name: "Ojus Goel",
+    name: "Sidhesh Kumar Patra",
     position: "General Secretary",
     email: "ojusg@iitbhilai.ac.in",
     phone: "+91-8708943859",
