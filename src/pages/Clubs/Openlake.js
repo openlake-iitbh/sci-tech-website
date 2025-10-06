@@ -18,71 +18,47 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        icon: "/openlake/member_image/Nishchay Rajput.jpg",
-        name: "Nishchay Rajput",
-        position: "Coordinator",
-        email: "nishchayr@iitbhilai.ac.in"
-    },
-    {
-        icon: "/openlake/member_image/sumit_pathak.jpg",
-        name: "Sumit Pathak",
-        position: "Coordinator",
-        email: "sumitkum@iitbhilai.ac.in"
-    },
-    {
-        icon: "/openlake/member_image/Amay_Dixit_12340220.png",
+        icon: "/openlake/member_image/Amay_OpenLake.png",
         name: "Amay Dixit",
-        position: "Core Member",
+        position: "Coordinator",
         email: "amayd@iitbhilai.ac.in"
     },
     {
-        icon: "/openlake/member_image/Arbaz shaikh_11zon.jpg",
-        name: "Arbaz Shaikh",
+        icon: "/openlake/member_image/Divyansh.jpg",
+        name: "Divyansh",
         position: "Core Member",
-        email: "shaikharbaz@iitbhilai.ac.in"
+        email: "DummyEmail@iitbhilai.ac.in"
     },
     {
-        icon: "/openlake/member_image/Divyanshu_Prakash_11zon.jpg",
-        name: "Divyanshu Prakash",
+        icon: "/openlake/member_image/Harshit Kandpal.jpg",
+        name: "Harshit Kandpal",
         position: "Core Member",
-        email: "divyanshup@iitbhilai.ac.in"
+        email: "harshitka@iitbhilai.ac.in"
     },
     {
-        icon: "/openlake/member_image/Hemanth.jpeg",
-        name: "Puneti Hemanth Kumar Reddy",
+        icon: "/openlake/member_image/sakshi shamrao jadahv.jpg",
+        name: "Sakshi Shamrao Jadhav",
         position: "Core Member",
-        email: "punetihemanth@iitbhilai.ac.in"
+        email: "sakshij@iitbhilai.ac.in"
     },
     {
-        icon: "/openlake/member_image/Kriti_arora_11zon.jpg",
-        name: "Kriti Arora",
+        icon: "/openlake/member_image/SLOK TULSYAN 1.jpg",
+        name: "Slok Tulsyan",
         position: "Core Member",
-        email: "kritia@iitbhilai.ac.in"
+        email: "slokt@iitbhilai.ac.in"
     },
     {
-        icon: "/openlake/member_image/Nidhi Singh_11zon.jpg",
-        name: "Nidhi Singh",
+        icon: "/openlake/member_image/Thanmaei.jpg",
+        name: "Thanmaie",
         position: "Core Member",
-        email: "nidhis@iitbhilai.ac.in"
+        email: "naginenitha@iitbhilai.ac.in"
     },
     {
-        icon: "/openlake/member_image/Nishant.jpg",
-        name: "Nishant Verma",
+        icon: "/openlake/member_image/Saurav.jpg",
+        name: "Saurav",
         position: "Core Member",
-        email: "nishantv@iitbhilai.ac.in"
-    },
-    {
-        icon: "/openlake/member_image/sachin_prakash.jpg",
-        name: "Sachin prakash",
-        position: "Core Member",
-        email: "sachinp@iitbhilai.ac.in"
-    },
-    {
-        icon: "/openlake/member_image/Shashank Pant.jpg",
-        name: "Shashank Pant",
-        position: "Core Member",
-        email: "shashankp@iitbhilai.ac.in"
-    },
+        email: "DummyEmail@iitbhilai.ac.in"
+    }
 ]
 
 const Openlake = () => {

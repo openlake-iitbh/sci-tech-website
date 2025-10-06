@@ -3,7 +3,7 @@ import { importAll } from './importAll';
 const paths = {
   epsilon: require.context('../../public/epsilon/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
   ses: require.context('../../public/ses/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
-  // blockchain: require.context('../../public/bib/gallery', false, /\.(png|jpe?g|svg|gif)$/),
+  blockchain: require.context('../../public/bib/gallery', false, /\.(png|jpe?g|svg|gif)$/),
   ingenuity: require.context('../../public/ingenuity/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
   openlake: require.context('../../public/openlake/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
   electromos: require.context('../../public/electromos/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),

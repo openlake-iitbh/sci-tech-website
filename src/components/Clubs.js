@@ -22,7 +22,7 @@ const CircularImages = () => {
       name: "Electromos",
       href:"/club/electromos"
     },
-    { src: "club_logo/DSAI.png", alt: "Spectra Logo", name: "Spectra" , href:"/club/spectra"},
+    { src: "club_logo/Spectre Logo.png", alt: "Spectre Logo", name: "Spectra" , href:"/club/spectra"},
   ];
 
   const centerX = 50; // Center X coordinate (percentage)
