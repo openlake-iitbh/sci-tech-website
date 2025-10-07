@@ -36,41 +36,114 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        icon: "/dsai/member_image/Bhavik_12240410.jpg",
-        name: "Bhavik Shangari",
+        icon: "/dsai/member_image/Kesav_DSAI.jpg",
+        name: "Kesav Patneedi",
         position: "Coordinator",
-        email: "bhaviks@iitbhilai.ac.i"
+        email: "kesavp@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Hemanth_12140660.jpeg",
-        name: "Gaddey Hemanth Chowdary",
+        icon: "/dsai/member_image/VarunRao_DSAI.jpg",
+        name: "Varun Rao",
         position: "Coordinator",
-        email: "gaddeyhemanth@iitbhilai.ac.in"
+        email: "varunr@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Nishant.jpg",
-        name: "Nishant Verma",
+        icon: "/dsai/member_image/Akhileshkumar yadav.jpg",
+        name: "Akhilesh Kumar Yadav",
         position: "Core Member",
-        email: "nishantv@iitbhilai.ac.in"
+        email: "akhileshksanjay@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Ashutosh_12340390.jpg",
-        name: "Ashutosh Kumar Jha",
+        icon: "/dsai/member_image/Aman Pratap Singh.JPEG",
+        name: "Aman Pratap Singh",
         position: "Core Member",
-        email: "ashutoshj@iitbhilai.ac.in"
+        email: "amanpratapsingh@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Uday_bhardwaj.jpg",
-        name: "Uday Bharadwaj",
+        icon: "/dsai/member_image/Devanshu.jpg",
+        name: "Devanshu Sabharwal",
         position: "Core Member",
-        email: "udayb@iitbhilai.ac.in"
+        email: "devanshusabh@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Naga Jaswanth.jpeg",
-        name: "Naga Jaswanth",
+        icon: "/dsai/member_image/Farhan.jpeg",
+        name: "Farhan",
         position: "Core Member",
-        email: "gantanag@iitbhilai.ac.in"
+        email: "farhana@iitbhilai.ac.in"
     },
+    {
+        icon: "/dsai/member_image/Kinshuk Gupta.jpg",
+        name: "Kinshuk Gupta",
+        position: "Core Member",
+        email: "kinshukg@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Neha_Bharti.jpg",
+        name: "Neha Bharti",
+        position: "Core Member",
+        email: "nehabharti@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Om_Anand.jpg",
+        name: "Om Anand",
+        position: "Core Member",
+        email: "oma@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Pranay.jpg",
+        name: "Pranay",
+        position: "Core Member",
+        email: "sbpranay@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/RahulRaj.jpg",
+        name: "Rahul Raj",
+        position: "Core Member",
+        email: "rahulr@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Rudra.jpg",
+        name: "Rudra Dudhat",
+        position: "Core Member",
+        email: "rudramd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Sarthak_image.jpg",
+        name: "Sarthak",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/ShashankYadav.jpg",
+        name: "Shashank Yadav",
+        position: "Core Member",
+        email: "shashanky@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Shri.jpg",
+        name: "Shri",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Siddhesh.jpg",
+        name: "Siddesh Bansal",
+        position: "Core Member",
+        email: "siddheshb@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Vidit_.jpg",
+        name: "Vidit Shrimali",
+        position: "Core Member",
+        email: "vidits@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/VIresh Koli.jpg",
+        name: "Viresh Koli",
+        position: "Core Member",
+        email: "vireshtusharkoli@iitbhilai.ac.in"
+    },
+    
 ]
 
 const DSAI = () => {
