@@ -18,89 +18,77 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        icon: "/ses/member_image/ASTRO_SEC_SaiKamal12341470_11zon.jpg",
-        name: "Sai Kamal Nannuri",
-        position: "Coordinator",
-        email: "nannurik@iitbhilai.ac.in"
+        icon: "/ses/member_image/Kushaal_Kumar_Pothula_SES_Astro.jpg",
+        name: "Kushaal Kumar Pothula",
+        position: "Secretory",
+        email: "kushaalkp@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/AERO_SEC_Sidhesh Kumar Patra_12342060.jpeg",
-        name: "Sidhesh Kumar Patra",
-        position: "Coordinator",
-        email: "sidheshp@iitbhilai.ac.in"
+        icon: "/ses/member_image/ADITYA_GIRISH_SEOKAR_ses_aero.jpg",
+        name: "Aditya Girish Seokar",
+        position: "Secretory",
+        email: "adityags@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Ajay Chikate _12340580_11zon.jpg",
-        name: "Ajay Chikate",
+        icon: "/ses/member_image/Copy of AKD.jpg",
+        name: "Ashish Kumar Dash",
         position: "Core Member",
-        email: "chikated@iitbhilai.ac.in"
+        email: "ashishkd@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Aviral saxena_12340410.jpg",
-        name: "Aviral Saxena",
+        icon: "/ses/member_image/Copy of Eashan Hasija.jpg",
+        name: "Eashan Hasija",
         position: "Core Member",
-        email: "avirals@iitbhilai.ac.in"
+        email: "eashanh@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Anaay Sahu-12340240.jpg",
-        name: "Anaay Sahu",
+        icon: "/ses/member_image/Copy of IMG-20240819-WA0053.jpg",
+        name: "Atharv Hire",
         position: "Core Member",
-        email: "anaays@iitbhilai.ac.in"
+        email: "hireas@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Prashant Asati.jpg",
-        name: "Prashant Asati",
+        icon: "/ses/member_image/Copy of Janvijay.jpeg",
+        name: "Janvijay Singh",
         position: "Core Member",
-        email: "prashanta@iitbhilai.ac.in"
+        email: "janvijay@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Ragini Mehta 12241420.jpg",
-        name: "Ragini Vinay Mehta",
+        icon: "/ses/member_image/Copy of Karan.jpg",
+        name: "Karan Kumar Prasad",
         position: "Core Member",
-        email: "raginivi@iitbhilai.ac.in"
+        email: "karankp@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Shashank Yadav-12342010.jpg",
-        name: "Shashank Yadav",
+        icon: "/ses/member_image/Copy of shubham_jha.jpg",
+        name: "Shubham Jha",
         position: "Core Member",
-        email: "shashanky@iitbhilai.ac.in"
+        email: "shubhamkj@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/Kesav Patneedi.jpg",
-        name: "Keshav Patneedi",
+        icon: "/ses/member_image/Copy of Sumagna.jpg",
+        name: "Sumagna Das",
         position: "Core Member",
-        email: "kesavp@iitbhilai.ac.in"
+        email: "sumagnaa@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/snehal_suhane_11zon.jpg",
-        name: "Snehal Suhane",
+        icon: "/ses/member_image/Copy of Thanmaie_.png",
+        name: "Thanmaie Nagineni",
         position: "Core Member",
-        email: "snehals@iitbhilai.ac.in"
+        email: "naginenitha@iitbhilai.ac.in"
     },
     {
-        icon: "/ses/member_image/SVS Rohit _12342200.jpg",
-        name: "SVS Rohit",
+        icon: "/ses/member_image/Copy of V Varshitha.jpg",
+        name: "V Varshitha",
         position: "Core Member",
-        email: "swarnas@iitbhilai.ac.in"
-    },
+        email: "vadlamuruvk@iitbhilai.ac.in"
+    },  
     {
-        icon: "/ses/member_image/Ankit Rath-(12340290).jpg",
-        name: "Ankit Rath",
+        icon: "/ses/member_image/Copy of 20250420_162112.jpg",
+        name: "Anushka Gawande",
         position: "Core Member",
-        email: "ankitr@iitbhilai.ac.in"
-    },
-    {
-        icon: "/ses/member_image/Kushagra Katare - 12341290.jpg",
-        name: "Kushagra Katare",
-        position: "Core Member",
-        email: "kushagrak@iitbhilai.ac.in"
-    },
-    {
-        icon: "/ses/member_image/Aditya Jha 12340090.jpg",
-        name: "Aditya Jha",
-        position: "Core Member",
-        email: "adityaj@iitbhilai.ac.in"
-    }    
+        email: "anushkage@iitbhilai.ac.in"
+    }, 
 ]
 
 const SES = () => {
@@ -139,3 +127,4 @@ Established in 2017, SES quickly became a beacon for space enthusiasts, organizi
 }
 
 export default SES;
+
