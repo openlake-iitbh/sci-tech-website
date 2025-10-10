@@ -18,40 +18,40 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        icon: "/dsai/member_image/Bhavik_12240410.jpg",
-        name: "Bhavik Shangari",
-        position: "Coordinator",
-        email: "bhaviks@iitbhilai.ac.i"
+        icon: "/motorsports/member_image/AdityaNarayanThakur_Captain_Motorsports.jpg",
+        name: "Aditya Narayan Thakur",
+        position: "Captain",
+        email: "adityant@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Hemanth_12140660.jpeg",
-        name: "Gaddey Hemanth Chowdary",
-        position: "Coordinator",
-        email: "gaddeyhemanth@iitbhilai.ac.in"
+        icon: "/motorsports/member_image/Swagat - VC Motorsports.jpg",
+        name: "Swagat Baghel",
+        position: "Vice Captain",
+        email: "swagatb@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Nishant.jpg",
-        name: "Nishant Verma",
+        icon: "/motorsports/member_image/Akshay.jpg",
+        name: "Akshay",
+        position: "Core member",
+        email: "nomulana@iitbhilai.ac.in"
+    },
+    {
+        icon: "/motorsports/member_image/Atharva Hire.jpg",
+        name: "Atharva Hire",
         position: "Core Member",
-        email: "nishantv@iitbhilai.ac.in"
+        email: "hireas@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Ashutosh_12340390.jpg",
-        name: "Ashutosh Kumar Jha",
+        icon: "/motorsports/member_image/Divij Sharma.jpeg",
+        name: "Divij Sharma",
         position: "Core Member",
-        email: "ashutoshj@iitbhilai.ac.in"
+        email: "divijs@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Uday_bhardwaj.jpg",
-        name: "Uday Bharadwaj",
+        icon: "/motorsports/member_image/Neeraj.jpg",
+        name: "Neeraj",
         position: "Core Member",
-        email: "udayb@iitbhilai.ac.in"
-    },
-    {
-        icon: "/dsai/member_image/Naga Jaswanth.jpeg",
-        name: "Ganta Naga Jaswanth",
-        position: "Core Member",
-        email: "gantanag@iitbhilai.ac.in"
+        email: "gadink@iitbhilai.ac.in"
     },
 ]
 
@@ -68,7 +68,7 @@ const Motorsports = () => {
             images={images}
             blogs={blogs}
             clubMembers={clubMembers}
-            clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
+            clubDescription="The Motorsports Team at IIT Bhilai is a powerhouse of innovation, engineering excellence, and passion for speed. It brings together talented students who design, build, and race high-performance vehicles, combining creativity with cutting-edge automotive technology. Through hands-on projects, technical workshops, and national competitions, the team transforms ideas into machines that embody precision and teamwork. By fusing theory with real-world engineering, the team prepares its members to drive the future of sustainable and intelligent mobility."
         />
     );
 }

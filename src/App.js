@@ -16,6 +16,7 @@ import SES from './pages/Clubs/Ses';
 import Epsilon from './pages/Clubs/Epsilon';
 import Openlake from './pages/Clubs/Openlake';
 import Motorsports from './pages/Clubs/Motorsports';
+import Spectre from './pages/Clubs/Spectre';
 import GDSC from './pages/Clubs/Gdsc';
 import Gallery from './pages/Gallery';
 import PageNotFound from './pages/PageNotFound';
@@ -35,14 +36,15 @@ function App() {
       <Route path='/gallery' element={<Gallery />}></Route>
       <Route path='/blogs/individual/:value' element={<IndividualCard />}></Route>
       <Route path='/club/dsai' element={<DSAI />}></Route>
-      {/* <Route path='/club/blockchain' element={<BlockChain />}></Route> */}
+      <Route path='/club/blockchain' element={<BlockChain />}></Route>
       <Route path='/club/ingenuity' element={<Ingenuity />}></Route>
       <Route path='/club/electromos' element={<Electromos />}></Route>
       <Route path='/club/ses' element={<SES />}></Route>
       <Route path='/club/epsilon' element={<Epsilon />}></Route>
       <Route path='/club/openlake' element={<Openlake />}></Route>
-      {/* <Route path='/club/motorsports' element={<Motorsports />}></Route>
-      <Route path='/club/gdsc' element={<GDSC />}></Route> */}
+      <Route path='/club/motorsports' element={<Motorsports />}></Route>
+      <Route path='/club/spectre' element={<Spectre />}></Route>
+      <Route path='/club/gdsc' element={<GDSC />}></Route>
 
       <Route path="*" element={<PageNotFound/>}></Route>
 

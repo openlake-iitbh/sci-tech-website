@@ -36,59 +36,41 @@ const blogs = [
 ];
 const clubMembers = [
     {
-        icon: "/bib/member_image/Arya.jpg",
-        name: "Arya Rajesh Lanjewar",
-        position: "Coordinator",
-        email: "lanjewararya@iitbhilai.ac.in"
-    },
-    {
-        icon: "/bib/member_image/Nikhil.jpg",
-        name: "Nikhil Kumar Shrey",
-        position: "Coordinator",
-        email: "nikhilkumar@iitbhilai.ac.in"
-    },
-    {
-        icon: "/bib/member_image/Nidhi.jpg",
-        name: "Nidhi Singh",
-        position: "Core Member",
-        email: "nidhis@iitbhilai.ac.in"
-    },
-    {
-        icon: "/bib/member_image/ashutosh.jpg",
-        name: "Ashutosh Kumar Jha",
-        position: "Core Member",
-        email: "ashutoshj@iitbhilai.ac.in"
-    },
-    {
-        icon: "/bib/member_image/amay.png",
-        name: "Amay Dixit",
-        position: "Core Member",
-        email: "amayd@iitbhilai.ac.in"
-    },
-    {
-        icon: "/bib/member_image/vasu.jpg",
+        icon: "/bib/member_image/vasu_BIB.png",
         name: "Vasu Garg",
-        position: "Core Member",
+        position: "Coordinator",
         email: "vasug@iitbhilai.ac.in"
     },
     {
-        icon: "/bib/member_image/theo.jpg",
-        name: "Putla Theophila",
+        icon: "/bib/member_image/Divij Sharma.jpeg",
+        name: "Divij Sharma",
         position: "Core Member",
-        email: "putlat@iitbhilai.ac.in"
+        email: "divijs@iitbhilai.ac.in"
     },
     {
-        icon: "/bib/member_image/pranay.jpg",
-        name: "Pranay Thapak",
+        icon: "/bib/member_image/harshit_k.jpg",
+        name: "Harshit Kandpal",
         position: "Core Member",
-        email: "pranayt@iitbhilai.ac.in"
+        email: "harshitka@iitbhilai.ac.in"
     },
     {
-        icon: "/bib/member_image/Abhay.jpg",
-        name: "Abhayveer Oberoi",
+        icon: "/bib/member_image/Harshita.jpg",
+        name: "Harshita Sharma",
         position: "Core Member",
-        email: "abhayveer@iitbhilai.ac.in"
+        email: "harshitas@iitbhilai.ac.in"
     },
+    {
+        icon: "/bib/member_image/Parth_Bhosale.png",
+        name: "Parth Bhosale",
+        position: "Core Member",
+        email: "parthnb@iitbhilai.ac.in"
+    },
+    {
+        icon: "/bib/member_image/VEDANT.jpg",
+        name: "Vedant Chandak",
+        position: "Core Member",
+        email: "cvedant@iitbhilai.ac.in"
+    }
 
 ]
 
