@@ -8,8 +8,9 @@ const paths = {
   openlake: require.context('../../public/openlake/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
   electromos: require.context('../../public/electromos/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
   dsai: require.context('../../public/dsai/gallery', false, /\.(png|jpe?g|svg|gif)$/),
-  // gdsc: require.context('../../public/gdsc/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
-  // motorsports: require.context('../../public/motorsports/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
+  gdsc: require.context('../../public/gdsc/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
+  motorsports: require.context('../../public/motorsports/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
+  spectre: require.context('../../public/spectre/gallery', false, /\.(png|JPG|jpe?g|svg|gif)$/),
     // Add more paths as needed
   };
 
