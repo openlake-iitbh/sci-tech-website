@@ -2,13 +2,16 @@ import React, { useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import TimelineSection from "../components/Timeline";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const OurStory = () => {
   return (
     <div className="text-white max-h-screen flex flex-col sm:flex-row m-4 md:m-8 overflow-hidden rounded-lg font-[poppins]">
       {/* Image */}
       <div className="flex-1">
-        <img
+        <LazyLoadImage
+        effect="blur"
           src="timeline.png"
           className="h-48 sm:h-full w-full object-cover sm:object-fill"
           alt="Our Story"
@@ -170,7 +173,8 @@ const MemberCard = ({ member, index }) => {
       key={index}
       className="border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center"
     >
-      <img
+      <LazyLoadImage
+      effect="blur"
         src={member.image}
         alt={member.name}
         className="w-24 h-24 rounded-full mb-4"
@@ -242,7 +246,8 @@ function About() {
                   </p>
                 </div>
                 <div className="flex flex-1 justify-center">
-                  <img
+                  <LazyLoadImage
+                  effect="blur"
                     src="mission.png"
                     alt="Mission"
                     className="mission rounded-lg h-60 max-w-full object-contain"
@@ -262,7 +267,8 @@ function About() {
                   </p>
                 </div>
                 <div className="flex flex-1 justify-center order-2 lg:order-1">
-                  <img
+                  <LazyLoadImage
+                  effect="blur"
                     src="vision.png"
                     alt="Vision"
                     className="vision rounded-lg h-60 max-w-full object-contain"
@@ -285,7 +291,8 @@ function About() {
                   </p>
                 </div>
                 <div className="flex flex-1 justify-center">
-                  <img
+                  <LazyLoadImage
+                  effect="blur"
                     src="values.png"
                     alt="Values"
                     className="values rounded-lg h-60 max-w-full object-contain"

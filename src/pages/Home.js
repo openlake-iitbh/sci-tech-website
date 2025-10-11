@@ -10,6 +10,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import BlogCard from "../components/BlogCard";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import CircularImages from "../components/Clubs";
 
 function Home() {
@@ -53,7 +56,7 @@ function Home() {
           className="w-full h-full rounded-lg "
         >
           <SwiperSlide>
-            <img
+            <LazyLoadImage
               className="m-auto h-full w-full object-cover"
               src="/Devfest_Bhilai x ShutterStories (407 of 71).jpg"
               alt="slide1"
@@ -79,7 +82,7 @@ function Home() {
       <section id="achievements" className="section-5 text-white sm:py-8">
         <div className="flex flex-col mb:flex-row justify-center mb:items-center backdrop-blur-[3px] ">
           <div className="mb:w-1/2 px-4 order-2 mb:order-1 flex justify-center">
-            <img
+            <LazyLoadImage
               src="Eyantra.png"
               alt="Achievements"
               className="h-56 w-auto mb-2 sm:h-auto max-h-96 mb:w-full object-fill object-center rounded-md shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300"
@@ -135,7 +138,7 @@ function Home() {
             </div>
           </div>
           <div className="px-4 flex justify-center">
-            <img
+            <LazyLoadImage
               src="history.jpeg"
               alt="History"
               className="h-48 sm:h-auto mb:my-2 object-cover shadow-lg rounded-md transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300"

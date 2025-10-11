@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 export const Card = ({ src, name, role }) => {
     return (
         <div className="flex items-end bg-gray-800 p-4 h-48 w-60 rounded-t-[65px] rounded-b-md relative  ">
-            <img className="w-44 h-44 absolute -top-[80%] inset-0 m-auto object-center object-cover rounded-[65px] rounded-bl-[0] mx-auto" src={src} alt={`${name}`} />
+            <LazyLoadImage effect="blur" className="w-44 h-44 absolute -top-[80%] inset-0 m-auto object-center object-cover rounded-[65px] rounded-bl-[0] mx-auto" src={src} alt={`${name}`} />
             <div className="text-center w-full">
                 <h1 className="mt-4 text-lg text-[#0A66C2] font-[poppins] font-bold">{name}</h1>
                 <h2 className="text-gray-400 font-[poppins]">{role}</h2>
@@ -49,7 +50,7 @@ function Developer() {
     return (
         <div className="home-bg text-white min-h-screen pb-10">
             <div className="relative">
-                <img src="/development.jpg" className="w-full h-[60vh] object-cover opacity-30" alt="bg" />
+                <LazyLoadImage effect="blur" src="/development.jpg" className="w-full h-[60vh] object-cover opacity-30" alt="bg" />
                 <div className="absolute inset-0 flex flex-col">
                     <NavBar />
                     <div className="flex-grow flex justify-center items-center">
