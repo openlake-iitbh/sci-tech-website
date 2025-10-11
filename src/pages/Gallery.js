@@ -1,7 +1,8 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { getGalleryImages } from "../utils/getGalleryImages";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import React, { useEffect, useState } from "react";
 
 const Gallery = () => {
@@ -61,14 +62,15 @@ const Gallery = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-8">
         {images.map((img, index) => (
           <div key={index} className="p-2 rounded-md">
-            <img
+            <LazyLoadImage
+              effect = "blur"
               src={img}
               alt={img}
               className="hover-shadow rounded-md cursor-pointer w-full h-full object-cover"
               onClick={() => {
                 openModal();
                 currentSlide(index + 1);
-              }}
+              }} 
             />
           </div>
         ))}
@@ -93,10 +95,11 @@ const Gallery = () => {
                 <div className="numbertext absolute top-0 left-0 m-2 text-white text-sm">
                   {index + 1} / {images.length}
                 </div>
-                <img
+                <LazyLoadImage
+                  effect = "blur"
                   src={`${img}`}
                   className="w-full object-center object-contain"
-                  alt={img}
+                  alt={img} 
                 />
               </div>
             ))}
@@ -117,7 +120,8 @@ const Gallery = () => {
                         </div> */}
             <div className="flex gap-2 h-36 overflow-x-scroll scrollbar-hide mt-4">
               {images.map((img, index) => (
-                <img
+                <LazyLoadImage
+                  effect = "blur"
                   key={index}
                   id={`thumbnail-${index}`}
                   className={`demo cursor-pointer hover:opacity-100 ${

@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 // import SwiperCore from 'swiper';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
@@ -130,7 +132,7 @@ const TimelineSection = () => {
                     >
                         <SwiperSlide>
                             <div className="bg-[#101323] p-6 rounded-lg ">
-                                <img src="timeline.png" alt="Event 1" className="rounded-lg mb-4" />
+                                <LazyLoadImage effect='blur' src="timeline.png" alt="Event 1" className="rounded-lg mb-4" />
                                 <h4 className="text-xl font-semibold font-[poppins]">Performance at IIT Hyderabad by IIT Bhilai</h4>
                                 <p className="text-sm leading-relaxed mt-2">
                                     Explore the remarkable journey of our SciTech Club, highlighting key moments and significant accomplishments that have shaped our legacy.
@@ -139,7 +141,7 @@ const TimelineSection = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="bg-[#101323] p-6 rounded-lg ">
-                                <img src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
+                                <LazyLoadImage effect='blur' src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
                                 <h4 className="text-xl font-semibold">Performance at IIT Hyderabad by IIT Bhilai</h4>
                                 <p className="text-sm leading-relaxed mt-2">
                                     Explore the remarkable journey of our SciTech Club, highlighting key moments and significant accomplishments that have shaped our legacy.
@@ -148,7 +150,7 @@ const TimelineSection = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="bg-[#101323] p-6 rounded-lg">
-                                <img src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
+                                <LazyLoadImage effect='blur' src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
                                 <h4 className="text-xl font-semibold">Performance at IIT Hyderabad by IIT Bhilai</h4>
                                 <p className="text-sm leading-relaxed mt-2">
                                     Explore the remarkable journey of our SciTech Club, highlighting key moments and significant accomplishments that have shaped our legacy.
@@ -157,7 +159,7 @@ const TimelineSection = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="bg-[#101323] p-6 rounded-lg">
-                                <img src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
+                                <LazyLoadImage effect='blur' src="timeline.png" alt="Event 2" className="rounded-lg mb-4" />
                                 <h4 className="text-xl font-semibold">Performance at IIT Hyderabad by IIT Bhilai</h4>
                                 <p className="text-sm leading-relaxed mt-2">
                                     Explore the remarkable journey of our SciTech Club, highlighting key moments and significant accomplishments that have shaped our legacy.

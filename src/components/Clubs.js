@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const CircularImages = () => {
   const images = [
     { src: "club_logo/GDSC.png", alt: "GDSC Club", name: "GDSC", href:"/club/gdsc" },
@@ -53,7 +54,8 @@ const CircularImages = () => {
     <div className="h-full w-full mx-auto">
       {/* Center Image */}
       <div className="relative h-full w-[100vh] max-w-full mx-auto">
-        <img
+        <LazyLoadImage
+        effect="blur"
           src="scitechgif.gif"
           alt="Center"
           className="absolute w-28 h-28 sm:w-32 sm:h-32 lg:w-44 lg:h-44 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -85,7 +87,8 @@ const CircularImages = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <img
+              <LazyLoadImage
+              effect="blur"
                 src={img.src}
                 alt={img.alt}
                 className="w-14 h-14 sm:w-16 sm:h-16 lg:w-24 lg:h-24 "
