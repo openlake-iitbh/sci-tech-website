@@ -54,7 +54,7 @@ const CircularImages = () => {
     <div className="h-full w-full mx-auto">
       {/* Center Image */}
       <div className="relative h-full w-[100vh] max-w-full mx-auto">
-        <LazyLoadImage
+        <img
         effect="blur"
           src="scitechgif.gif"
           alt="Center"
