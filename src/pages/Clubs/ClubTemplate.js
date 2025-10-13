@@ -6,6 +6,8 @@ import "swiper/css/navigation";
 import BlogCard from "../../components/BlogCard";
 import EventCard from "../../components/EventCard";
 import { use } from "framer-motion/client";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ClubTemplate = ({
   clubName,
@@ -81,7 +83,9 @@ const ClubTemplate = ({
       <div className="hidden w-1/4 sm:flex flex-col p-2 h-full">
         <div className="flex items-center justify-center gap-2">
           <a href="/">
-            <img
+            <LazyLoadImage
+            effect="blur"
+              effect="blur"
               src={`/club_logo/${clubLogo}`}
               alt="Logo"
               className="h-8 w-8 sm:h-14 sm:w-14"
@@ -265,11 +269,12 @@ const ClubTemplate = ({
           <SwiperSlide>
             <div className="p-6 overflow-y-scroll h-full">
               <div className="flex gap-8 mb-8 items-center">
-                <img
+                <LazyLoadImage
+                effect="blur"
                   src={`/club_logo/${clubLogo}`}
                   className="h-16 w-16"
                   alt="Logo"
-                ></img>
+                /> 
                 {/* <div className=""> */}
                 <h2 className="text-4xl font-[600] font-[poppins] text-[#0A66C2]">
                   {clubName}
@@ -300,11 +305,13 @@ const ClubTemplate = ({
                 <div className="grid grid-cols-2 mb:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                   {clubMembers.map((member, index) => (
                     <div key={index} className="flex flex-col items-center">
-                      <img
-                        src={member.icon}
-                        className="h-24 w-24 rounded-full line-clamp-1"
-                        alt={member.name}
-                      />
+                      <LazyLoadImage
+                      effect="blur"
+                      src={member.icon}
+                      alt={member.name}
+                      className="h-24 w-24 rounded-full object-cover object-center"
+                    />
+
                       <h3 className="text-lg text-center font-[poppins] font-[500]">
                         {member.name}
                       </h3>
@@ -326,11 +333,12 @@ const ClubTemplate = ({
                 <h1 className="text-3xl text-center text-blue-700 font-[poppins] mb-4">
                   {events[0].title}
                 </h1>
-                <img
+                <LazyLoadImage
+                effect="blur"
                   src={events[0].image}
                   className=" h-72 w-full object-contain rounded-lg"
                   alt="Event"
-                ></img>
+                /> 
                 <p className="my-4 whitespace-pre-line">
                   {events[0].description}
                 </p>
@@ -370,7 +378,8 @@ const ClubTemplate = ({
           <SwiperSlide>
             <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-scroll h-full">
               {images.map((image, index) => (
-                <img
+                <LazyLoadImage
+                effect="blur"
                   key={index}
                   onClick={() => openImage(index)}
                   src={image}
@@ -412,7 +421,8 @@ const ClubTemplate = ({
                   <div className="w-full h-full rounded-md p-4 overflow-auto">
                     <div className="flex flex-col justify-center items-center mt-[2%]">                      
                       <div className="h-48 w-full px-8">
-                        <img
+                        <LazyLoadImage
+                        effect="blur"
                           className="w-full h-full object-cover object-center rounded-xl"
                           src="/blog.png"
                           alt="Blog"
@@ -473,7 +483,8 @@ const ClubTemplate = ({
             >
               <i className="fas fa-chevron-left fa-2x  text-blue-800"></i>
             </button>
-            <img
+            <LazyLoadImage
+            effect="blur"
               src={images[selectedImage]}
               alt=""
               className="w-2/3 h-2/3 rounded-md object-contain bg-center"
