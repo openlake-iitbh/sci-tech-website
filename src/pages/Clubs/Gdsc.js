@@ -17,44 +17,57 @@ const blogs = [
     // Add more blog objects here as needed
 ];
 const clubMembers = [
+    // Coordinator
     {
-        icon: "/dsai/member_image/Bhavik_12240410.jpg",
-        name: "Bhavik Shangari",
+        icon: "/gdsc/members/Saurav Gupta .jpg",
+        name: "Saurav Gupta",
         position: "Coordinator",
-        email: "bhaviks@iitbhilai.ac.i"
+        email: "sauravg@iitbhilai.ac.in"
     },
+    // Core Members
     {
-        icon: "/dsai/member_image/Hemanth_12140660.jpeg",
-        name: "Gaddey Hemanth Chowdary",
-        position: "Coordinator",
-        email: "gaddeyhemanth@iitbhilai.ac.in"
-    },
-    {
-        icon: "/dsai/member_image/Nishant.jpg",
-        name: "Nishant Verma",
+        icon: "/gdsc/members/Rohit.jpg",
+        name: "Rohit Raghuwanshi",
         position: "Core Member",
-        email: "nishantv@iitbhilai.ac.in"
+        email: "rohitrg@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Ashutosh_12340390.jpg",
-        name: "Ashutosh Kumar Jha",
+        icon: "/gdsc/members/AKD.jpg",
+        name: "Ashish Kumar Dash",
         position: "Core Member",
-        email: "ashutoshj@iitbhilai.ac.in"
+        email: "ashishkd@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Uday_bhardwaj.jpg",
-        name: "Uday Bharadwaj",
+        icon: "/gdsc/members/Pranay_GDG.jpeg",
+        name: "SB Pranay",
         position: "Core Member",
-        email: "udayb@iitbhilai.ac.in"
+        email: "sbpranay@iitbhilai.ac.in"
     },
     {
-        icon: "/dsai/member_image/Naga Jaswanth.jpeg",
-        name: "Ganta Naga Jaswanth",
+        icon: "/gdsc/members/Umap_Utkarsh.jpg",
+        name: "Umap Utkarsh Sharad",
         position: "Core Member",
-        email: "gantanag@iitbhilai.ac.in"
+        email: "umapus@iitbhilai.ac.in"
     },
+    {
+        icon: "/gdsc/members/Siddhi Singh",
+        name: "Siddhi Singh",
+        position: "Core Member",
+        email: "siddhiss@iitbhilai.ac.in"
+    },
+    {
+        icon: "/gdsc/members/Swarit.jpg",
+        name: "Swarit Dixit",
+        position: "Core Member",
+        email: "swaritd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/gdsc/members/Chaithali.jpg",
+        name: "Bodike Chaithali",
+        position: "Core Member",
+        email: "chaithalib@iitbhilai.ac.in"
+    }
 ]
-
 const GDSC = () => {
     const images = getGalleryImages('gdsc');
 

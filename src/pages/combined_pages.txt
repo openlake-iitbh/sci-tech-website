@@ -1,0 +1,3069 @@
+
+--- File: ./About.js ---
+import React, { useEffect } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import TimelineSection from "../components/Timeline";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+export const OurStory = () => {
+  return (
+    <div className="text-white max-h-screen flex flex-col sm:flex-row m-4 md:m-8 overflow-hidden rounded-lg font-[poppins]">
+      {/* Image */}
+      <div className="flex-1">
+        <LazyLoadImage
+        effect="blur"
+          src="timeline.png"
+          className="h-48 sm:h-full w-full object-cover sm:object-fill"
+          alt="Our Story"
+        />
+      </div>
+      <div className="flex-1 bg-[#101323] flex items-center justify-center py-8 px-8">
+        <div className="flex flex-col items-center justify-center gap-4 md:gap-6">
+          <h1 className="text-2xl md:text-4xl font-[junge] font-semibold text-center">
+            OUR <span className="text-sky-500">STORY</span>
+          </h1>
+          <p className="text-lg md:text-2xl font-[junge] text-center">
+            "Innovate, Collaborate, Excel"
+          </p>
+          <p className="text-sm md:text-base text-center">
+            "At IIT Bhilai, the Scitech Council was born from a shared passion
+            for innovation and a desire to create a vibrant community centered
+            around science and technology. Inspired by the limitless
+            possibilities of discovery, we set out to build a space where
+            curiosity could thrive and ideas could flourish."
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const teamMembers = [
+  {
+    name: "Sidhesh Kumar Patra",
+    position: "General Secretary",
+    email: "ojusg@iitbhilai.ac.in",
+    phone: "+91-8708943859",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ojus.png", // replace with actual image URL
+  },
+  {
+    name: "Bhavik Shangari",
+    position: "DSAI Coordinator",
+    email: "bhaviks@iitbhilai.ac.in",
+    phone: "+91-9636455905",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/dsai/member_image/Bhavik_12240410.jpg", // replace with actual image URL
+  },
+  {
+    name: "Gaddey Hemanth Chowdary",
+    position: "DSAI Coordinator",
+    email: "gaddeyhemanth@iitbhilai.ac.in",
+    phone: "+91-9494248739",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/dsai/member_image/Hemanth_12140660.jpeg", // replace with actual image URL
+  },
+  {
+    name: "Nishchay Rajput",
+    position: "Openlake Coordinator",
+    email: "nishchayr@iitbhilai.ac.in",
+    phone: "+91-9770552422",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/openlake/member_image/Nishchay Rajput.jpg", // replace with actual image URL
+  },
+  {
+    name: "Sumit Pathak",
+    position: "Openlake Coordinator",
+    email: "sumitp@iitbhilai.ac.in",
+    phone: "+91-8306312679",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/openlake/member_image/sumit_pathak.jpg", // replace with actual image URL
+  },
+  {
+    name: "Arya Rajesh Lanjewar",
+    position: "Blockchain Coordinator",
+    email: "lanjewararya@iitbhilai.ac.in",
+    phone: "+91-9527705693",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/bib/member_image/Arya.jpg",
+  },
+  {
+    name: "Nikhil Kumar Shrey",
+    position: "Blockchain Coordinator",
+    email: "nikhilkumar@iitbhilai.ac.in",
+    phone: "+91-9111900797",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/bib/member_image/Nikhil.jpg",
+  },
+  {
+    name: "Omendra Kumar Upadhyay",
+    position: "Electromos Coordinator",
+    email: "omendrak@iitbhilai.ac.in",
+    phone: "+91-8247589701",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/electromos/member_image/omendra_12241200.jpg",
+  },
+  {
+    name: "Pradeep",
+    position: "Epsilon Coordinator",
+    email: "pradeepj@iitbhilai.ac.in",
+    phone: "+91-7010823512",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/epsilon/member_image/pradeep.png",
+  },
+  {
+    name: "Chetan",
+    position: "Epsilon Coordinator",
+    email: "chetan@iitbhilai.ac.in",
+    phone: "+91-9355844091",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/epsilon/member_image/Chetan.jpg",
+  },
+  {
+    name: "Koosh Gupta",
+    position: "Ingenuity Coordinator",
+    email: "kooshg@iitbhilai.ac.in",
+    phone: "+91-8250213794",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ingenuity/member_image/Koosh-Gupta_12240850.jpg",
+  },
+  {
+    name: "Manopriya Mondal",
+    position: "Ingenuity Coordinator",
+    email: "manopriyam@iitbhilai.ac.in",
+    phone: "+91-7595807122",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ingenuity/member_image/Manopriya-Mondal_12240970.jpg",
+  },
+  {
+    name: "Sai Kamal Nannuri",
+    position: "SES Secretary",
+    email: "nannurik@iitbhilai.ac.in",
+    phone: "+91-8019181868",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ses/member_image/ASTRO_SEC_SaiKamal12341470_11zon.jpg",
+  },
+  {
+    name: "Sidhesh Kumar Patra",
+    position: "SES Secretary",
+    email: "sidheshp@iitbhilai.ac.in",
+    phone: "+91-6371257931",
+    linkedin: "https://www.linkedin.com",
+    instagram: "https://www.instagram.com",
+    image: "/ses/member_image/AERO_SEC_Sidhesh Kumar Patra_12342060.jpeg",
+  },
+];
+
+const MemberCard = ({ member, index }) => {
+  return (
+    <div
+      key={index}
+      className="border border-solid border-[#EEE8F333] rounded-2xl p-6 flex flex-col items-center"
+    >
+      <LazyLoadImage
+      effect="blur"
+        src={member.image}
+        alt={member.name}
+        className="w-24 h-24 rounded-full mb-4"
+      />
+      <h3 className="text-xl text-center font-bold mb-2 text-[#0A66C2] line-clamp-1">
+        {member.name}
+      </h3>
+      <p className="text-sm mb-2">{member.position}</p>
+      <p className="text-sm mb-2">{member.email}</p>
+      <p className="text-sm mb-4">{member.phone}</p>
+      {/* <div className="flex space-x-2">
+        <a
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center font-[poppins] bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-full"
+        >
+          <i className="fab fa-linkedin-in mr-1"></i>LinkedIn
+        </a>
+        <a
+          href={member.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center font-[poppins] bg-pink-500 hover:bg-pink-600 text-white py-2 px-3 rounded-full"
+        >
+          <i className="fab fa-instagram mr-1"></i>Instagram
+        </a>
+      </div> */}
+    </div>
+  );
+};
+
+function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <div className="home-bg">
+      <div className="about-section-2 max-h-[640px]">
+        <NavBar />
+        <h1 className="w-fit text-[3rem] text-[#0A66C2]  font-bold m-auto mt-[12rem] backdrop-blur-[2px]">
+          About Us
+        </h1>        
+      </div>
+
+      {/* Adding everything based on the function */}
+      <OurStory />
+
+      {/* Corousel */}
+      {/* <TimelineSection /> */}
+
+      <section className="section-3">
+        <div className="py-16 text-white">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col gap-y-8 lg:gap-y-32">
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="bg-[#101323] p-6 rounded-lg text-center flex-1">
+                  <h3 className="text-4xl font-bold mb-4 tracking-wider font-[junge] text-[#0A66C2]">
+                    Our Mission
+                  </h3>
+                  <hr className="w-36 border-[#0A66C2] mx-auto my-4" />
+                  <p className="text-sm leading-relaxed">
+                    To foster a vibrant culture of curiosity and creativity by
+                    organizing engaging events, hands-on workshops, and
+                    collaborative projects. We aim to inspire students to push
+                    boundaries, develop cutting-edge solutions, and make
+                    impactful contributions to the world of science and
+                    technology.
+                  </p>
+                </div>
+                <div className="flex flex-1 justify-center">
+                  <LazyLoadImage
+                  effect="blur"
+                    src="mission.png"
+                    alt="Mission"
+                    className="mission rounded-lg h-60 max-w-full object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="bg-[#101323] p-6 rounded-lg text-center flex-1 order-1 lg:order-2">
+                  <h3 className="text-4xl font-bold mb-4 tracking-wider font-[junge] text-[#0A66C2]">
+                    Our Vision
+                  </h3>
+                  <hr className="w-36 border-[#0A66C2] mx-auto my-4" />
+                  <p className="text-sm leading-relaxed">
+                    SciTech council aims to be a dynamic hub of innovation and
+                    collaboration, where students are empowered to explore,
+                    create, and lead in science and technology.
+                  </p>
+                </div>
+                <div className="flex flex-1 justify-center order-2 lg:order-1">
+                  <LazyLoadImage
+                  effect="blur"
+                    src="vision.png"
+                    alt="Vision"
+                    className="vision rounded-lg h-60 max-w-full object-contain"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="bg-[#101323] p-6 rounded-lg text-center flex-1">
+                  <h3 className="text-4xl font-bold mb-4 tracking-wider font-[junge] text-[#0A66C2]">
+                    Our Values
+                  </h3>
+                  <hr className="w-36 border-[#0A66C2] mx-auto my-4" />
+                  <p className="text-sm leading-relaxed">
+                    We believe in the power of innovation and encourage the
+                    pursuit of new ideas and creative solutions. Our community
+                    thrives on collaboration, bringing together diverse
+                    perspectives to foster teamwork and shared success. We
+                    balance hard work with fun, ensuring that our activities are
+                    engaging, enjoyable, and memorable.
+                  </p>
+                </div>
+                <div className="flex flex-1 justify-center">
+                  <LazyLoadImage
+                  effect="blur"
+                    src="values.png"
+                    alt="Values"
+                    className="values rounded-lg h-60 max-w-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-4">
+        <div className="py-16 text-white">
+          <div className="container mx-auto">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl tracking-wider leading-[99px] font-[junge] text-[#0A66C2] mb-12 text-center">
+              MEET OUR CREATIVE MINDS
+            </h2>
+            <div className="pb-8 mx-2">
+              <MemberCard key={0} member={teamMembers[0]} index={0} />
+            </div>
+            <div className="mx-2 grid grid-cols-1 mb:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {teamMembers.slice(1).map((member, index) => (
+                <MemberCard key={index} member={member} index={index} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+export default About;
+
+--- File: ./Achievements.js ---
+import React, {useEffect} from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+
+const achievements = [
+  {
+    title: "Top 5 in International Micromouse competition, IIT Bombay",
+    details: "Recognized for Best bot design in Cosmoclench, IIT Bombay.",
+    participants: "Darshan Prajapati, Mohit, Santosh, Hemant",
+  },
+  {
+    title:
+      "ICPC team (Lemon) ranked 40 among all participating teams at Pune-Gwalior region",
+    details:
+      "Defeated top teams from IIT Kharagpur, Roorkee, Guwahati, Hyderabad, Indore, NIT Calicut, and IIIT Allahabad.",
+    participants: "Manish Salunkhe, Akshay Wairagade, Pravin Shankhapal",
+  },
+  {
+    title: "1st Prize in ELCTROBLITZ at IIIT Raipur",
+    participants: "Dhananjay, Mohit, Santosh",
+  },
+  {
+    title: "Cleared Stage 1 of E-yantra competition",
+    participants: "Divyanshu, Santosh, Shubham, Hemant",
+  },
+  {
+    title:
+      "Gold Medal in Inter IIT Tech Meet 11.0 for Cognitive Garage Problem Statement",
+    details: "Among 23 IITs, IIT Bhilai's contingent bagged the gold medal.",
+    participants:
+      "Vaibhav Arora (PS lead), Tushar Bansal, Madhur Jain, Chirag, Kriti Gupta",
+  },
+  {
+    title: "Google Summer of Code Selections",
+    details:
+      "GSoC is a global mentoring program for open-source contributions. Over the years, many students from IIT Bhilai have been selected.",
+    participants: `
+      GSoC '23: Prarabdh Shukla, Javed Habib, Shubham Balasaheb Dhaule, Aakash Thatte.
+      GSoC '22: Vemuganti Satvik, Ananya Hooda, Madhur Jain.
+      GSoC '21: Shashwat Jaiswal, Kumar Shivendu.
+      GSoC '19: Anand Panchbhai.`,
+  },
+  {
+    title: "Top 50 in Google Solutions Challenge 2022",
+    participants:
+      "Team Anton: Prakanshul Saxena, Prachir Agrawal, Harshil Singhal, Harshit Jajodia, Manas Wadhwa, Shaleen Malik",
+  },
+  {
+    title:
+      "Winners of Smart India Hackathon - Software Edition (SH1009, Ministry of Rural Development)",
+    participants:
+      "Prakanshul Saxena (Team lead), Prachir Agrawal, Harshil Singhal, Harshit Jajodia, Manas Wadhwa, Shaleen Malik",
+  },
+  {
+    title: "ICPC Regionals Qualification (2022-23)",
+    details:
+      "The International Collegiate Programming Contest is the oldest and most prestigious programming contest in the world.",
+    participants: "Shashwat Johri, Dakshraj Sadashiv Kashid, Sankalp Acharya",
+  },
+];
+
+const AchievementsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <div className="home-bg">
+      <div className="max-h-[640px] achievements">
+        <div className="backdrop-blur-[3px] h-full">
+        <NavBar />
+        <h1 className="text-2xl sm:text-4xl md:text-5xl h-2/3 ml-4 club-bp:ml-16 flex justify-start items-center font-bold text-cyan-500">
+          Achievements in Sci-Tech Council
+        </h1>
+        </div>
+      </div>
+      <div className="min-h-screen mt-4">
+        <div className="flex flex-col mx-2 mb:mx-8 sm:mx-8 md:mx-16 space-y-8">
+          {achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 shadow-lg rounded-lg p-6 hover:scale-105 transform transition-transform duration-300 text-white"
+            >
+              <h2 className="text-2xl font-semibold text-[#0A66C2] mb-2">
+                {achievement.title}
+              </h2>
+              {achievement.details && (
+                <p className="mb-2">{achievement.details}</p>
+              )}
+              <p className="font-medium">
+                <span className="font-bold text-blue-600">Participants: </span>
+                {achievement.participants}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default AchievementsPage;
+
+--- File: ./Blog.js ---
+import { useState } from "react";
+import BlogCard from "../components/BlogCard";
+import BlogHeader from "../components/HeaderBlog";
+import SideBar from "../components/SideBar";
+
+function Blog(){
+    //  Pointing the entry with the help of indexing
+    const [blogEntry , setBlogEntry] = useState([
+        {
+            title : "Sci-tech club weekly magazine",
+            author: "Aditya, Indian Institute of technology Bhilai",
+            time : "5 min read",
+            link :"#",
+            source : "",
+
+        },
+        {
+            title : "Sci-tech club weekly magazine",
+            author: "Aditya, Indian Institute of technology Bhilai",
+            time : "5 min read",
+            link :"#",
+            source : "",
+
+        },
+        {
+            title : "Sci-tech club weekly magazine",
+            author: "Aditya, Indian Institute of technology Bhilai",
+            time : "5 min read",
+            link :"#",
+            source : "",
+
+        },
+        {
+            title : "Sci-tech club weekly magazine",
+            author: "Aditya, Indian Institute of technology Bhilai",
+            time : "5 min read",
+            link :"#",
+            source : "",
+
+        },
+        {
+            title : "Sci-tech club weekly magazine",
+            author: "Aditya, Indian Institute of technology Bhilai",
+            time : "5 min read",
+            link :"#",
+            source : "",
+
+        },
+        {
+            title : "Sci-tech club weekly magazine",
+            author: "Aditya, Indian Institute of technology Bhilai",
+            time : "5 min read",
+            link :"#",
+            source : "",
+
+        },
+    ]);
+
+    return (
+        <div className="flex bg-black">
+            <SideBar name="Blogs"/>
+            {/* Remaining addition of the blog elements */}
+            <div className="w-[70%] ml-[30%] p-2">
+               <BlogHeader clubname="Block Chain Club"/>
+               <section id="blogs" className="py-2 text-white">
+                <div className="flex flex-wrap justify-center space-x-4">
+
+                    {/* This will help me for printing the individual details , as I will access them with the help of array (index) */}
+
+                    (
+                        {
+                            blogEntry.map((blog , index) => {
+                                return (<BlogCard key={index} title={blog.title} author={blog.author} time={blog.time} link={blog.link} value={index} />)
+                            })
+                        }
+                    )
+
+                </div>
+                <div className="text-center mt-8">
+                    <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+                        Learn More
+                    </button>
+                </div>
+            </section>
+            </div>
+        </div>
+    )
+}
+
+export default Blog;
+--- File: ./Clubs/BlockChain.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/bib/member_image/vasu_BIB.png",
+        name: "Vasu Garg",
+        position: "Coordinator",
+        email: "vasug@iitbhilai.ac.in"
+    },
+    {
+        icon: "/bib/member_image/Divij Sharma.jpeg",
+        name: "Divij Sharma",
+        position: "Core Member",
+        email: "divijs@iitbhilai.ac.in"
+    },
+    {
+        icon: "/bib/member_image/harshit_k.jpg",
+        name: "Harshit Kandpal",
+        position: "Core Member",
+        email: "harshitka@iitbhilai.ac.in"
+    },
+    {
+        icon: "/bib/member_image/Harshita.jpg",
+        name: "Harshita Sharma",
+        position: "Core Member",
+        email: "harshitas@iitbhilai.ac.in"
+    },
+    {
+        icon: "/bib/member_image/Parth_Bhosale.png",
+        name: "Parth Bhosale",
+        position: "Core Member",
+        email: "parthnb@iitbhilai.ac.in"
+    },
+    {
+        icon: "/bib/member_image/VEDANT.jpg",
+        name: "Vedant Chandak",
+        position: "Core Member",
+        email: "cvedant@iitbhilai.ac.in"
+    }
+
+]
+
+const BlockChain = () => {
+    const images = getGalleryImages('blockchain');
+    const events = EventDetails.filter(event => event.club === 'BIB');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="BlockChain Club"
+            clubLogo="BIB.png"
+            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
+            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
+            twitter="https://twitter.com/BlockchainClubI1"
+            youtube="https://youtube.com/@blockchainiitbh?feature=shared"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="Blockchain at IIT Bhilai (BIB) is the institute's vibrant blockchain society, committed to fostering innovation and knowledge in decentralized technologies. Our club offers a rich blend of workshops, expert lectures, and hackathons, providing a hands-on approach to learning and applying blockchain concepts. With a focus on collaboration and real-world application, BIB is the hub for students passionate about exploring blockchain's vast potential and driving technological advancement. Join us to be a part of the blockchain revolution and contribute to cutting-edge projects and research."
+        />
+    );
+}
+
+export default BlockChain;
+
+--- File: ./Clubs/ClubTemplate.js ---
+import React, { useRef, useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Controller } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import BlogCard from "../../components/BlogCard";
+import EventCard from "../../components/EventCard";
+import { use } from "framer-motion/client";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+const ClubTemplate = ({
+  clubName,
+  clubLogo,
+  instagram,
+  linkedin,
+  twitter,
+  youtube,
+  github,
+  images,
+  blogs,
+  events,
+  clubMembers,
+  clubAgenda,
+  clubDescription,
+}) => {
+  const swiperRef1 = useRef(null);
+  const swiperRef2 = useRef(null);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isEnlargedView, setIsEnlargedView] = useState(false);
+  const [isBlogVisible, setIsBlogVisible] = useState(false);
+  const [currentBlog, setCurrentBlog] = useState(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const openImage = (index) => {
+    setSelectedImage(index);
+    setIsEnlargedView(true);
+  };
+  window.addEventListener("keydown", (e) => {
+    if (isEnlargedView) {
+      if (e.key === "Escape") {
+        closeImage();
+      } else if (e.key === "ArrowLeft") {
+        navigateImage("prev");
+      } else if (e.key === "ArrowRight") {
+        navigateImage("next");
+      }
+    }
+  });
+
+  const closeImage = () => {
+    setIsEnlargedView(false);
+  };
+
+  const navigateImage = (direction) => {
+    if (direction === "prev") {
+      setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    } else {
+      setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }
+  };
+  const handleBlogClick = (blog) => {
+    setCurrentBlog(blog);
+    setIsBlogVisible(true);
+  };
+  const handleSlideChange = (index) => {
+    if (swiperRef1.current && swiperRef2.current) {
+      setActiveSlide(index);
+      swiperRef1.current.slideTo(index);
+      swiperRef2.current.slideTo(index);
+    }
+  };
+  
+  const onSlideChange = (swiper) => {
+    setActiveSlide(swiper.activeIndex);
+  };
+
+
+  return (
+    <div className="flex h-screen bg-[#101323] text-white">
+      <div className=""></div>
+      {/* Left Sidebar */}
+      <div className="hidden w-1/4 sm:flex flex-col p-2 h-full">
+        <div className="flex items-center justify-center gap-2">
+          <a href="/">
+            <LazyLoadImage
+            effect="blur"
+              effect="blur"
+              src={`/club_logo/${clubLogo}`}
+              alt="Logo"
+              className="h-8 w-8 sm:h-14 sm:w-14"
+            />
+          </a>
+          <a className="hidden sm:flex" href="/">
+            <h1 className="text-sm sm:text-xl font-[poppins]">{clubName}</h1>
+          </a>
+        </div>
+        <div className="flex flex-1 flex-col items-center justify-center relative">
+          <Swiper
+            allowTouchMove={false}
+            style={{ marginLeft: 0 }}
+            modules={[Navigation, Controller]}
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".swiper-button-nex",
+              prevEl: ".swiper-button-pre",
+            }}
+            direction="vertical"
+            className="w-32 h-48 "
+            onSwiper={(swiper) => {
+              swiperRef1.current = swiper;
+            }}
+            controller={{ control: swiperRef2.current }}
+            onSlideChange={onSlideChange}
+          >
+            <SwiperSlide>
+              <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
+                <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
+                  About
+                </h2>
+              </div>
+            </SwiperSlide>
+            {events && events.length > 0 && (
+              <SwiperSlide>
+                <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
+                  <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
+                    Events
+                  </h2>
+                </div>
+              </SwiperSlide>
+            )}
+            <SwiperSlide>
+              <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
+                <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
+                  Gallery
+                </h2>
+              </div>
+            </SwiperSlide>
+            {/* <SwiperSlide>
+              <div className="absolute top-1/2  transform -translate-x-1/4 lg:-translate-x-0 -translate-y-1/2 -rotate-90">
+                <h2 className="text-5xl text-[#EEE8F3] font-bold font-[junge]">
+                  Blogs
+                </h2>
+              </div>
+            </SwiperSlide> */}
+          </Swiper>
+          <hr className="absolute border -rotate-90 border-[#EEE8F3] w-full" />
+          <div className="absolute right-1/4 flex flex-col items-center space-y-2 mt-4">
+            <button className="hover:transform hover:scale-150 text-4xl swiper-button-pre">
+              <i className="fas fa-chevron-up"></i>
+            </button>
+            <button className="hover:transform hover:scale-150 text-4xl swiper-button-nex">
+              <i className="fas fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col w-full bg-[#030617] h-screen">
+        {/* Header */}
+        <div className=" p-4 flex justify-between sm:justify-end items-center over">
+          {/* <h2 className="sm:text-2xl font-bold"></h2> */}
+          <div className="sm:hidden flex space-x-4 items-center">
+            <a href="/" className="text-white hover:text-blue-500 pr-4">
+              <h1 className="text-xl sm:text-xl font-[poppins]">{clubName}</h1>
+            </a>
+            <a
+              onClick={() => handleSlideChange(0)}
+              href="#"
+              className={`text-xl ${
+                activeSlide === 0 ? "text-[#0A66C2] underline" : "text-white"
+              }`}
+            >
+              About
+            </a>
+            {events && (
+              <a
+                onClick={() => handleSlideChange(1)}
+                href="#"
+                className={`text-xl ${
+                  activeSlide === 1 ? "text-[#0A66C2] underline" : "text-white"
+                }`}
+              >
+                Events
+              </a>
+            )}
+            <a
+              onClick={() => handleSlideChange(2)}
+              href="#"
+              className={`text-xl ${
+                activeSlide === 2 ? "text-[#0A66C2] underline" : "text-white"
+              }`}
+            >
+              Gallery
+            </a>
+          </div>
+          <div className="hidden club-bp:flex space-x-4">
+            {instagram && (
+              <a
+                href={instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-500"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+            )}
+            {linkedin && (
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+            )}
+            {twitter && (
+              <a
+                href={twitter}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+            )}
+            {youtube && (
+              <a
+                href={youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-500"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+            )}
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+            )}
+          </div>
+        </div>
+
+        {/* Swiper Section */}
+        <Swiper
+          allowTouchMove={false}
+          modules={[Navigation, Controller]}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation={{
+            nextEl: ".swiper-button-nex",
+            prevEl: ".swiper-button-pre",
+          }}
+          direction="vertical"
+          // onSwiper={(swiper) => {
+          //   swiperRef2.current = swiper;
+          // }}
+          // controller={{ control: swiperRef1.current }}
+        >
+          <SwiperSlide>
+            <div className="p-6 overflow-y-scroll h-full">
+              <div className="flex gap-8 mb-8 items-center">
+                <LazyLoadImage
+                effect="blur"
+                  src={`/club_logo/${clubLogo}`}
+                  className="h-16 w-16"
+                  alt="Logo"
+                /> 
+                {/* <div className=""> */}
+                <h2 className="text-4xl font-[600] font-[poppins] text-[#0A66C2]">
+                  {clubName}
+                </h2>
+                {/* </div> */}
+              </div>
+              <div className="flex flex-col gap-4 mb-8">
+                {/* <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">
+                  What are we about
+                </h2> */}
+                <p className="text-[1rem] club-bp:text-xl font-[poppins]">{clubDescription}</p>
+              </div>
+              {/* <div className="flex flex-col gap-4 mb-8">
+                               <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">What do we do</h2>
+                               <p className="text-sm font-[poppins]">{clubAgenda}</p>
+                           </div>
+                           <div className="flex flex-col gap-4 mb-8">
+                               <h2 className="text-xl font-[400] font-[poppins] text-[#0A66C2]">Why should you join us?</h2>
+                               <p className="text-sm font-[poppins]">By joining the ClubTemplate Club, you'll gain access to a wealth of resources, including:</p>
+                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Knowledge:</strong> Stay updated with the latest trends and developments in ClubTemplate technology. </p>
+                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Community:</strong> Be part of a supportive and enthusiastic group that shares your passion for ClubTemplate. </p>
+                               <p className='text-sm font-[poppins] font-[400]'><strong className='font-[600]'>Innovation:</strong> Contribute to cutting-edge projects and be at the forefront of ClubTemplate innovation. </p>
+                           </div> */}
+              <div className="flex flex-col gap-4 mb-8">
+                <h2 className="text-xl mb:text-2xl md:text-4xl leading-[99px] font-[junge] text-[#0A66C2] mb-4 text-center">
+                  THE MINDS BEHIND THE CLUB
+                </h2>
+                <div className="grid grid-cols-2 mb:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  {clubMembers.map((member, index) => (
+                    <div key={index} className="flex flex-col items-center">
+                      <LazyLoadImage
+                      effect="blur"
+                      src={member.icon}
+                      alt={member.name}
+                      className="h-24 w-24 rounded-full object-cover object-center"
+                    />
+
+                      <h3 className="text-lg text-center font-[poppins] font-[500]">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm font-[poppins] font-[300]">
+                        {member.position}
+                      </p>
+                      <p className="text-xs text-blue-600 font-[poppins] font-[300]">
+                        {member.email}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          {events && events.length > 0 && (
+            <SwiperSlide>
+              <div className="overflow-y-scroll h-full text-white px-4">
+                <h1 className="text-3xl text-center text-blue-700 font-[poppins] mb-4">
+                  {events[0].title}
+                </h1>
+                <LazyLoadImage
+                effect="blur"
+                  src={events[0].image}
+                  className=" h-72 w-full object-contain rounded-lg"
+                  alt="Event"
+                /> 
+                <p className="my-4 whitespace-pre-line">
+                  {events[0].description}
+                </p>
+                <p className="text-blue-700 font-semibold font-serif">
+                  Venue:{" "}
+                  <span className="text-white font-normal italic">
+                    {events[0].location}
+                  </span>
+                </p>
+                <p className="text-blue-700 font-semibold font-serif">
+                  Date:{" "}
+                  <span className="text-white font-normal italic">
+                    {events[0].date +
+                      " " +
+                      events[0].month +
+                      ", " +
+                      events[0].year}
+                  </span>
+                </p>
+                {events && events.length>1 && (
+                  <h2 className="text-2xl font-bold text-blue-70 font-serif py-4">
+                    Explore More
+                  </h2>
+                )}
+                <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-4">
+                  {events && 
+                    events.map(
+                      (event, index) =>
+                        index > 0 && (
+                          <EventCard key={index} event={event} />
+                        )
+                    )}
+                </div>
+              </div>
+            </SwiperSlide>
+          )}
+          <SwiperSlide>
+            <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-scroll h-full">
+              {images.map((image, index) => (
+                <LazyLoadImage
+                effect="blur"
+                  key={index}
+                  onClick={() => openImage(index)}
+                  src={image}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover cursor-pointer rounded-lg"
+                />
+              ))}
+              {/* Add more images as needed */}
+            </div>
+          </SwiperSlide>
+          {/* <SwiperSlide>
+            <div className="relative h-full">
+              <div
+                className={`p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-scroll h-full ${
+                  isBlogVisible
+                    ? "opacity-0 pointer-events-none"
+                    : "opacity-100"
+                }`}
+              >
+                {blogs.map((blog, index) => (
+                  <BlogCard
+                    key={index}
+                    onClick={() => handleBlogClick(blog)}
+                    title={blog.title}
+                    author={blog.author}
+                    time={blog.time}
+                  />
+                ))}
+              </div>
+
+              {isBlogVisible && (
+                <div className="fixed z-50 inset-0 bg-opacity-75 flex justify-end items-center transition-all transform translate-x-0">
+                  <button
+                    onClick={() => setIsBlogVisible(false)}
+                    className="absolute top-4 left-4 text-white"
+                  >
+                    <i class="fas fa-arrow-left text-white" />
+                  </button>
+                  <div className="w-full h-full rounded-md p-4 overflow-auto">
+                    <div className="flex flex-col justify-center items-center mt-[2%]">                      
+                      <div className="h-48 w-full px-8">
+                        <LazyLoadImage
+                        effect="blur"
+                          className="w-full h-full object-cover object-center rounded-xl"
+                          src="/blog.png"
+                          alt="Blog"
+                        />
+                      </div>
+                      <div className="px-6 py-4 flex flex-1 flex-col gap-3">
+                        <div className="text-blue-500 text-lg font-bold sm:text-2xl lg:text-3xl mb-2">
+                          {currentBlog.title}
+                        </div>
+                        <p className="text-gray-700 dark:text-gray-300 text-base">
+                          {currentBlog.author}
+                        </p>
+
+                        <div className="flex space-x-2 items-center">
+                          <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.0859 1.17161C12.8893 0.737754 11.7362 0.544264 10.724 0.527077C9.14323 0.551556 8.04948 0.981504 7.5 1.24895C6.95052 0.981504 5.83073 0.551035 4.29167 0.526556C3.25 0.525254 2.09375 0.744004 0.914062 1.17161C0.369271 1.36848 0 1.8914 0 2.47187V10.3599C0 10.7417 0.179036 11.0906 0.491927 11.3182C0.799479 11.5404 1.18568 11.6042 1.5526 11.4948C4.64896 10.5485 7.00313 11.9909 7.13333 12.0727C7.23438 12.1307 7.32292 12.1932 7.47656 12.1932C7.64635 12.1932 7.7401 12.1314 7.84297 12.074C8.1237 11.8998 10.4029 10.5724 13.4237 11.4941C13.7911 11.6047 14.1753 11.5396 14.4849 11.3167C14.8203 11.0891 15 10.7401 15 10.3599V2.47187C15 1.89166 14.6302 1.369 14.0859 1.17161ZM7.08333 11.1021C6.43359 10.7888 5.23411 10.3372 3.6849 10.3372C2.96016 10.3372 2.16146 10.4365 1.31016 10.6958C1.19542 10.7308 1.07578 10.7113 0.979687 10.6425C0.885937 10.5734 0.833333 10.451 0.833333 10.3599V2.47187C0.833333 2.24117 0.978177 2.03359 1.19427 1.95546C2.28281 1.56041 3.33073 1.35859 4.28385 1.35989C5.63281 1.38098 6.61979 1.75729 7.08333 1.97604V11.1021ZM14.1667 10.3599C14.1667 10.4738 14.1142 10.5743 14.021 10.6422C13.9229 10.7126 13.8049 10.7313 13.6905 10.6975C11.0443 9.89114 8.88802 10.6411 7.91667 11.1073V1.97604C8.38021 1.75729 9.36719 1.38098 10.7135 1.35989C11.6331 1.35825 12.7016 1.55479 13.8073 1.95572C14.0208 2.03385 14.1667 2.24114 14.1667 2.47187V10.3599Z"
+                              fill="#94A3B8"
+                            />
+                          </svg>
+
+                          <p className="text-gray-700 dark:text-gray-300 text-base">
+                            {currentBlog.time}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h1 className="font-semibold text-xl mt-2">
+                        {" "}
+                        Exploring The Boundaries Of Spaces :
+                      </h1>
+                      <p>{currentBlog.content}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </SwiperSlide> */}
+        </Swiper>
+        {isEnlargedView && (
+          <div className="fixed z-50 w-full inset-0 bg-black bg-opacity-75 flex justify-center items-center">
+            <button
+              onClick={closeImage}
+              className="absolute top-4 right-4 text-white"
+            >
+              <i className="fas fa-times fa-2x text-red-500"></i>
+            </button>
+            <button
+              onClick={() => navigateImage("prev")}
+              className="absolute left-[15%] text-white"
+            >
+              <i className="fas fa-chevron-left fa-2x  text-blue-800"></i>
+            </button>
+            <LazyLoadImage
+            effect="blur"
+              src={images[selectedImage]}
+              alt=""
+              className="w-2/3 h-2/3 rounded-md object-contain bg-center"
+            />
+            <button
+              onClick={() => navigateImage("next")}
+              className="absolute right-[15%] text-white"
+            >
+              <i className="fas fa-chevron-right fa-2x text-blue-800"></i>
+            </button>
+          </div>
+        )}
+
+        {/* Footer */}
+        <footer className="club-bp:hidden flex flex-col justify-center items-center h-16 bg-[#101323] py-4 text-white">
+          <div className="flex space-x-4">
+            {instagram && (
+              <a
+                href={instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-500"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+            )}
+            {linkedin && (
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+            )}
+            {twitter && (
+              <a
+                href={twitter}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+            )}
+            {youtube && (
+              <a
+                href={youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-red-500"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+            )}
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="text-white hover:text-blue-500"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+            )}
+          </div>
+          {/* <hr className="w-[90%]" /> */}
+          <p className="text-sm font-[poppins]">
+            &copy; 2024 <span className="text-[#0A66C2]">{clubName}</span> All Rights Reserved
+          </p>
+        </footer>
+      </div>
+    </div>
+  );
+};
+
+export default ClubTemplate;
+
+--- File: ./Clubs/Dsai.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/dsai/member_image/Kesav_DSAI.jpg",
+        name: "Kesav Patneedi",
+        position: "Coordinator",
+        email: "kesavp@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/VarunRao_DSAI.jpg",
+        name: "Varun Rao",
+        position: "Coordinator",
+        email: "varunr@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Akhileshkumar yadav.jpg",
+        name: "Akhilesh Kumar Yadav",
+        position: "Core Member",
+        email: "akhileshksanjay@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Aman Pratap Singh.JPEG",
+        name: "Aman Pratap Singh",
+        position: "Core Member",
+        email: "amanpratapsingh@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Devanshu.jpg",
+        name: "Devanshu Sabharwal",
+        position: "Core Member",
+        email: "devanshusabh@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Farhan.jpeg",
+        name: "Farhan",
+        position: "Core Member",
+        email: "farhana@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Kinshuk Gupta.jpg",
+        name: "Kinshuk Gupta",
+        position: "Core Member",
+        email: "kinshukg@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Neha_Bharti.jpg",
+        name: "Neha Bharti",
+        position: "Core Member",
+        email: "nehabharti@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Om_Anand.jpg",
+        name: "Om Anand",
+        position: "Core Member",
+        email: "oma@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Pranay.jpg",
+        name: "Pranay",
+        position: "Core Member",
+        email: "sbpranay@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/RahulRaj.jpg",
+        name: "Rahul Raj",
+        position: "Core Member",
+        email: "rahulr@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Rudra.jpg",
+        name: "Rudra Dudhat",
+        position: "Core Member",
+        email: "rudramd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Sarthak_image.jpg",
+        name: "Sarthak",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/ShashankYadav.jpg",
+        name: "Shashank Yadav",
+        position: "Core Member",
+        email: "shashanky@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Shri.jpg",
+        name: "Shri",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Siddhesh.jpg",
+        name: "Siddesh Bansal",
+        position: "Core Member",
+        email: "siddheshb@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Vidit_.jpg",
+        name: "Vidit Shrimali",
+        position: "Core Member",
+        email: "vidits@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/VIresh Koli.jpg",
+        name: "Viresh Koli",
+        position: "Core Member",
+        email: "vireshtusharkoli@iitbhilai.ac.in"
+    },
+    
+]
+
+const DSAI = () => {
+    const images = getGalleryImages('dsai');
+    const events = EventDetails.filter((event) => event.club === "DSAI");
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="DSAI"
+            clubLogo="/DSAI.png"
+            instagram="https://www.instagram.com/dsai_iitbhilai/"
+            linkedin="https://www.linkedin.com/company/data-science-and-artificial-intelligence-club-iit-bhilai/"
+            twitter="https://twitter.com/DSAI_IITBHILAI"
+            github="https://github.com/dsai-iitbhilai"
+            youtube="https://www.youtube.com/@datascienceaiclubiitbhilai5876"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
+        />
+    );
+}
+
+export default DSAI;
+
+--- File: ./Clubs/Electromos.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/electromos/member_image/omendra_12241200.jpg",
+        name: "Omendra Kumar Upadhyay",
+        position: "Coordinator",
+        email: "omendrak@iitbhilai.ac.in"
+    },
+    {
+        "name": "Minal Bisen",
+        "email": "minalb@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/Minal Bisen (PhD, EE).jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Ayush Kumar",
+        "email": "ayushkumar@iitbhiali.ac.in",
+        "icon": "/electromos/member_image/Ayush.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Divit Sharma",
+        "email": "divits@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/Divit EE 2023.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Alapati Nagasai",
+        "email": "alapatin@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/nagasai.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Ragini Vinay Mehta",
+        "email": "raginivi@iitbhiali.ac.in",
+        "icon": "/electromos/member_image/Ragini.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Rohan Kumar Mishra",
+        "email": "rohankum@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/Rohan.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Rohit Rajkumar Dhamale",
+        "email": "rohitraj@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/Rohit.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Sai Sampath",
+        "email": "bellalas@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/Sai Sampath EE 2022.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Daksh",
+        "email": "daksh@iitbhilai.ac.in",
+        "icon": "/electromos/member_image/Daksh.jpg",
+        "position": "Core Member"
+    }
+]
+
+const Electromos = () => {
+    const images = getGalleryImages('electromos');
+    const events = EventDetails.filter(event => event.club === 'Electromos');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="Electromos"
+            clubLogo="Electromos.png"
+            instagram="https://www.instagram.com/electromos.iitbh/"
+            linkedin="https://www.linkedin.com/company/electromos-sci-tech-club-iit-bhilai/"
+            twitter="https://twitter.com/"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="Electromos, the one and only electronics club of IIT Bhilai has always been the epicentre for electronics research and projects in the Sci-Tech community of this institute.
+Every year a bunch of electronics enthusiast gather to foster this club and propagate the knowledge of electronics and it's domain in the institute.
+We work in IoT, Signal processing, VLSI, control systems etc and intrested students also participate in the hackathons and projects related to this domain.
+Joining this dynamic, workaholic and open minded club is a must in your college life."
+        />
+    );
+}
+
+export default Electromos;
+
+--- File: ./Clubs/Epsilon.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        "icon": "/epsilon/member_image/pradeep.png",
+        "name": "Pradeep",
+        "position": "Coordinator",
+        "email": "pradeepj@iitbhilai.ac.in"
+    },
+    {
+        "icon": "/epsilon/member_image/Chetan.jpg",
+        "name": "Chetan",
+        "position": "Coordinator",
+        "email": "chetan@iitbhilai.ac.in"
+    },
+    {
+        "name": "Anand Vardhan",
+        "email": "anandv@iitbhilai.ac.in",
+        "icon": "/epsilon/member_image/anand.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Harsh Katole",
+        "email": "harshpk@iitbhilai.ac.in",
+        "icon": "/epsilon/member_image/harsh.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Khushi Dutta",
+        "email": "khushid@iitbhilai.ac.in",
+        "icon": "/epsilon/member_image/khushid.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Khushi Sharma",
+        "email": "khushisa@iitbhilai.ac.in",
+        "icon": "/epsilon/member_image/khushis.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Kirtiraj Tilakdhari Jamnotiya",
+        "email": "kirtiraj@iitbhilai.ac.in",
+        "icon": "/epsilon/member_image/kirti.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Raj Mohammad",
+        "email": "rajmohammad@iitbhilai.ac.in",
+        "icon": "/epsilon/member_image/raj.jpg",
+        "position": "Core Member"
+    }
+]
+
+const Epsilon = () => {
+    const images = getGalleryImages('epsilon');
+    const events = EventDetails.filter(event=> event.club === 'Epsilon');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="Epsilon"
+            clubLogo="epsilon_logo_new.png"
+            instagram="https://www.instagram.com/roboticsclub_iitbhilai/"
+            linkedin="https://www.linkedin.com/company/the-epsilon-club-iit-bhilai-robotics-club/"
+            youtube="https://www.youtube.com/@theepsilonclubiitbhilai2447/featured"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
+        />
+    );
+}
+
+export default Epsilon;
+
+--- File: ./Clubs/Gdsc.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/dsai/member_image/Bhavik_12240410.jpg",
+        name: "Bhavik Shangari",
+        position: "Coordinator",
+        email: "bhaviks@iitbhilai.ac.i"
+    },
+    {
+        icon: "/dsai/member_image/Hemanth_12140660.jpeg",
+        name: "Gaddey Hemanth Chowdary",
+        position: "Coordinator",
+        email: "gaddeyhemanth@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Nishant.jpg",
+        name: "Nishant Verma",
+        position: "Core Member",
+        email: "nishantv@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Ashutosh_12340390.jpg",
+        name: "Ashutosh Kumar Jha",
+        position: "Core Member",
+        email: "ashutoshj@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Uday_bhardwaj.jpg",
+        name: "Uday Bharadwaj",
+        position: "Core Member",
+        email: "udayb@iitbhilai.ac.in"
+    },
+    {
+        icon: "/dsai/member_image/Naga Jaswanth.jpeg",
+        name: "Ganta Naga Jaswanth",
+        position: "Core Member",
+        email: "gantanag@iitbhilai.ac.in"
+    },
+]
+
+const GDSC = () => {
+    const images = getGalleryImages('gdsc');
+
+    return (
+        <ClubTemplate
+            clubName="GDSC"
+            clubLogo="GDSC.png"
+            instagram="https://www.instagram.com/dsc_iitbhilai/"
+            linkedin="https://www.linkedin.com/company/developer-student-club-iit-bhilai/"
+            twitter=""
+            images={images}
+            blogs={blogs}
+            clubMembers={clubMembers}
+            clubDescription="The Data Science and Artificial Intelligence Club at IIT Bhilai is a dynamic hub for aspiring tech enthusiasts. It accelerates learning through cutting-edge workshops, exciting hackathons, and real-world projects. By bridging theory and practice, the club transforms students into innovative problem-solvers, ready to tackle the challenges of tomorrow's AI-driven world."
+        />
+    );
+}
+
+export default GDSC;
+
+--- File: ./Clubs/Ingenuity.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [    
+    {
+        "icon": "/ingenuity/member_image/Koosh-Gupta_12240850.jpg",
+        name: "Koosh Gupta",
+        position: "Coordinator",
+        email: "kooshg@iitbhilai.ac.in"
+    },
+    {
+        "icon": "/ingenuity/member_image/Manopriya-Mondal_12240970.jpg",
+        name: "Manopriya Mondal",
+        position: "Coordinator",
+        email: "manopriyam@iitbhilai.ac.in"
+    },
+    {
+        "name": "Arpan Goswami",
+        "email": "arpang@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Arpan-Goswami_12240250.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Divyanshu Prakash",
+        "email": "divyanshup@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Divyanshu-Prakash_12240540.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Ujjwal Raj",
+        "email": "ujjwalr@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Ujjwal-Raj_12241920.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Naga Jaswanth",
+        "email": "gantanag@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Ganta-Naga-Jaswanth_12240570.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Priyanshu Kishore",
+        "email": "priyanshuk@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Priyanshu-Kishore_12241370.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Puneti Hemanth Kumar Reddy",
+        "email": "punetihemanth@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Hemanth_12241390.jpeg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Amay Dixit",
+        "email": "amayd@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Amay-Dixit_12340220.png",
+        "position": "Core Member"
+    },
+    {
+        "name": "Raj Mohammad",
+        "email": "rajmohammad@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Raj-Mohammad_12241430.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Suraj Uttam Gaikwad",
+        "email": "surajutt@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Suraj-Uttam-Gaikwad_12241830.jpg",
+        "position": "Core Member"
+    },
+    {
+        "name": "Talla Sai Surya",
+        "email": "tallasai@iitbhilai.ac.in",
+        "icon": "/ingenuity/member_image/Talla-Sai-Surya_12241860.jpg",
+        "position": "Core Member"
+    },    
+]
+
+const Ingenuity = () => {
+    const images = getGalleryImages('ingenuity');
+    const events = EventDetails.filter(event => event.club === 'Ingenuity');
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="Ingenuity"
+            clubLogo="ING.png"
+            instagram="https://www.instagram.com/ingenuity_iit_bh/"
+            linkedin="https://www.linkedin.com/company/74349589/admin/feed/posts/"            
+            youtube="https://www.youtube.com/channel/UCxJn-SGexPHBs7Pmx378osw"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="Ingenuity, the competitive programming club of IIT Bhilai, is where innovation intertwines with algorithmic brilliance. Born from a vision to cultivate a haven of problem-solving and intellectual curiosity, Ingenuity is more than a coder's refuge - it's a thriving community of passionate enthusiasts. Here, we sharpen our problem-solving prowess and algorithmic acumen through exhilarating coding contests and dynamic collaborative learning."
+        />
+    );
+}
+
+export default Ingenuity;
+
+--- File: ./Clubs/Motorsports.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/motorsports/member_image/AdityaNarayanThakur_Captain_Motorsports.jpg",
+        name: "Aditya Narayan Thakur",
+        position: "Captain",
+        email: "adityant@iitbhilai.ac.in"
+    },
+    {
+        icon: "/motorsports/member_image/Swagat - VC Motorsports.jpg",
+        name: "Swagat Baghel",
+        position: "Vice Captain",
+        email: "swagatb@iitbhilai.ac.in"
+    },
+    {
+        icon: "/motorsports/member_image/Akshay.jpg",
+        name: "Akshay",
+        position: "Core member",
+        email: "nomulana@iitbhilai.ac.in"
+    },
+    {
+        icon: "/motorsports/member_image/Atharva Hire.jpg",
+        name: "Atharva Hire",
+        position: "Core Member",
+        email: "hireas@iitbhilai.ac.in"
+    },
+    {
+        icon: "/motorsports/member_image/Divij Sharma.jpeg",
+        name: "Divij Sharma",
+        position: "Core Member",
+        email: "divijs@iitbhilai.ac.in"
+    },
+    {
+        icon: "/motorsports/member_image/Neeraj.jpg",
+        name: "Neeraj",
+        position: "Core Member",
+        email: "gadink@iitbhilai.ac.in"
+    },
+]
+
+const Motorsports = () => {
+    const images = getGalleryImages('motorsports');
+
+    return (
+        <ClubTemplate
+            clubName="Motorsports"
+            clubLogo="Motorsports.png"
+            instagram="https://www.instagram.com/blockchainclub.iitbhilai/"
+            linkedin="https://www.linkedin.com/company/blockchainclubiitbhilai/"
+            twitter="https://twitter.com/BlockchainClubI1"
+            images={images}
+            blogs={blogs}
+            clubMembers={clubMembers}
+            clubDescription="The Motorsports Team at IIT Bhilai is a powerhouse of innovation, engineering excellence, and passion for speed. It brings together talented students who design, build, and race high-performance vehicles, combining creativity with cutting-edge automotive technology. Through hands-on projects, technical workshops, and national competitions, the team transforms ideas into machines that embody precision and teamwork. By fusing theory with real-world engineering, the team prepares its members to drive the future of sustainable and intelligent mobility."
+        />
+    );
+}
+
+export default Motorsports;
+
+--- File: ./Clubs/Openlake.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/openlake/member_image/Amay_OpenLake.png",
+        name: "Amay Dixit",
+        position: "Coordinator",
+        email: "amayd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Divyansh.jpg",
+        name: "Divyansh",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Harshit Kandpal.jpg",
+        name: "Harshit Kandpal",
+        position: "Core Member",
+        email: "harshitka@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/sakshi shamrao jadahv.jpg",
+        name: "Sakshi Shamrao Jadhav",
+        position: "Core Member",
+        email: "sakshij@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/SLOK TULSYAN 1.jpg",
+        name: "Slok Tulsyan",
+        position: "Core Member",
+        email: "slokt@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Thanmaei.jpg",
+        name: "Thanmaie",
+        position: "Core Member",
+        email: "naginenitha@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Saurav.jpg",
+        name: "Saurav",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    }
+]
+
+const Openlake = () => {
+    const images = getGalleryImages('openlake');
+    const events = EventDetails.filter(event => event.club === "Openlake");
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="Openlake"
+            clubLogo="OPENLAKE.png"
+            instagram="https://instagram.com/openlake_iitbhilai?igshid=MmU2YjMzNjRlOQ=="
+            linkedin="https://www.linkedin.com/company/openlake/"
+            twitter="https://twitter.com/OpenLakeClub?t=FpIJluBD6clOSITxfJXojw&s=09"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="OpenLake, the premier open-source club at IIT Bhilai.
+
+At OpenLake, we are committed to fostering a collaborative and innovative community where students can explore, contribute to, and learn from open-source projects. Our mission is to promote the spirit of open-source development, encouraging creativity, collaboration, and continuous learning.
+
+Whether you are a seasoned developer or just beginning your journey, OpenLake provides a platform for all to enhance their skills and share knowledge. Join us to delve into the world of open-source, participate in hackathons, attend informative workshops, and collaborate on impactful projects.
+
+Together, let's build, share, and grow."
+        />
+    );
+}
+
+export default Openlake;
+
+
+--- File: ./Clubs/Ses.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/ses/member_image/Kushaal_Kumar_Pothula_SES_Astro.jpg",
+        name: "Kushaal Kumar Pothula",
+        position: "Secretory",
+        email: "kushaalkp@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/ADITYA_GIRISH_SEOKAR_ses_aero.jpg",
+        name: "Aditya Girish Seokar",
+        position: "Secretory",
+        email: "adityags@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of AKD.jpg",
+        name: "Ashish Kumar Dash",
+        position: "Core Member",
+        email: "ashishkd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of Eashan Hasija.jpg",
+        name: "Eashan Hasija",
+        position: "Core Member",
+        email: "eashanh@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of IMG-20240819-WA0053.jpg",
+        name: "Atharv Hire",
+        position: "Core Member",
+        email: "hireas@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of Janvijay.jpeg",
+        name: "Janvijay Singh",
+        position: "Core Member",
+        email: "janvijay@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of Karan.jpg",
+        name: "Karan Kumar Prasad",
+        position: "Core Member",
+        email: "karankp@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of shubham_jha.jpg",
+        name: "Shubham Jha",
+        position: "Core Member",
+        email: "shubhamkj@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of Sumagna.jpg",
+        name: "Sumagna Das",
+        position: "Core Member",
+        email: "sumagnaa@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of Thanmaie_.png",
+        name: "Thanmaie Nagineni",
+        position: "Core Member",
+        email: "naginenitha@iitbhilai.ac.in"
+    },
+    {
+        icon: "/ses/member_image/Copy of V Varshitha.jpg",
+        name: "V Varshitha",
+        position: "Core Member",
+        email: "vadlamuruvk@iitbhilai.ac.in"
+    },  
+    {
+        icon: "/ses/member_image/Copy of 20250420_162112.jpg",
+        name: "Anushka Gawande",
+        position: "Core Member",
+        email: "anushkage@iitbhilai.ac.in"
+    }, 
+]
+
+const SES = () => {
+    const images = getGalleryImages('ses');
+    const events  = EventDetails.filter(event => event.club === "SES");    
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="SES"
+            clubLogo="SES Logo.png"
+            instagram="https://instagram.com/ses_iitbh?igshid=ZDc4ODBmNjlmNQ=="
+            linkedin="https://www.linkedin.com/company/space-exploration-society-iitbh/"
+            youtube="https://www.youtube.com/@spaceexplorationsocietyiit864/featured"
+            facebook="https://www.facebook.com/ses.iitbh/"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="At IIT Bhilai, the Space Exploration Society (SES) thrives as a lively community where curiosity and the cosmos converge. Space fanatics within the institute unite to explore the universe’s wonders and advance aeronautical innovation. Under the expansive night sky, SES members revel in celestial observations and the excitement of aeromodelling.
+
+Established in 2017, SES quickly became a beacon for space enthusiasts, organizing impactful events and workshops that captivate and inspire. Esteemed astrophysicists, engineers, and distinguished alumni frequently share their expertise, enriching the society’s endeavors with deep insights and practical knowledge. Their mentorship has propelled students to excel in various competitions and projects, achieving significant milestones in both astronomy and aeronautics."
+        />
+    );
+}
+
+export default SES;
+
+
+--- File: ./Clubs/Spectre.js ---
+import ClubTemplate from "./ClubTemplate";
+import { getGalleryImages } from '../../utils/getGalleryImages';
+import EventDetails from "../../utils/EventDetails";
+const blogs = [
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    {
+        title: "Sci-tech club weekly magazine",
+        author: "Aditya, Indian Institute of Technology Bhilai",
+        time: "5 min read",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quia! Quisquam, voluptate."
+    },
+    // Add more blog objects here as needed
+];
+const clubMembers = [
+    {
+        icon: "/openlake/member_image/Amay_OpenLake.png",
+        name: "Amay Dixit",
+        position: "Coordinator",
+        email: "amayd@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Divyansh.jpg",
+        name: "Divyansh",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Harshit Kandpal.jpg",
+        name: "Harshit Kandpal",
+        position: "Core Member",
+        email: "harshitka@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/sakshi shamrao jadahv.jpg",
+        name: "Sakshi Shamrao Jadhav",
+        position: "Core Member",
+        email: "sakshij@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/SLOK TULSYAN 1.jpg",
+        name: "Slok Tulsyan",
+        position: "Core Member",
+        email: "slokt@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Thanmaei.jpg",
+        name: "Thanmaie",
+        position: "Core Member",
+        email: "naginenitha@iitbhilai.ac.in"
+    },
+    {
+        icon: "/openlake/member_image/Saurav.jpg",
+        name: "Saurav",
+        position: "Core Member",
+        email: "DummyEmail@iitbhilai.ac.in"
+    }
+]
+
+const Spectre = () => {
+    const images = getGalleryImages('spectre');
+    const events = EventDetails.filter(event => event.club === "Spectre");
+    events.length > 1 && events.sort((a, b) => {
+        const dateA = new Date(
+            Number(a.year),
+            new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+            Number(a.date)
+        );
+        const dateB = new Date(
+            Number(b.year),
+            new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+            Number(b.date)
+        );
+        return dateB - dateA;
+    });
+    return (
+        <ClubTemplate
+            clubName="Spectre"
+            clubLogo="Spectre Logo.png"
+            instagram="https://instagram.com/openlake_iitbhilai?igshid=MmU2YjMzNjRlOQ=="
+            linkedin="https://www.linkedin.com/company/openlake/"
+            twitter="https://twitter.com/OpenLakeClub?t=FpIJluBD6clOSITxfJXojw&s=09"
+            images={images}
+            blogs={blogs}
+            events={events}
+            clubMembers={clubMembers}
+            clubDescription="Spectre, the premier cybersecurity club at IIT Bhilai, is dedicated to cultivating a community of curious minds passionate about digital security. At Spectre, we empower students to explore the fascinating world of cybersecurity through hands-on learning, real-world challenges, and collaborative projects. Our mission is to promote awareness, innovation, and technical excellence in areas such as ethical hacking, digital forensics, cryptography, and network defense. Whether you're an experienced security enthusiast or just beginning your journey, Spectre provides a platform to enhance your skills, learn from peers, and tackle cutting-edge security problems. Join us to defend, decode, and discover the future of cybersecurity."
+        />
+    );
+}
+
+export default Spectre;
+
+--- File: ./combined_pages.txt ---
+
+--- File: ./ContactUs.js ---
+import React from 'react';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+import { FaLocationDot } from 'react-icons/fa6';
+
+const ContactUs = () => {
+    return (
+        <div className="bg-[#030617] flex flex-col justify-center">
+            <NavBar />
+            <div className="relative md:p-12 flex flex-col md:flex-row gap-10 md:gap-0 items-center md:mx-8">
+                <div className="w-full pt-8 pl-10 md:w-1/2 relative text-white font-[poppins]">
+                    <h2 className="text-2xl md:text-5xl font-[poppins] font-[600] mb-6">Contact Us<span className='text-[#0A66C2]'>.</span></h2>
+                    <div className="border-l-4 border-[#0A66C2] pl-6 py-4">
+                        <strong className='opacity-50'>Address</strong>
+                        <p className="mb-8 font-[600]">
+                            <br />
+                            IIT Bhilai, Kutelabhata
+                            <br />
+                            Bhilai, Durg
+                            <br />
+                            Chhattisgarh
+                        </p>
+                        <div className="mb-8">
+                            <a href="https://maps.app.goo.gl/gg93jd9WPyVYDwk96" target='_blank' rel='noreferrer' className=" flex items-center underline">
+                                <FaLocationDot className='text-red-700 mr-2'></FaLocationDot>See Location
+                            </a>
+                        </div>
+                        <strong className='opacity-50'>Contacts</strong>
+                        <p className="">
+                            <br />
+                            <a href="mailto:Gensec_Scitech_Gymkhana@iitbhilai.ac.in" className="text-blue-400">Gensec_Scitech_Gymkhana@iitbhilai.ac.in</a>
+                            <br />
+                            8708943859
+                        </p>
+                    </div>
+                </div>
+                <div className="w-[80%] md:w-1/2 bg-[#FFFFFF0D] relative shadow-lg font-[poppins] font-[600]">
+                    <h3 className="w-fit absolute -top-5 left-0 right-0 mx-auto text-2xl font-bold text-white z-50">Contact Form</h3>
+                    <form className='p-6 m-4'>
+                        <div className="mb-4">
+                            {/* <label className="block text-white mb-2">Name</label> */}
+                            <input type="text" placeholder='Name' required className="w-full p-2 border-b-2 border-[#FFFFFF80] divide-solid bg-transparent text-white focus:outline-none" />
+                        </div>
+                        <div className="mb-4">
+                            {/* <label className="block text-white mb-2">Email</label> */}
+                            <input type="email" placeholder='Email' required className="w-full p-2 border-b-2 border-[#FFFFFF80] divide-solid bg-transparent text-white focus:outline-none" />
+                        </div>
+                        <div className="mb-4">
+                            {/* <label className="block text-white mb-2">Subject</label> */}
+                            <input type="text" placeholder='Subject' className="w-full p-2 border-b-2 border-[#FFFFFF80] divide-solid bg-transparent text-white focus:outline-none" />
+                        </div>
+                        <div className="mb-4">
+                            {/* <label className="block text-white mb-2">Message</label> */}
+                            <textarea placeholder='Message' className="w-full p-2 border-b-2 border-[#FFFFFF80] divide-solid bg-transparent text-white focus:outline-none"></textarea>
+                        </div>
+                        <div className="flex justify-center">
+                            <button type="submit" className="bg-send-linear text-white p-2 rounded">Send Message</button>
+                        </div>
+                    </form>
+                    <div className="absolute md:-m-8 top-0 left-0 w-1/4 h-1/4 border-t-4 border-l-4 border-blue-500"></div>
+                    <div className="absolute md:-m-8 top-0 right-0 w-1/4 h-1/4 border-t-4 border-r-4 border-blue-500"></div>
+                    <div className="absolute md:-m-8 bottom-0 left-0 w-1/4 h-1/4 border-b-4 border-l-4 border-blue-500"></div>
+                    <div className="absolute md:-m-8 bottom-0 right-0 w-1/4 h-1/4 border-b-4 border-r-4 border-blue-500"></div>
+                </div>
+            </div>
+
+            <Footer />
+        </div>
+    );
+}
+
+export default ContactUs;
+
+--- File: ./Developer.js ---
+import { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+export const Card = ({ src, name, role }) => {
+    return (
+        <div className="flex items-end bg-gray-800 p-4 h-48 w-60 rounded-t-[65px] rounded-b-md relative  ">
+            <LazyLoadImage effect="blur" className="w-44 h-44 absolute -top-[80%] inset-0 m-auto object-center object-cover rounded-[65px] rounded-bl-[0] mx-auto" src={src} alt={`${name}`} />
+            <div className="text-center w-full">
+                <h1 className="mt-4 text-lg text-[#0A66C2] font-[poppins] font-bold">{name}</h1>
+                <h2 className="text-gray-400 font-[poppins]">{role}</h2>
+                </div>
+        </div>
+    );
+};
+
+function Developer() {
+    const [member, setMember] = useState([
+        {
+            src: "/developer/Arbaz shaikh.jpg",
+            name: "Arbaz Shaikh",
+            role: "Developer"
+        },
+        {
+            src: "/developer/nishant.jpeg",
+            name: "Nishant Verma",
+            role: "Developer"
+        },
+        {
+            src: "/developer/Divyanshu.jpg",
+            name: "Divyanshu Prakash",
+            role: "Developer"
+        },
+        {
+            src: "/developer/Jaswanth.jpeg",
+            name: "Naga Jaswanth",
+            role: "Developer"
+        }, 
+        {
+            src: "/developer/sai.jpg",
+            name: "Sai Surya",
+            role: "UI/UX Designer"
+        }       
+    ]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
+    return (
+        <div className="home-bg text-white min-h-screen pb-10">
+            <div className="relative">
+                <LazyLoadImage effect="blur" src="/development.jpg" className="w-full h-[60vh] object-cover opacity-30" alt="bg" />
+                <div className="absolute inset-0 flex flex-col">
+                    <NavBar />
+                    <div className="flex-grow flex justify-center items-center">
+                        <h1 className="text-4xl home-heading font-[poppins]">
+                            {`<Div Class="`}<span className="text-sky-500 font-[junge] font-bold">Developer</span>{`">`}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-24 m-10">
+                {member.map((m, index) => (
+                    <Card key={index} src={m.src} name={m.name} role={m.role} />
+                ))}
+            </div>
+            <Footer />
+        </div>
+    );
+}
+
+export default Developer;
+
+--- File: ./Events.js ---
+import React, { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import EventCard from "../components/EventCard";
+import EventsDetails from "../utils/EventDetails";
+
+const Events = () => {
+  const [activeTab, setActiveTab] = useState("upcoming");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const currentDate = new Date();
+
+  const upcomingEvents = EventsDetails.filter((event) => {
+    const eventDate = new Date(
+      Number(event.year),
+      new Date(Date.parse(event.month + " 1, 2024")).getMonth(),
+      Number(event.date)
+    );
+    return (
+      eventDate >=
+      new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate()
+      )
+    );
+  });
+  upcomingEvents.sort((a, b) => {
+    const dateA = new Date(
+      Number(a.year),
+      new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+      Number(a.date)
+    );
+    const dateB = new Date(
+      Number(b.year),
+      new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+      Number(b.date)
+    );
+    return dateB - dateA;
+  });
+
+  const pastEvents = EventsDetails.filter((event) => {
+    const eventDate = new Date(
+      Number(event.year),
+      new Date(Date.parse(event.month + " 1, 2024")).getMonth(),
+      Number(event.date)
+    );
+    return (
+      eventDate <
+      new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate()
+      )
+    );
+  });
+  pastEvents.sort((a, b) => {
+    const dateA = new Date(
+      Number(a.year),
+      new Date(Date.parse(a.month + " 1, 2024")).getMonth(),
+      Number(a.date)
+    );
+    const dateB = new Date(
+      Number(b.year),
+      new Date(Date.parse(b.month + " 1, 2024")).getMonth(),
+      Number(b.date)
+    );
+    return dateB - dateA;
+  });
+
+  return (
+    <div className="home-bg text-white">
+      <section className="events mb-8 h-screen max-h-[640px]">
+        <div className="backdrop-brightness-[.4] h-full">
+          <NavBar />
+          <div className="flex flex-col justify-center items-center h-[80%]">
+            {/* <div className="flex flex-col flex-1 "> */}
+            <h1 className="text-4xl md:text-6xl mb-4 font-[junge] font-bold text-[#0A66C2]">
+              Events
+            </h1>
+            <h2 className="subtitle">Check out our upcoming events</h2>
+            {/* </div> */}
+          </div>
+        </div>
+      </section>
+
+      <section className="events-card mb-8">
+        <div className="mx-auto px-4">
+          <div className="mx-auto font-[junge] bg-[#101323] p-4 rounded-lg shadow-lg flex justify-center mb-8">
+            <button
+              className={`w-full text-white font-bold px-4 py-2 mx-2 rounded ${
+                activeTab === "upcoming" ? "bg-[#0A66C2]" : ""
+              }`}
+              onClick={() => handleTabClick("upcoming")}
+            >
+              Upcoming
+            </button>
+            <button
+              className={`w-full text-white font-bold px-4 py-2 mx-2 rounded ${
+                activeTab === "past" ? "bg-[#0A66C2]" : ""
+              }`}
+              onClick={() => handleTabClick("past")}
+            >
+              Past
+            </button>
+          </div>
+          <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {activeTab === "upcoming" && (upcomingEvents.length > 0 ? (
+              upcomingEvents.map((event, index) => (
+                <EventCard key={index} event={event} />
+              ))
+            ) : (
+              <p className="text-white">No upcoming events available.</p>
+            ))}
+
+            {activeTab === "past" &&
+              (pastEvents.length > 0 ? (
+                pastEvents.map((event, index) => (
+                  <EventCard key={index} event={event} />
+                ))
+              ) : (
+                <p className="text-white">No past events available.</p>
+              ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+};
+
+export default Events;
+
+--- File: ./file.txt ---
+find . -type f -exec echo -e \n--- File: {} --- ; -exec cat {} ;
+
+--- File: ./Gallery.js ---
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import { getGalleryImages } from "../utils/getGalleryImages";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import React, { useEffect, useState } from "react";
+
+const Gallery = () => {
+  const gallery = [
+    "epsilon",
+    "ses",
+    "ingenuity",
+    "electromos",
+    "dsai",
+    // "blockchain",
+    "openlake",
+    // "motorsports",
+    // "gdsc",
+  ];
+  const images = gallery.map((club) => getGalleryImages(club)).flat();
+  const [isOpen, setIsOpen] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  const showSlides = (n) => {
+    let newIndex = slideIndex + n;
+    if (newIndex > images.length) newIndex = 1;
+    if (newIndex < 1) newIndex = images.length;
+    setSlideIndex(newIndex);
+
+    const thumbnailElement = document.getElementById(
+      `thumbnail-${newIndex - 1}`
+    );
+    if (thumbnailElement) {
+      thumbnailElement.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
+  };
+
+  const currentSlide = (n) => {
+    setSlideIndex(n);
+    const thumbnailElement = document.getElementById(`thumbnail-${n - 1}`);
+    if (thumbnailElement) {
+      thumbnailElement.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowLeft") showSlides(-1);
+      if (e.key === "ArrowRight") showSlides(1);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  });
+
+  return (
+    <div className="home-bg">
+      <NavBar />
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-8">
+        {images.map((img, index) => (
+          <div key={index} className="p-2 rounded-md">
+            <LazyLoadImage
+              effect = "blur"
+              src={img}
+              alt={img}
+              className="hover-shadow rounded-md cursor-pointer w-full h-full object-cover"
+              onClick={() => {
+                openModal();
+                currentSlide(index + 1);
+              }} 
+            />
+          </div>
+        ))}
+      </div>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-black left-0 top-0 w-full h-full overflow-auto pt-8">
+          <span
+            className="absolute top-0 right-0 m-4 text-3xl text-white cursor-pointer"
+            onClick={closeModal}
+          >
+            &times;
+          </span>
+          <div className="relative w-11/12 max-w-5xl m-auto h-96 p-4">
+            {images.map((img, index) => (
+              <div
+                key={index}
+                className={`mySlides h-full ${
+                  slideIndex === index + 1 ? "flex" : "hidden"
+                }`}
+              >
+                <div className="numbertext absolute top-0 left-0 m-2 text-white text-sm">
+                  {index + 1} / {images.length}
+                </div>
+                <LazyLoadImage
+                  effect = "blur"
+                  src={`${img}`}
+                  className="w-full object-center object-contain"
+                  alt={img} 
+                />
+              </div>
+            ))}
+            <button
+              className="prev absolute top-1/2 w-auto p-4 -mt-12 transition-ease select-none rounded-t-sm rounded-r-sm text-2xl text-white cursor-pointer"
+              onClick={() => showSlides(-1)}
+            >
+              &#10094;
+            </button>
+            <button
+              className="next absolute top-1/2 w-auto p-4 -mt-12 transition-ease select-none rounded-t-sm rounded-r-sm right-0 text-2xl text-white cursor-pointer"
+              onClick={() => showSlides(1)}
+            >
+              &#10095;
+            </button>
+            {/* <div className="caption-container text-center text-white p-2 mt-2">
+                            <p id="caption">{images[slideIndex - 1]}</p>
+                        </div> */}
+            <div className="flex gap-2 h-36 overflow-x-scroll scrollbar-hide mt-4">
+              {images.map((img, index) => (
+                <LazyLoadImage
+                  effect = "blur"
+                  key={index}
+                  id={`thumbnail-${index}`}
+                  className={`demo cursor-pointer hover:opacity-100 ${
+                    slideIndex === index + 1
+                      ? "opacity-100 border-2 border-blue-700"
+                      : "opacity-60"
+                  }`}
+                  src={img}
+                  onClick={() => currentSlide(index + 1)}
+                  alt={img}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+      <Footer />
+    </div>
+  );
+};
+
+export default Gallery;
+
+--- File: ./Home.js ---
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import ConcentricCircles from "../components/Circles";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import BlogCard from "../components/BlogCard";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import CircularImages from "../components/Clubs";
+
+function Home() {
+  const { hash } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
+
+  return (
+    <div className="home-bg">
+      <section className="section-1 max-h-[640px]">
+        <NavBar />
+        <div className="mx-auto text-center py-32 relative bg-opacity-70">
+          <h1 className="welcome font-bold text-white mb-4">
+            Welcome to Scitech Council
+          </h1>
+          <p className="text-l md:text-2xl text-gray-300">
+            We are a group of tech enthusiasts who love to explore and learn new
+            things.
+          </p>
+          {/* <button className="bg-blue-500 rounded hover:bg-blue-700 text-white py-2 px-4 mt-4">Join Us</button> */}
+        </div>
+      </section>
+
+      <div className="p-8 sm:p-16 w-full h-96">
+        <Swiper
+          // style={{ marginLeft: '0' }}
+          modules={[Navigation, Pagination]}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          className="w-full h-full rounded-lg "
+        >
+          <SwiperSlide>
+            <LazyLoadImage
+              className="m-auto h-full w-full object-cover"
+              src="/Devfest_Bhilai x ShutterStories (407 of 71).jpg"
+              alt="slide1"
+            />
+          </SwiperSlide>          
+        </Swiper>
+      </div>
+
+      <section
+        id="clubs"
+        className="section-2 text-white py-8 relative h-screen overflow-visible mb:mb-8"
+      >
+        <div className="h-full">
+          <h2 className="px-8 home-heading font-bold font-[junge] text-[#0A66C2]">
+            Clubs
+          </h2>
+          {/* <ConcentricCircles /> */}
+          <CircularImages />          
+        </div>
+      </section>
+
+
+      <section id="achievements" className="section-5 text-white sm:py-8">
+        <div className="flex flex-col mb:flex-row justify-center mb:items-center backdrop-blur-[3px] ">
+          <div className="mb:w-1/2 px-4 order-2 mb:order-1 flex justify-center">
+            <LazyLoadImage
+              src="Eyantra.png"
+              alt="Achievements"
+              className="h-56 w-auto mb-2 sm:h-auto max-h-96 mb:w-full object-fill object-center rounded-md shadow-lg transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="w-full mb:w-1/2 order-1 mb:order-2 px-4 flex flex-col justify-center">
+            <div className="px-4 mb-8">
+              <h2 className="home-heading font-bold font-[junge] text-[#0A66C2]">
+                Our Achievments
+              </h2>
+            </div>
+            <div className="flex flex-wrap items-center ">
+              <div className="w-full px-4 mb-8 ">
+                <p className="text-[0.9rem] sm:text-xs md:text-sm lg:text-lg mb-6">
+                  Despite our relatively recent inception, the Scitech Council
+                  of IIT Bhilai has made significant strides in fostering a
+                  culture of innovation and collaboration. Our projects have led
+                  to creative solutions and prototypes, showcasing the potential
+                  and ingenuity of our members. These achievements, though just
+                  the beginning, highlight our commitment to providing valuable
+                  learning experiences and inspiring technological advancement.
+                </p>
+                <button onClick={()=>navigate('/achievements')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                View All
+                            </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+
+      <section id="history" className="section-3 text-white py-4">
+        <div className="flex flex-col mb:flex-row justify-center mb:items-center ">
+          <div className="container mx-auto px-4 flex flex-col justify-center">
+            <div className="px-4 mb-8">
+              <h2 className="home-heading font-bold text-blue-400">
+                History
+              </h2>
+            </div>
+            <div className="flex flex-wrap items-center ">
+              <div className="w-full px-4 mb-8 ">
+                <p className="text-[0.9rem] sm:text-xs md:text-sm lg:text-lg mb-6">
+                  From our humble beginnings, we have grown into a dynamic
+                  council that organizes a diverse range of events, workshops,
+                  and projects. These activities not only provide hands-on
+                  learning experiences but also foster collaboration and
+                  creativity among students. Our journey has been marked by the
+                  enthusiastic participation and brilliant contributions of our
+                  members, each bringing unique perspectives and talents to the
+                  table.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="px-4 flex justify-center">
+            <LazyLoadImage
+              src="history.jpeg"
+              alt="History"
+              className="h-48 sm:h-auto mb:my-2 object-cover shadow-lg rounded-md transform hover:-translate-y-2 hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>       
+      </section>
+
+      {/* <section id="blogs" className="section-4 text-white py-16">
+        <div className="home-heading px-8 font-[junge] text-[#0A66C2] mb-8">
+          Check out Our Blogs
+        </div>
+        <div className="grid mx-8 justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <BlogCard
+            title="Sci-tech club weekly magazine"
+            author="Aditya, Indian Institute of technology Bhilai"
+            time="5 min read"
+            link="#"
+          />
+          <BlogCard
+            title="Sci-tech club weekly magazine"
+            author="Aditya, Indian Institute of technology Bhilai"
+            time="5 min read"
+            link="#"
+          />
+          <BlogCard
+            title="Sci-tech club weekly magazine"
+            author="Aditya, Indian Institute of technology Bhilai"
+            time="5 min read"
+            link="#"
+          />
+        </div>
+        <div className="text-center mt-8">
+          <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">
+            Learn More
+          </button>
+        </div>
+      </section> */}
+
+  
+
+      <Footer />
+    </div>
+  );
+}
+
+export default Home;
+
+--- File: ./PageNotFound.js ---
+// PageNotFound.js
+
+import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+const PageNotFound = () => {
+  const visorCanvasRef = useRef(null);
+  const cordCanvasRef = useRef(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Draw visor
+    const drawVisor = () => {
+      const canvas = visorCanvasRef.current;
+      const ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(5, 45);
+      ctx.bezierCurveTo(15, 64, 45, 64, 55, 45);
+
+      ctx.lineTo(55, 20);
+      ctx.bezierCurveTo(55, 15, 50, 10, 45, 10);
+
+      ctx.lineTo(15, 10);
+
+      ctx.bezierCurveTo(15, 10, 5, 10, 5, 20);
+      ctx.lineTo(5, 45);
+
+      ctx.fillStyle = "#2f3640";
+      ctx.strokeStyle = "#f5f6fa";
+      ctx.fill();
+      ctx.stroke();
+    };
+
+    drawVisor();
+  }, []);
+
+  useEffect(() => {
+    const canvas = cordCanvasRef.current;
+    const ctx = canvas.getContext("2d");
+
+    let y1 = 160;
+    let y2 = 100;
+    let y3 = 100;
+
+    let y1Forward = true;
+    let y2Forward = false;
+    let y3Forward = true;
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      ctx.moveTo(130, 170);
+      ctx.bezierCurveTo(250, y1, 345, y2, 400, y3);
+
+      ctx.strokeStyle = "white";
+      ctx.lineWidth = 8;
+      ctx.stroke();
+
+      if (y1 === 100) {
+        y1Forward = true;
+      }
+
+      if (y1 === 300) {
+        y1Forward = false;
+      }
+
+      if (y2 === 100) {
+        y2Forward = true;
+      }
+
+      if (y2 === 310) {
+        y2Forward = false;
+      }
+
+      if (y3 === 100) {
+        y3Forward = true;
+      }
+
+      if (y3 === 317) {
+        y3Forward = false;
+      }
+
+      y1Forward ? (y1 += 1) : (y1 -= 1);
+      y2Forward ? (y2 += 1) : (y2 -= 1);
+      y3Forward ? (y3 += 1) : (y3 -= 1);
+    };
+
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animate);
+    };
+  }, []);
+
+  return (
+    <div className="page-404">
+      <div className="moon"></div>
+      <div className="moon__crater moon__crater1"></div>
+      <div className="moon__crater moon__crater2"></div>
+      <div className="moon__crater moon__crater3"></div>
+
+      <div className="star star1"></div>
+      <div className="star star2"></div>
+      <div className="star star3"></div>
+      <div className="star star4"></div>
+      <div className="star star5"></div>
+
+      <div className="error">
+        <div className="error__title">404</div>
+        <div className="error__subtitle">Hmmm...</div>
+        <div className="error__description">
+          It looks like one of the developers fell asleep
+        </div>
+        <button
+          onClick={() => navigate(-1)}
+          className="error__button error__button--active"
+        >
+          Go Back
+        </button>
+        <button
+          onClick={() => navigate("/contact-us")}
+          className="error__button"
+        >
+          CONTACT
+        </button>
+      </div>
+
+      <div className="astronaut h-screen w-screen">
+        <div className="astronaut__backpack"></div>
+        <div className="astronaut__body"></div>
+        <div className="astronaut__body__chest"></div>
+        <div className="astronaut__arm-left1"></div>
+        <div className="astronaut__arm-left2"></div>
+        <div className="astronaut__arm-right1"></div>
+        <div className="astronaut__arm-right2"></div>
+        <div className="astronaut__arm-thumb-left"></div>
+        <div className="astronaut__arm-thumb-right"></div>
+        <div className="astronaut__leg-left"></div>
+        <div className="astronaut__leg-right"></div>
+        <div className="astronaut__foot-left"></div>
+        <div className="astronaut__foot-right"></div>
+        <div className="astronaut__wrist-left"></div>
+        <div className="astronaut__wrist-right"></div>
+
+        <div className="astronaut__cord">
+          <canvas
+            id="cord"
+            ref={cordCanvasRef}
+            height="500px"
+            width="500px"
+          ></canvas>
+        </div>
+
+        <div className="astronaut__head">
+          <canvas
+            id="visor"
+            ref={visorCanvasRef}
+            width="60px"
+            height="60px"
+          ></canvas>
+          <div className="astronaut__head-visor-flare1"></div>
+          <div className="astronaut__head-visor-flare2"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PageNotFound;
